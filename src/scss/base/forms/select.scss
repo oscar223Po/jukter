@@ -1,0 +1,229 @@
+//========================================================================================================================================================
+// <SELECT>
+.select {
+	min-width: 0;
+	position: relative;
+	// .select__body
+	&__body {
+		position: relative;
+	}
+	// .select__title
+	&__title {
+		color: inherit;
+		text-align: left;
+		cursor: pointer;
+		width: 100%;
+		border-radius: toRem(25);
+	}
+	// .select__value
+	&__value {
+		display: flex;
+		min-width: 0;
+		align-items: center;
+		height: toRem(45);
+		padding: 0 toRem(20);
+		gap: toRem(10);
+		> * {
+			flex: 1 1 auto;
+		}
+		&:after {
+			@extend %ic;
+			content: "";
+			color: $grenColor;
+			align-self: stretch;
+			flex: 0 0 10px;
+			font-size: toRem(24);
+			transition: all 0.3s ease 0s;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			._select-open & {
+				transform: rotate(-180deg);
+			}
+		}
+		&._select-pseudo-label {
+			&::before {
+				content: attr(data-pseudo-label);
+				opacity: 0.5;
+			}
+		}
+	}
+	// .select__content
+	&__content {
+		flex: 1 1 auto;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	// .select__text
+	&__text {
+		flex: 1 1 auto;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	&__input {
+		width: 100%;
+		background-color: transparent;
+		height: 100%;
+	}
+	// .select__options
+	&__options {
+		color: #000;
+		position: absolute;
+		top: calc(100% - toRem(1));
+		border-radius: 0 0 25px 25px;
+		min-width: 100%;
+		left: 0;
+		overflow: hidden;
+		background-color: #fff;
+		border-top: 0;
+		border: 1px solid $liteGrayColor;
+		border-top: 0;
+	}
+	// .select__scroll
+	&__scroll {
+		overflow-y: auto;
+		overflow-x: hidden;
+		// Максимальна висота
+		max-height: toRem(200);
+		// Стилі скроллбару
+		.simplebar-scrollbar {
+			&::before {
+				//opacity: 1;
+			}
+		}
+	}
+	// .select__option
+	&__option {
+		width: 100%;
+		text-align: left;
+		cursor: pointer;
+		color: inherit;
+		font-weight: 500;
+		line-height: normal;
+		font-size: toRem(20);
+		color: $darkGrayColor;
+		padding: toRem(10) toRem(20);
+		transition: background-color 0.3s ease 0s;
+		&:not(:last-child) {
+			border-bottom: toRem(1) solid $liteGrayColor;
+		}
+		&._select-selected {
+			background-color: #eee;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: rgba($darkGrayColor, 0.07);
+			}
+		}
+	}
+
+	// Конструкція додаткових даних
+	&__row {
+		display: inline-flex;
+		align-items: center;
+	}
+	&__asset {
+	}
+	&__text {
+	}
+
+	&--show-top {
+		.select__options {
+			top: auto;
+			bottom: calc(100% - toRem(1));
+			border: 1px solid #d9d9d9;
+			border-bottom: 0;
+			border-radius: 4px 4px 0 0;
+			padding: 5px 0px 10px 0px;
+		}
+	}
+
+	// Стан селекту
+	&._select-open {
+		.select__title {
+			border-radius: toRem(25) toRem(25) toRem(0) toRem(0);
+		}
+	}
+	&._select-disabled {
+	}
+	&._select-active {
+	}
+	&._select-focus {
+	}
+	&._select-multiple {
+	}
+	&._select-checkbox {
+	}
+	//========================================================================================================================================================
+	&_req-selected {
+		max-width: toRem(452);
+		.select__title {
+			font-weight: 800;
+			color: $whiteColor;
+			line-height: normal;
+			font-size: toRem(22);
+			background-color: $blueColor;
+			border: toRem(1) solid $grayColor;
+		}
+		.select__value {
+			width: 100%;
+			&::after {
+				content: "\e90b";
+				color: $whiteColor;
+			}
+		}
+		.select__options {
+		}
+		.select__option {
+		}
+	}
+	&_req-date {
+		max-width: toRem(252);
+		&._select-open {
+			.select__value {
+				&::after {
+					transform: rotate(0deg);
+				}
+			}
+		}
+		.select__title {
+			font-weight: 800;
+			color: $whiteColor;
+			line-height: normal;
+			font-size: toRem(22);
+			background-color: $blueColor;
+			border: toRem(1) solid $grayColor;
+		}
+		.select__value {
+			width: 100%;
+			flex-direction: row-reverse;
+			&::after {
+				content: "\e93e";
+				color: $grenColor;
+			}
+		}
+	}
+	&_req-main {
+		.select__title {
+			line-height: normal;
+			border: toRem(1) solid $grayColor;
+		}
+		.select__value {
+			&::after {
+				content: "\e90b";
+			}
+		}
+		.select__options {
+		}
+		.select__option {
+		}
+	}
+}
+//========================================================================================================================================================
+// Тег
+._select-tag {
+	cursor: pointer;
+}
+//========================================================================================================================================================

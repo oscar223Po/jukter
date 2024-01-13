@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Jukter (Добавление заявки груза) - RequestPage"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<!-- [Request] -->
+			<section class="request">
+				<div class="request__container">
+					<div class="request__top">
+						<h2 class="request__title title-big">Добавление заявки груза</h2>
+						<ul class="request__list">
+							<li class="request__item"><a href="" class="request__link">Транспорт</a></li>
+							<li class="request__item"><a href="" class="request__link request__link--active">Груз</a></li>
+						</ul>
+					</div>
+					<div class="request__body">
+						<div class="request__item item-request item-request-first">
+							<div class="item-request__number">1</div>
+							<div class="item-request-first__content">
+								<div class="item-request__select">
+									<span class="item-request__span">Откуда</span>
+									<select name="form[]" data-class-modif="req-selected">
+										<option value="1">Пермь, Россия</option>
+										<option value="2">Москва, Россия</option>
+										<option value="3">Мурманск, Россия</option>
+									</select>
+									<button type="button" class="item-request__add">Добавить 2-ой пункт погрузки</button>
+								</div>
+								<div class="item-request__select">
+									<span class="item-request__span">Куда</span>
+									<select name="form[]" data-class-modif="req-selected">
+										<option value="1" selected>Пермь, Россия</option>
+										<option value="2">Пермь, Россия</option>
+										<option value="3">Пермь, Россия</option>
+										<option value="4">Пермь, Россия</option>
+										<option value="5">Пермь, Россия</option>
+									</select>
+									<button type="button" class="item-request__add">Добавить 2-ой пункт погрузки</button>
+								</div>
+								<div class="item-request__select">
+									<span class="item-request__span">Дата</span>
+									<select name="form[]" data-class-modif="req-date">
+										<option value="1" selected>02.02.2024</option>
+										<option value="2">02.03.2024</option>
+										<option value="3">02.04.2024</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="request__button"><a href="" class="button button--green">Разместить</a></div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

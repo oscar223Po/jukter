@@ -1,0 +1,222 @@
+//========================================================================================================================================================
+// Footer
+.footer {
+	@include adaptiveValue("margin-top", 40, 80);
+	&__background {
+		display: flex;
+		object-fit: cover;
+		position: relative;
+		justify-content: center;
+		&::before {
+			content: "";
+			width: 100%;
+			left: toRem(0);
+			bottom: toRem(0);
+			height: toRem(30);
+			position: absolute;
+			background-color: $blueColor;
+		}
+		img {
+			width: toRem(1920);
+			object-fit: cover;
+		}
+		@media (max-width: $mobile) {
+			margin-left: toRem(-250);
+			img {
+				width: toRem(1320);
+			}
+			&::before {
+				height: toRem(20);
+			}
+		}
+	}
+
+	&__main {
+		color: $whiteColor;
+		background-color: #1d1d1d;
+		@include adaptiveValue("padding-top", 51, 35);
+		@include adaptiveValue("padding-bottom", 75, 20);
+	}
+
+	&__container {
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 60, 20);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 57, 25);
+		}
+		@media (max-width: $tablet) {
+			text-align: center;
+			flex-direction: column;
+		}
+	}
+
+	&__logo {
+		display: flex;
+		transition: opacity 0.3s ease 0s;
+		img {
+			@include adaptiveValue("width", 260, 200);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+
+	&__text {
+		line-height: normal;
+		@include adaptiveValue("font-size", 18, 12);
+		@media (max-width: em(1660)) {
+			br {
+				display: none;
+			}
+		}
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		@include adaptiveValue("column-gap", 212, 40, 2, $containerWidth, 991.98);
+		@media (max-width: $tablet) {
+			row-gap: toRem(40);
+			flex-direction: column;
+			&:not(:last-child) {
+				margin-bottom: toRem(55);
+			}
+		}
+		@media (max-width: em(360.98)) {
+			row-gap: toRem(15);
+			&:not(:last-child) {
+				margin-bottom: toRem(30);
+			}
+		}
+	}
+
+	&__contacts {
+		.footer__title {
+			@media (max-width: $tablet) {
+				text-align: center;
+			}
+		}
+	}
+
+	&__title {
+		font-weight: 800;
+		font-size: toRem(16);
+		@include adaptiveValue("font-size", 28, 16);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 15, 10);
+		}
+	}
+
+	&__socials {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+		@media (max-width: $tablet) {
+			gap: toRem(20);
+			justify-content: center;
+		}
+	}
+
+	&__social {
+		display: flex;
+		transition: opacity 0.3s ease 0s;
+		img {
+			@include adaptiveValue("max-width", 47, 30);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+	&__copy {
+		@media (max-width: $tablet) {
+			display: none;
+		}
+	}
+
+	&__copy,
+	&__copy-mb {
+		line-height: normal;
+		color: rgba($liteGrayColor, 0.6);
+		@include adaptiveValue("font-size", 16, 13);
+	}
+
+	&__lists {
+		display: flex;
+		flex: 1 0 auto;
+		column-gap: toRem(30);
+		justify-content: space-between;
+		@media (max-width: $mobile) {
+			display: grid;
+			column-gap: toRem(15);
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: min-content;
+			@include adaptiveValue("row-gap", 27, 15, 2, 767.98, 360.98);
+		}
+		@media (max-width: em(360.98)) {
+			row-gap: toRem(20);
+			justify-content: center;
+			grid-template-columns: auto;
+		}
+	}
+
+	&__item {
+		&:first-child {
+			grid-row: span 2; /* Занимает две строки */
+			grid-column: span 1; /* Занимает одну колонку */
+		}
+		@media (max-width: $mobileSmall) {
+			max-width: toRem(181);
+		}
+		@media (max-width: em(360.98)) {
+			margin: 0 auto;
+			max-width: 100%;
+			text-align: center;
+		}
+	}
+
+	&__list {
+	}
+
+	&__li {
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+
+	&__link {
+		display: flex;
+		line-height: normal;
+		transition: color 0.3s ease 0s;
+		@include adaptiveValue("font-size", 18, 12);
+		@media (any-hover: hover) {
+			&:hover {
+				color: $grenColor;
+			}
+		}
+		@media (max-width: em(360.98)) {
+			justify-content: center;
+		}
+	}
+
+	&__copy-mb {
+		text-align: center;
+		br {
+			display: none;
+		}
+		@media (min-width: $tablet) {
+			display: none;
+		}
+	}
+}
+//========================================================================================================================================================

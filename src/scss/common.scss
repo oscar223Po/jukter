@@ -1,0 +1,415 @@
+//========================================================================================================================================================
+// Заголовки, загальні БЕМ блоки та інше...
+//========================================================================================================================================================
+::-webkit-scrollbar {
+	width: toRem(1);
+	border-radius: toRem(10);
+	background-color: $whiteColor;
+}
+::-webkit-scrollbar-thumb {
+	border-radius: toRem(10);
+	background-color: $mainColor;
+}
+::selection {
+	background-color: rgba(#a60101, 0.5);
+}
+summary {
+	list-style: none;
+}
+summary::marker,
+summary::-webkit-details-marker {
+	display: none;
+}
+//========================================================================================================================================================
+// Title Styles
+.title-big {
+	font-weight: 800;
+	color: $mainColor;
+	line-height: 150.6%;
+	text-transform: uppercase;
+	@include adaptiveValue("font-size", 57, 30);
+	&--white {
+		color: $whiteColor;
+		span {
+			color: $grenColor;
+		}
+	}
+}
+.title-sm {
+	font-weight: 800;
+	line-height: normal;
+	@include adaptiveValue("font-size", 24, 16);
+	@media (max-width: $mobile) {
+		text-align: center;
+	}
+}
+//========================================================================================================================================================
+.articles {
+	@media (min-width: $mobile) {
+		background-color: $blueColor;
+		padding: toRem(40) toRem(24);
+	}
+	&__items {
+		display: grid;
+		gap: toRem(10);
+		@media (min-width: $mobile) {
+			grid-template-columns: repeat(auto-fit, minmax(toRem(520), 1fr));
+		}
+	}
+
+	&__item {
+	}
+
+	&__navigation {
+	}
+}
+.item-articles {
+	padding: toRem(25);
+	border-radius: toRem(5);
+	background-color: #fcfcfc;
+	@media (max-width: $mobile) {
+		padding: toRem(25) toRem(15);
+		border: toRem(1) solid #dadde8;
+		box-shadow: toRem(0) toRem(0) toRem(30) toRem(0) rgba(0, 0, 0, 0.1);
+	}
+	&__desktop {
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+
+	&__mobile {
+		@media (min-width: $mobile) {
+			display: none;
+		}
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&:not(:last-child) {
+			margin-bottom: toRem(5);
+		}
+	}
+
+	&__way {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+
+	&__town {
+		font-weight: 800;
+		line-height: normal;
+		font-size: toRem(20);
+		span {
+			font-weight: 400;
+			font-size: toRem(16);
+		}
+	}
+
+	&__line {
+		width: toRem(50);
+		height: toRem(1.3);
+		background-color: $mainColor;
+	}
+
+	&__long {
+		line-height: normal;
+		font-size: toRem(16);
+	}
+
+	&__arrow {
+		font-size: toRem(8.7);
+	}
+
+	&__list {
+		display: flex;
+		gap: toRem(15);
+		align-items: center;
+		&:not(:last-child) {
+			margin-bottom: toRem(40);
+		}
+	}
+
+	&__li {
+		display: flex;
+		gap: toRem(7);
+		align-items: center;
+		line-height: normal;
+		font-size: toRem(16);
+		border-radius: toRem(10);
+		border: toRem(1) solid #d9d9d9;
+		padding: toRem(5) toRem(15);
+		&::before {
+			display: flex;
+			color: #5e91e0;
+			width: toRem(24);
+			height: toRem(24);
+			align-items: center;
+			justify-content: center;
+		}
+		&:nth-child(1) {
+			&::before {
+				font-size: toRem(21);
+				transform: translateY(toRem(1));
+			}
+		}
+		&:nth-child(2) {
+			&::before {
+				font-size: toRem(24);
+			}
+		}
+		&:nth-child(3) {
+			&::before {
+				font-size: toRem(17);
+				transform: translateY(toRem(1));
+			}
+		}
+		&:nth-child(4) {
+			&::before {
+				font-size: toRem(19);
+			}
+		}
+		@media (max-width: $mobile) {
+			gap: toRem(5);
+			font-size: toRem(14);
+			padding: toRem(5) toRem(10);
+			&::before {
+				width: toRem(20);
+				height: toRem(20);
+			}
+		}
+	}
+
+	&__final {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+
+	&__button {
+		padding: toRem(0) toRem(54);
+	}
+
+	&__cost {
+		text-align: right;
+		h5 {
+			font-weight: 800;
+			text-align: right;
+			line-height: normal;
+			font-size: toRem(24);
+			&:not(:last-child) {
+				margin-bottom: toRem(5);
+			}
+		}
+		span {
+			line-height: normal;
+			font-size: toRem(16);
+		}
+	}
+
+	&__last {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__sec {
+		line-height: normal;
+		font-size: toRem(16);
+	}
+
+	&__icons {
+		display: flex;
+		gap: toRem(7);
+		align-items: center;
+		span {
+			display: flex;
+			width: toRem(24);
+			height: toRem(24);
+			align-items: center;
+			justify-content: center;
+			&:first-child {
+				color: $redColor;
+				font-size: toRem(20);
+			}
+			&:last-child {
+				color: #657bd8;
+				font-size: toRem(23);
+			}
+		}
+	}
+}
+.mobile-item-articles {
+	&__columns {
+		display: flex;
+		justify-content: space-between;
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+
+	&__column {
+	}
+
+	&__ways {
+		&:not(:last-child) {
+			margin-bottom: toRem(9);
+		}
+	}
+
+	&__town {
+		display: flex;
+		gap: toRem(5);
+		font-weight: 800;
+		align-items: center;
+		font-size: toRem(16);
+		span {
+			font-weight: 400;
+			font-size: toRem(14);
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(8);
+		}
+	}
+
+	&__long {
+		line-height: normal;
+		font-size: toRem(13);
+		&:not(:last-child) {
+			margin-bottom: toRem(14);
+		}
+	}
+
+	&__final {
+		h5 {
+			font-weight: 800;
+			color: $grenColor;
+			line-height: normal;
+			font-size: toRem(16);
+		}
+		span {
+			line-height: normal;
+			font-size: toRem(13);
+		}
+	}
+
+	&__list {
+		gap: toRem(5);
+		display: flex;
+		align-items: end;
+		flex-direction: column;
+	}
+
+	&__button {
+		width: 100%;
+		height: toRem(40);
+	}
+}
+.navigation-articles {
+	display: flex;
+	gap: toRem(14);
+	align-items: center;
+	margin-top: toRem(40);
+	justify-content: center;
+	@media (max-width: $mobile) {
+		gap: toRem(20);
+		margin-top: toRem(25);
+	}
+	&__button {
+		display: flex;
+		gap: toRem(10);
+		font-weight: 800;
+		color: $whiteColor;
+		line-height: normal;
+		align-items: center;
+		font-size: toRem(16);
+		border-radius: toRem(50);
+		padding: toRem(7) toRem(15);
+		border: toRem(1) solid $grenColor;
+		transition: background-color 0.2s ease 0s;
+		&::before {
+			font-size: toRem(13);
+			transform: translateY(toRem(1));
+		}
+		&--prev {
+		}
+		&--next {
+			flex-direction: row-reverse;
+			&::before {
+				transform: rotate(-180deg);
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $grayColor;
+			}
+		}
+		@media (max-width: $mobile) {
+			width: toRem(40);
+			height: toRem(40);
+			color: $mainColor;
+			span {
+				display: none;
+			}
+			&--prev {
+				padding-left: toRem(13);
+			}
+			&--next {
+				padding-right: toRem(13);
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		gap: toRem(10);
+		align-items: center;
+		@media (max-width: $mobile) {
+			gap: toRem(5);
+		}
+	}
+
+	&__item {
+	}
+
+	&__link {
+		display: flex;
+		width: toRem(31);
+		font-weight: 800;
+		height: toRem(31);
+		color: $whiteColor;
+		border-radius: 50%;
+		align-items: center;
+		font-size: toRem(16);
+		justify-content: center;
+		&--active {
+			background-color: $grenColor;
+		}
+		@media (max-width: $mobile) {
+			width: toRem(27);
+			height: toRem(27);
+			color: $mainColor;
+			font-size: toRem(14);
+			&--active {
+				color: $whiteColor;
+			}
+		}
+	}
+}
+//========================================================================================================================================================
+/*
+<div class="item-articles__last">
+	<div class="item-articles__sec">48 секунд назад</div>
+	<div class="item-articles__icons"><span class="_icon-favorite-empty"></span><span class="_icon-verified"></span></div>
+</div>
+*/
+//========================================================================================================================================================
