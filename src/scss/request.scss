@@ -71,6 +71,8 @@
 	}
 
 	&__body {
+		display: grid;
+		gap: toRem(40);
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 60, 40);
 		}
@@ -109,13 +111,30 @@
 		background-color: $grenColor;
 	}
 
+	&__content {
+		padding: toRem(32) toRem(20) toRem(32) toRem(60);
+	}
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+
 	&__select {
 		width: 100%;
+	}
+
+	&__label {
 	}
 
 	&__span {
 		display: flex;
 		line-height: normal;
+		span {
+			opacity: 0;
+			visibility: hidden;
+		}
 		&:not(:last-child) {
 			margin-bottom: toRem(5);
 		}
@@ -132,7 +151,132 @@
 	&__content {
 		display: flex;
 		gap: toRem(50);
-		padding: toRem(32) toRem(60);
+	}
+
+	&__select {
+		width: 100%;
+		max-width: toRem(450);
+	}
+}
+.item-request-second {
+	&__content {
+	}
+
+	&__main {
+		display: flex;
+		gap: toRem(50);
+		&:not(:last-child) {
+			margin-bottom: toRem(40);
+		}
+	}
+
+	&__selects {
+		display: flex;
+		gap: toRem(50);
+		flex: 1 1 100%;
+	}
+
+	&__info {
+		display: flex;
+		flex: 1 1 100%;
+		&.info-max-gap {
+			gap: toRem(50);
+		}
+		&.info-min-gap {
+			gap: toRem(15);
+		}
+	}
+
+	&__input {
+		max-width: toRem(125);
+	}
+
+	&__bottom {
+		display: grid;
+		gap: toRem(50);
+		grid-template-columns: toRem(175) auto;
+	}
+
+	&__options {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__optional {
+		align-self: start;
+		align-items: start;
+		justify-items: start;
+	}
+
+	&__opt {
+		&:not(:last-child) {
+			margin-bottom: em(10);
+		}
+	}
+}
+.item-request-third {
+	&__content {
+	}
+
+	&__body {
+		display: flex;
+		gap: toRem(50);
+	}
+
+	&__input {
+	}
+
+	&__currency {
+		max-width: toRem(162);
+	}
+
+	&__condition {
+		position: relative;
+	}
+
+	&__label {
+	}
+
+	&__inp {
+		max-width: toRem(125);
+	}
+
+	&__all {
+		padding: toRem(0) toRem(53) toRem(0) toRem(20);
+	}
+
+	&__details {
+		position: relative;
+	}
+
+	&__button {
+	}
+}
+.item-request-four {
+	&__content {
+	}
+
+	&__body {
+		display: flex;
+		gap: toRem(50);
+	}
+
+	&__label {
+		width: 100%;
+		max-width: toRem(300);
+	}
+
+	&__input {
+		width: 100%;
+	}
+}
+.item-request-five {
+	&__content {
+		padding: toRem(60) toRem(20) toRem(60) toRem(60);
+	}
+
+	&__button {
 	}
 }
 // ========================================================================================================================================================

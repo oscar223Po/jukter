@@ -1,3 +1,4 @@
+// ========================================================================================================================================================
 .options {
 	display: flex;
 	flex-direction: column;
@@ -10,6 +11,14 @@
 			margin-bottom: em(5);
 		}
 	}
+
+	// .options__items
+	&__items {
+		display: flex;
+		gap: toRem(7);
+		align-items: center;
+	}
+
 	// .options__input
 	&__input {
 		width: 0;
@@ -30,15 +39,15 @@
 		display: inline-flex;
 		align-items: center;
 		cursor: pointer;
-		gap: 10px;
+		gap: 7px;
 		&:before {
 			content: "";
 			align-self: flex-start;
-			width: 20px;
-			height: 20px;
-			flex: 0 0 20px;
+			width: 18px;
+			height: 18px;
+			flex: 0 0 18px;
 			border-radius: 50%;
-			border: 1px solid #a7a9ac;
+			border: 1px solid $grenColor;
 		}
 		&:after {
 			content: "";
@@ -47,13 +56,14 @@
 			width: 10px;
 			height: 10px;
 			border-radius: 50%;
-			background-color: #77243a;
+			background-color: $grenColor;
 			position: absolute;
-			left: 5px;
-			top: 5px;
+			left: 4px;
+			top: 4px;
 		}
 	}
 	// .options__text
 	&__text {
 	}
 }
+// ========================================================================================================================================================

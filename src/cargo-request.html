@@ -21,8 +21,8 @@
 					<div class="request__body">
 						<div class="request__item item-request item-request-first">
 							<div class="item-request__number">1</div>
-							<div class="item-request-first__content">
-								<div class="item-request__select">
+							<div class="item-request__content item-request-first__content">
+								<div class="item-request-first__select">
 									<span class="item-request__span">Откуда</span>
 									<select name="form[]" data-class-modif="req-selected">
 										<option value="1">Пермь, Россия</option>
@@ -31,7 +31,7 @@
 									</select>
 									<button type="button" class="item-request__add">Добавить 2-ой пункт погрузки</button>
 								</div>
-								<div class="item-request__select">
+								<div class="item-request-first__select">
 									<span class="item-request__span">Куда</span>
 									<select name="form[]" data-class-modif="req-selected">
 										<option value="1" selected>Пермь, Россия</option>
@@ -42,7 +42,7 @@
 									</select>
 									<button type="button" class="item-request__add">Добавить 2-ой пункт погрузки</button>
 								</div>
-								<div class="item-request__select">
+								<div class="item-request-first__select">
 									<span class="item-request__span">Дата</span>
 									<select name="form[]" data-class-modif="req-date">
 										<option value="1" selected>02.02.2024</option>
@@ -52,12 +52,152 @@
 								</div>
 							</div>
 						</div>
+						<div class="request__item item-request item-request-second">
+							<div class="item-request__number">2</div>
+							<div class="item-request__content item-request-second__content">
+								<h4 class="item-request__title title-sm">Информация о грузе</h4>
+								<div class="item-request-second__body">
+									<div class="item-request-second__main">
+										<div class="item-request-second__selects">
+											<div class="item-request__select">
+												<span class="item-request__span">Характер груза</span>
+												<select name="form[]" data-class-modif="req-regular">
+													<option data-class="_icon-box" value="1">Выбрать</option>
+													<option data-class="_icon-box" value="2">Москва, Россия</option>
+													<option data-class="_icon-box" value="3">Мурманск, Россия</option>
+												</select>
+											</div>
+											<div class="item-request__select">
+												<span class="item-request__span">Тип транспорта</span>
+												<select name="form[]" data-class-modif="req-regular">
+													<option data-class="_icon-bus" value="1">Выбрать</option>
+													<option data-class="_icon-bus" value="2">Москва, Россия</option>
+													<option data-class="_icon-bus" value="3">Мурманск, Россия</option>
+												</select>
+											</div>
+										</div>
+										<div class="item-request-second__info info-max-gap">
+											<label for="#" class="item-request__label">
+												<span class="item-request__span">Вес груза, т</span>
+												<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="item-request-second__input input">
+											</label>
+											<label for="#" class="item-request__label">
+												<span class="item-request__span">Вес груза, т</span>
+												<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="item-request-second__input input">
+											</label>
+											<label for="#" class="item-request__label">
+												<span class="item-request__span">Вес груза, т</span>
+												<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="item-request-second__input input">
+											</label>
+										</div>
+									</div>
+									<div class="item-request-second__bottom">
+										<div class="item-request-second__options">
+											<div class="options__item">
+												<input id="o_1" class="options__input" checked type="radio" value="1" name="option-01">
+												<label for="o_1" class="options__label"><span class="options__text">Без догруза</span></label>
+											</div>
+											<div class="options__item">
+												<input id="o_2" class="options__input" type="radio" value="2" name="option-01">
+												<label for="o_2" class="options__label"><span class="options__text">Догруз</span></label>
+											</div>
+											<div class="options__item">
+												<input id="o_3" class="options__input" type="radio" value="3" name="option-01">
+												<label for="o_3" class="options__label"><span class="options__text">Возможен догруз</span></label>
+											</div>
+										</div>
+										<div class="item-request-second__optional">
+											<div class="item-request-second__opt options__item">
+												<input id="o_1" class="options__input" checked type="radio" value="1" name="option-02">
+												<label for="o_1" class="options__label"><span class="options__text">Указать размеры груза, в метрах</span></label>
+											</div>
+											<div class="item-request-second__info info-min-gap">
+												<label for="#" class="item-request__label">
+													<span class="item-request__span">Длина, м</span>
+													<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="item-request-second__input input">
+												</label>
+												<label for="#" class="item-request__label">
+													<span class="item-request__span">Ширина, м</span>
+													<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="item-request-second__input input">
+												</label>
+												<label for="#" class="item-request__label">
+													<span class="item-request__span">Высота, м</span>
+													<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="item-request-second__input input">
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="request__item item-request item-request-third">
+							<div class="item-request__number">3</div>
+							<div class="item-request__content item-request-third__content">
+								<h4 class="item-request__title title-sm">Стоимость</h4>
+								<div class="item-request-third__body">
+									<label for="#" class="item-request__label">
+										<span class="item-request__span">Стоимость</span>
+										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Указать стоимость" class="item-request-third__input input">
+									</label>
+									<div class="item-request__select item-request-third__currency">
+										<span class="item-request__span">Валюта</span>
+										<select name="form[]" data-class-modif="req-selected">
+											<option value="1">RUB</option>
+											<option value="2">KAZ</option>
+											<option value="3">KGS</option>
+											<option value="4">USD</option>
+										</select>
+									</div>
+									<div class="item-request-third__condition">
+										<label for="#" class="item-request-third__label">
+											<span class="item-request__span">Доп. условие</span>
+											<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="всего" class="item-request-third__inp input-actions input-actions--active input">
+										</label>
+									</div>
+									<div class="item-request-third__details">
+										<span class="item-request__span">Доп. условие</span>
+										<button data-popup="#details" type="button" class="item-request-third__button button button--blue">Детали оплаты</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="request__item item-request item-request-four">
+							<div class="item-request__number">4</div>
+							<div class="item-request__content item-request-four__content">
+								<h4 class="item-request__title title-sm">Контактная информация</h4>
+								<div class="item-request-four__body">
+									<label for="#" class="item-request-four__label">
+										<span class="item-request__span">Номер телефона</span>
+										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" class="item-request-four__input input-actions input">
+									</label>
+									<label for="#" class="item-request-four__label">
+										<span class="item-request__span">Номер WhatsApp</span>
+										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" class="item-request-four__input input-actions input">
+									</label>
+									<label for="#" class="item-request-four__label">
+										<span class="item-request__span">Номер Telegram</span>
+										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" class="item-request-four__input input-actions input">
+									</label>
+									<label for="#" class="item-request-four__label">
+										<span class="item-request__span">Дополнительный номер телефона</span>
+										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" class="item-request-four__input input-actions input">
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="request__item item-request item-request-five">
+							<div class="item-request__number">5</div>
+							<div class="item-request__content item-request-five__content">
+								<button data-popup="#condition" type="button" class="item-request-five__button button button--blue">Дополнительная информация</button>
+							</div>
+						</div>
 					</div>
 					<div class="request__button"><a href="" class="button button--green">Разместить</a></div>
 				</div>
 			</section>
 		</main>
 		@@include('html/_footer.htm',{})
+		@@include('html/_popup.htm',{})
 	</div>
 	@@include('html/_js.htm',{})
 </body>

@@ -31,12 +31,38 @@
 			}
 		}
 	}
+	&--green-big {
+		height: toRem(58);
+		color: $whiteColor;
+		border-radius: toRem(50);
+		background-color: $grenColor;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $blueColor;
+			}
+		}
+	}
 	&--white {
 		background-color: $whiteColor;
 		@media (any-hover: hover) {
 			&:hover {
 				color: $whiteColor;
 				background-color: $darkGrayColor;
+			}
+		}
+	}
+	&--blue {
+		font-weight: 800;
+		height: toRem(45);
+		color: $whiteColor;
+		line-height: normal;
+		border-radius: toRem(50);
+		padding: toRem(0) toRem(25);
+		background-color: $blueColor;
+		transition: background-color 0.15s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $grenColor;
 			}
 		}
 	}

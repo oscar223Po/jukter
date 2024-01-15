@@ -405,6 +405,46 @@ summary::-webkit-details-marker {
 		}
 	}
 }
+// ========================================================================================================================================================
+.checkbox-inp {
+	display: flex;
+	gap: toRem(7);
+	align-items: center;
+	justify-content: space-between;
+	&__label {
+		position: relative;
+		span {
+			top: 0;
+			bottom: 0;
+			display: flex;
+			right: toRem(10);
+			position: absolute;
+			align-items: center;
+			font-size: toRem(16);
+		}
+	}
+
+	&__text {
+		line-height: normal;
+	}
+}
+.checkbox-opt {
+	&__text {
+		line-height: normal;
+	}
+}
+// ========================================================================================================================================================
+.input-actions {
+	font-weight: 800;
+	color: $whiteColor;
+	transition: background-color 0.3s ease 0s;
+	&::placeholder {
+		color: $whiteColor;
+	}
+	&--active {
+		background-color: $blueColor;
+	}
+}
 //========================================================================================================================================================
 /*
 <div class="item-articles__last">

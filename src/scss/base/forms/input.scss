@@ -1,3 +1,4 @@
+// ========================================================================================================================================================
 //<INPUT>
 // Сніппет (HTML): inp
 input[type="text"],
@@ -9,14 +10,23 @@ textarea {
 	appearance: none;
 }
 .input {
-	border-radius: 0 !important;
 	width: 100%;
 	display: block;
+	height: toRem(45);
 	padding: 0px 20px;
-	border: 1px solid #eee;
+	border-radius: toRem(25);
+	border: 1px solid $grayColor;
+	&::placeholder {
+		color: $mainColor;
+	}
 	&._form-focus {
 	}
 	&._form-error {
+	}
+	&--min {
+		width: toRem(98);
+		height: toRem(35);
+		padding: toRem(0) toRem(50) toRem(0) toRem(10);
 	}
 }
 .input[placeholder]:not([data-placeholder-nohiden]) {
@@ -27,8 +37,8 @@ textarea {
 		opacity: 0;
 	}
 }
-
 textarea.input {
 	resize: none;
 	padding: 0px 0px;
 }
+// ========================================================================================================================================================

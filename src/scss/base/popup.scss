@@ -51,15 +51,143 @@ body::after {
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
-	background-color: #eee;
-	padding: 20px;
 	width: 100%;
-	max-width: 900px;
-	border-radius: 20px;
+	border-radius: toRem(25);
+	background-color: $whiteColor;
+	box-shadow: toRem(0) toRem(0) toRem(25) toRem(0) rgba(173, 173, 173, 0.5);
 	.lock & {
 		visibility: visible;
 	}
 }
 //========================================================================================================================================================
-// Popups
+.top-popup {
+	display: grid;
+	align-items: center;
+	grid-template-columns: toRem(24) auto toRem(24);
+	&:not(:last-child) {
+		margin-bottom: toRem(34);
+	}
+	&__empty {
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__cancel {
+		font-size: toRem(24);
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $redColor;
+			}
+		}
+	}
+}
+//========================================================================================================================================================
+// Condition Window Close & Open
+.condition {
+	max-width: toRem(1255);
+	padding: toRem(25) toRem(45) toRem(45) toRem(45);
+	&__main {
+		display: grid;
+		justify-content: space-between;
+		grid-template-columns: toRem(195) toRem(600) toRem(245);
+		&:not(:last-child) {
+			margin-bottom: toRem(60);
+		}
+	}
+
+	&__column {
+	}
+
+	&__button {
+		display: flex;
+		margin: toRem(0) auto;
+		padding: toRem(0) toRem(90);
+	}
+}
+.column-condition {
+	&__title {
+		font-weight: 800;
+		line-height: normal;
+		font-size: toRem(22);
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+
+	&__checkboxes {
+		display: grid;
+		gap: toRem(10);
+		align-items: start;
+	}
+
+	&__checkbox {
+	}
+
+	&__checkbox-inp {
+	}
+
+	&__input {
+		width: toRem(98);
+		height: toRem(35);
+		text-align: center;
+	}
+
+	&__checkboxes-big {
+		display: grid;
+		gap: toRem(30);
+		grid-template-columns: toRem(260) auto;
+	}
+
+	&__select {
+	}
+}
+//========================================================================================================================================================
+// Details Window Close & Open
+.details {
+	max-width: toRem(395);
+	padding: toRem(25) toRem(45) toRem(45) toRem(45);
+	&__main {
+		display: grid;
+		gap: toRem(25);
+		&:not(:last-child) {
+			margin-bottom: toRem(60);
+		}
+	}
+
+	&__item {
+	}
+
+	&__button {
+		width: 100%;
+	}
+}
+.item-details {
+	&__title {
+		font-weight: 800;
+		line-height: normal;
+		font-size: toRem(22);
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+
+	&__chekboxes {
+		display: grid;
+		gap: toRem(10);
+		&--wrap {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+	}
+
+	&__checkbox {
+	}
+
+	&__checkbox-inp {
+	}
+}
 //========================================================================================================================================================

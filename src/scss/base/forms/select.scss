@@ -158,7 +158,6 @@
 	}
 	//========================================================================================================================================================
 	&_req-selected {
-		max-width: toRem(452);
 		.select__title {
 			font-weight: 800;
 			color: $whiteColor;
@@ -218,6 +217,73 @@
 		.select__options {
 		}
 		.select__option {
+		}
+	}
+	&_req-regular {
+		flex: 1 1 100%;
+		max-width: toRem(352);
+		.select__title {
+			line-height: normal;
+			border: toRem(1) solid $grayColor;
+		}
+		.select__value {
+			&::after {
+				content: "\e90b";
+			}
+		}
+		.select__content {
+			display: flex;
+			gap: toRem(10);
+			align-items: center;
+			&::before {
+				color: $grenColor;
+				font-size: toRem(24);
+			}
+		}
+		.select__options {
+			border: 1px solid $grayColor;
+		}
+		.select__option {
+			display: flex;
+			gap: toRem(10);
+			align-items: center;
+			font-size: toRem(18);
+			&::before {
+				color: $grenColor;
+				font-size: toRem(24);
+			}
+			&:not(:last-child) {
+				border-bottom: 1px solid $grayColor;
+			}
+		}
+	}
+	&_cond-min {
+		max-width: toRem(98);
+		&._select-open {
+			.select__title {
+				border-radius: toRem(10) toRem(10) toRem(0) toRem(0);
+			}
+			.select__options {
+				border-radius: toRem(0) toRem(0) toRem(10) toRem(10);
+			}
+		}
+		.select__title {
+			padding: toRem(0);
+			font-size: toRem(14);
+			border-radius: toRem(25);
+			border: toRem(1) solid $grayColor;
+		}
+		.select__value {
+			margin: 0;
+			height: toRem(35);
+			padding: toRem(0) toRem(10);
+			&::after {
+				content: "\e90b";
+			}
+		}
+		.select__option {
+			padding: toRem(5);
+			font-size: toRem(14);
 		}
 	}
 }

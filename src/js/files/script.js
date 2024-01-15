@@ -108,5 +108,43 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 		});
 	}
+	// ================[ JavaScript Section Conditional Window ]================
+	/* 
+	const conditionWindow = document.querySelector(".condition");
+	const conditionButtonClose = document.querySelector(".condition__cancel");
+	const conditionButton = document.querySelector(".item-request-third__all");
+	if (conditionButton !== null) {
+		conditionButton.addEventListener("click", () => {
+			conditionWindow.classList.remove("condition-close");
+		})
+		conditionButtonClose.addEventListener("click", () => {
+			conditionWindow.classList.add("condition-close");
+		})
+	}
+	const detailsWindow = document.querySelector(".details");
+	const detailsButtonClose = document.querySelector(".details__cancel");
+	const detailsButton = document.querySelector(".item-request-third__button");
+	if (detailsButton !== null) {
+		detailsButton.addEventListener("click", () => {
+			detailsWindow.classList.remove("details-close");
+		})
+		detailsButtonClose.addEventListener("click", () => {
+			detailsWindow.classList.add("details-close");
+		})
+	}
+	*/
+	// ================[ JavaScript Section Input Active ]================
+	const inputs = document.querySelectorAll('.input-actions');
+	if (inputs !== null) {
+		inputs.forEach(function (input) {
+			input.addEventListener("input", function () {
+				if (input.value.trim() !== "") {
+					input.classList.add('input-actions--active');
+				} else {
+					input.classList.remove('input-actions--active');
+				}
+			});
+		})
+	}
 });
 //--------------------------------------------------------------

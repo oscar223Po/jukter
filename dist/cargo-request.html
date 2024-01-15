@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240113231659">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240115190921">
 	<link rel="shortcut icon" href="img/icons/head-logo.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,8 +56,8 @@
 					<div class="request__body">
 						<div class="request__item item-request item-request-first">
 							<div class="item-request__number">1</div>
-							<div class="item-request-first__content">
-								<div class="item-request__select">
+							<div class="item-request__content item-request-first__content">
+								<div class="item-request-first__select">
 									<span class="item-request__span">Откуда</span>
 									<select name="form[]" data-class-modif="req-selected">
 										<option value="1">Пермь, Россия</option>
@@ -66,7 +66,7 @@
 									</select>
 									<button type="button" class="item-request__add">Добавить 2-ой пункт погрузки</button>
 								</div>
-								<div class="item-request__select">
+								<div class="item-request-first__select">
 									<span class="item-request__span">Куда</span>
 									<select name="form[]" data-class-modif="req-selected">
 										<option value="1" selected>Пермь, Россия</option>
@@ -77,7 +77,7 @@
 									</select>
 									<button type="button" class="item-request__add">Добавить 2-ой пункт погрузки</button>
 								</div>
-								<div class="item-request__select">
+								<div class="item-request-first__select">
 									<span class="item-request__span">Дата</span>
 									<select name="form[]" data-class-modif="req-date">
 										<option value="1" selected>02.02.2024</option>
@@ -85,6 +85,145 @@
 										<option value="3">02.04.2024</option>
 									</select>
 								</div>
+							</div>
+						</div>
+						<div class="request__item item-request item-request-second">
+							<div class="item-request__number">2</div>
+							<div class="item-request__content item-request-second__content">
+								<h4 class="item-request__title title-sm">Информация о грузе</h4>
+								<div class="item-request-second__body">
+									<div class="item-request-second__main">
+										<div class="item-request-second__selects">
+											<div class="item-request__select">
+												<span class="item-request__span">Характер груза</span>
+												<select name="form[]" data-class-modif="req-regular">
+													<option data-class="_icon-box" value="1">Выбрать</option>
+													<option data-class="_icon-box" value="2">Москва, Россия</option>
+													<option data-class="_icon-box" value="3">Мурманск, Россия</option>
+												</select>
+											</div>
+											<div class="item-request__select">
+												<span class="item-request__span">Тип транспорта</span>
+												<select name="form[]" data-class-modif="req-regular">
+													<option data-class="_icon-bus" value="1">Выбрать</option>
+													<option data-class="_icon-bus" value="2">Москва, Россия</option>
+													<option data-class="_icon-bus" value="3">Мурманск, Россия</option>
+												</select>
+											</div>
+										</div>
+										<div class="item-request-second__info info-max-gap">
+											<label for="#" class="item-request__label">
+												<span class="item-request__span">Вес груза, т</span>
+												<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="item-request-second__input input">
+											</label>
+											<label for="#" class="item-request__label">
+												<span class="item-request__span">Вес груза, т</span>
+												<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="item-request-second__input input">
+											</label>
+											<label for="#" class="item-request__label">
+												<span class="item-request__span">Вес груза, т</span>
+												<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="item-request-second__input input">
+											</label>
+										</div>
+									</div>
+									<div class="item-request-second__bottom">
+										<div class="item-request-second__options">
+											<div class="options__item">
+												<input id="o_1" class="options__input" checked type="radio" value="1" name="option-01">
+												<label for="o_1" class="options__label"><span class="options__text">Без догруза</span></label>
+											</div>
+											<div class="options__item">
+												<input id="o_2" class="options__input" type="radio" value="2" name="option-01">
+												<label for="o_2" class="options__label"><span class="options__text">Догруз</span></label>
+											</div>
+											<div class="options__item">
+												<input id="o_3" class="options__input" type="radio" value="3" name="option-01">
+												<label for="o_3" class="options__label"><span class="options__text">Возможен догруз</span></label>
+											</div>
+										</div>
+										<div class="item-request-second__optional">
+											<div class="item-request-second__opt options__item">
+												<input id="o_1" class="options__input" checked type="radio" value="1" name="option-02">
+												<label for="o_1" class="options__label"><span class="options__text">Указать размеры груза, в метрах</span></label>
+											</div>
+											<div class="item-request-second__info info-min-gap">
+												<label for="#" class="item-request__label">
+													<span class="item-request__span">Длина, м</span>
+													<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="item-request-second__input input">
+												</label>
+												<label for="#" class="item-request__label">
+													<span class="item-request__span">Ширина, м</span>
+													<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="item-request-second__input input">
+												</label>
+												<label for="#" class="item-request__label">
+													<span class="item-request__span">Высота, м</span>
+													<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="item-request-second__input input">
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="request__item item-request item-request-third">
+							<div class="item-request__number">3</div>
+							<div class="item-request__content item-request-third__content">
+								<h4 class="item-request__title title-sm">Стоимость</h4>
+								<div class="item-request-third__body">
+									<label for="#" class="item-request__label">
+										<span class="item-request__span">Стоимость</span>
+										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Указать стоимость" class="item-request-third__input input">
+									</label>
+									<div class="item-request__select item-request-third__currency">
+										<span class="item-request__span">Валюта</span>
+										<select name="form[]" data-class-modif="req-selected">
+											<option value="1">RUB</option>
+											<option value="2">KAZ</option>
+											<option value="3">KGS</option>
+											<option value="4">USD</option>
+										</select>
+									</div>
+									<div class="item-request-third__condition">
+										<label for="#" class="item-request-third__label">
+											<span class="item-request__span">Доп. условие</span>
+											<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="всего" class="item-request-third__inp input-actions input-actions--active input">
+										</label>
+									</div>
+									<div class="item-request-third__details">
+										<span class="item-request__span">Доп. условие</span>
+										<button data-popup="#details" type="button" class="item-request-third__button button button--blue">Детали оплаты</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="request__item item-request item-request-four">
+							<div class="item-request__number">4</div>
+							<div class="item-request__content item-request-four__content">
+								<h4 class="item-request__title title-sm">Контактная информация</h4>
+								<div class="item-request-four__body">
+									<label for="#" class="item-request-four__label">
+										<span class="item-request__span">Номер телефона</span>
+										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" class="item-request-four__input input-actions input">
+									</label>
+									<label for="#" class="item-request-four__label">
+										<span class="item-request__span">Номер WhatsApp</span>
+										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" class="item-request-four__input input-actions input">
+									</label>
+									<label for="#" class="item-request-four__label">
+										<span class="item-request__span">Номер Telegram</span>
+										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" class="item-request-four__input input-actions input">
+									</label>
+									<label for="#" class="item-request-four__label">
+										<span class="item-request__span">Дополнительный номер телефона</span>
+										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" class="item-request-four__input input-actions input">
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="request__item item-request item-request-five">
+							<div class="item-request__number">5</div>
+							<div class="item-request__content item-request-five__content">
+								<button data-popup="#condition" type="button" class="item-request-five__button button button--blue">Дополнительная информация</button>
 							</div>
 						</div>
 					</div>
@@ -144,8 +283,372 @@
 			</div>
 		</footer>
 		<!-- Footer -->
+		<!-- //======================================================================================================================================================== -->
+		<div id="condition" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content condition">
+					<div class="condition__top top-popup">
+						<div class="top-popup__empty"></div>
+						<h4 class="top-popup__title title-sm">Дополнительная информация</h4>
+						<button data-close type="button" class="top-popup__cancel _icon-close"></button>
+					</div>
+					<div class="condition__main">
+						<div class="condition__column column-condition">
+							<h4 class="column-condition__title">Документы</h4>
+							<div class="column-condition__checkboxes">
+								<div class="column-condition__checkbox checkbox-opt">
+									<input id="c_1" data-error="Error" class="checkbox-opt__input" type="checkbox" value="1" name="form[]">
+									<label for="c_1" class="checkbox-opt__label"><span class="checkbox-opt__text">CMR</span></label>
+								</div>
+								<div class="column-condition__checkbox checkbox-opt">
+									<input id="c_2" data-error="Error" class="checkbox-opt__input" type="checkbox" value="2" name="form[]">
+									<label for="c_2" class="checkbox-opt__label"><span class="checkbox-opt__text">TIR</span></label>
+								</div>
+								<div class="column-condition__checkbox checkbox-opt">
+									<input id="c_3" data-error="Error" class="checkbox-opt__input" type="checkbox" value="3" name="form[]">
+									<label for="c_3" class="checkbox-opt__label"><span class="checkbox-opt__text">T1</span></label>
+								</div>
+								<div class="column-condition__checkbox checkbox-opt">
+									<input id="c_4" data-error="Error" class="checkbox-opt__input" type="checkbox" value="4" name="form[]">
+									<label for="c_4" class="checkbox-opt__label"><span class="checkbox-opt__text">T2</span></label>
+								</div>
+								<div class="column-condition__checkbox-inp checkbox-inp">
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="c_5" data-error="Error" class="checkbox-opt__input" type="checkbox" value="5" name="form[]">
+										<label for="c_5" class="checkbox-opt__label"><span class="checkbox-opt__text">ADR</span></label>
+									</div>
+									<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="column-condition__input input">
+								</div>
+								<div class="column-condition__checkbox checkbox-opt">
+									<input id="c_6" data-error="Error" class="checkbox-opt__input" type="checkbox" value="6" name="form[]">
+									<label for="c_6" class="checkbox-opt__label"><span class="checkbox-opt__text">ETMT</span></label>
+								</div>
+								<div class="column-condition__checkbox checkbox-opt">
+									<input id="c_7" data-error="Error" class="checkbox-opt__input" type="checkbox" value="7" name="form[]">
+									<label for="c_7" class="checkbox-opt__label"><span class="checkbox-opt__text">Санпаспоррт</span></label>
+								</div>
+								<div class="column-condition__checkbox checkbox-opt">
+									<input id="c_8" data-error="Error" class="checkbox-opt__input" type="checkbox" value="8" name="form[]">
+									<label for="c_8" class="checkbox-opt__label"><span class="checkbox-opt__text">Санитарная книжка</span></label>
+								</div>
+								<div class="column-condition__checkbox checkbox-opt">
+									<input id="c_9" data-error="Error" class="checkbox-opt__input" type="checkbox" value="9" name="form[]">
+									<label for="c_9" class="checkbox-opt__label"><span class="checkbox-opt__text">Тамож. свидет.</span></label>
+								</div>
+								<div class="column-condition__checkbox checkbox-opt">
+									<input id="c_10" data-error="Error" class="checkbox-opt__input" type="checkbox" value="10" name="form[]">
+									<label for="c_10" class="checkbox-opt__label"><span class="checkbox-opt__text">Тамож. контроль</span></label>
+								</div>
+							</div>
+						</div>
+						<div class="condition__column column-condition">
+							<h4 class="column-condition__title">Погрузка</h4>
+							<div class="column-condition__checkboxes-big">
+								<div class="column-condition__checkboxes">
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="g_1" data-error="Error" class="checkbox-opt__input" type="checkbox" value="1" name="form[]">
+										<label for="g_1" class="checkbox-opt__label"><span class="checkbox-opt__text">Боковая</span></label>
+									</div>
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="g_2" data-error="Error" class="checkbox-opt__input" type="checkbox" value="2" name="form[]">
+										<label for="g_2" class="checkbox-opt__label"><span class="checkbox-opt__text">Верхняя</span></label>
+									</div>
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="g_3" data-error="Error" class="checkbox-opt__input" type="checkbox" value="3" name="form[]">
+										<label for="g_3" class="checkbox-opt__label"><span class="checkbox-opt__text">Задняя</span></label>
+									</div>
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="g_4" data-error="Error" class="checkbox-opt__input" type="checkbox" value="4" name="form[]">
+										<label for="g_4" class="checkbox-opt__label"><span class="checkbox-opt__text">Полная растентовка</span></label>
+									</div>
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="g_5" data-error="Error" class="checkbox-opt__input" type="checkbox" value="5" name="form[]">
+										<label for="g_5" class="checkbox-opt__label"><span class="checkbox-opt__text">С обрешеткой</span></label>
+									</div>
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="g_6" data-error="Error" class="checkbox-opt__input" type="checkbox" value="6" name="form[]">
+										<label for="g_6" class="checkbox-opt__label"><span class="checkbox-opt__text">С бортами</span></label>
+									</div>
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="g_7" data-error="Error" class="checkbox-opt__input" type="checkbox" value="7" name="form[]">
+										<label for="g_7" class="checkbox-opt__label"><span class="checkbox-opt__text">Постоянно</span></label>
+									</div>
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="g_8" data-error="Error" class="checkbox-opt__input" type="checkbox" value="8" name="form[]">
+										<label for="g_8" class="checkbox-opt__label"><span class="checkbox-opt__text">Еженедельно</span></label>
+									</div>
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="g_9" data-error="Error" class="checkbox-opt__input" type="checkbox" value="9" name="form[]">
+										<label for="g_9" class="checkbox-opt__label"><span class="checkbox-opt__text">Ежедневно</span></label>
+									</div>
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="g_10" data-error="Error" class="checkbox-opt__input" type="checkbox" value="10" name="form[]">
+										<label for="g_10" class="checkbox-opt__label"><span class="checkbox-opt__text">Круглосуточно</span></label>
+									</div>
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="g_11" data-error="Error" class="checkbox-opt__input" type="checkbox" value="11" name="form[]">
+										<label for="g_11" class="checkbox-opt__label"><span class="checkbox-opt__text">Пломба</span></label>
+									</div>
+									<div class="column-condition__checkbox-inp checkbox-inp">
+										<div class="column-condition__checkbox checkbox-opt">
+											<input id="g_12" data-error="Error" class="checkbox-opt__input" type="checkbox" value="12" name="form[]">
+											<label for="g_12" class="checkbox-opt__label"><span class="checkbox-opt__text">Погрузка в</span></label>
+										</div>
+										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="00:00" class="column-condition__input input">
+									</div>
+									<div class="column-condition__checkbox-inp checkbox-inp">
+										<div class="column-condition__checkbox checkbox-opt">
+											<input id="g_13" data-error="Error" class="checkbox-opt__input" type="checkbox" value="13" name="form[]">
+											<label for="g_13" class="checkbox-opt__label"><span class="checkbox-opt__text">Выгрузка до</span></label>
+										</div>
+										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="00:00" class="column-condition__input input">
+									</div>
+								</div>
+								<div class="column-condition__checkboxes">
+									<div class="column-condition__checkbox-inp checkbox-inp">
+										<div class="column-condition__checkbox checkbox-opt">
+											<input id="g_14" data-error="Error" class="checkbox-opt__input" type="checkbox" value="14" name="form[]">
+											<label for="g_14" class="checkbox-opt__label"><span class="checkbox-opt__text">Дата разгурзки</span></label>
+										</div>
+										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="column-condition__input input">
+									</div>
+									<div class="column-condition__checkbox-inp checkbox-inp">
+										<div class="column-condition__checkbox checkbox-opt">
+											<input id="g_15" data-error="Error" class="checkbox-opt__input" type="checkbox" value="15" name="form[]">
+											<label for="g_15" class="checkbox-opt__label"><span class="checkbox-opt__text">Мест погр.</span></label>
+										</div>
+										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="column-condition__input input">
+									</div>
+									<div class="column-condition__checkbox-inp checkbox-inp">
+										<div class="column-condition__checkbox checkbox-opt">
+											<input id="g_16" data-error="Error" class="checkbox-opt__input" type="checkbox" value="16" name="form[]">
+											<label for="g_16" class="checkbox-opt__label"><span class="checkbox-opt__text">Мест выгр.</span></label>
+										</div>
+										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="column-condition__input input">
+									</div>
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="g_17" data-error="Error" class="checkbox-opt__input" type="checkbox" value="17" name="form[]">
+										<label for="g_17" class="checkbox-opt__label"><span class="checkbox-opt__text">Полуприцеп</span></label>
+									</div>
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="g_18" data-error="Error" class="checkbox-opt__input" type="checkbox" value="18" name="form[]">
+										<label for="g_18" class="checkbox-opt__label"><span class="checkbox-opt__text">Сцепка</span></label>
+									</div>
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="g_19" data-error="Error" class="checkbox-opt__input" type="checkbox" value="19" name="form[]">
+										<label for="g_19" class="checkbox-opt__label"><span class="checkbox-opt__text">Пневмоход</span></label>
+									</div>
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="g_20" data-error="Error" class="checkbox-opt__input" type="checkbox" value="20" name="form[]">
+										<label for="g_20" class="checkbox-opt__label"><span class="checkbox-opt__text">Гидроборт</span></label>
+									</div>
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="g_21" data-error="Error" class="checkbox-opt__input" type="checkbox" value="21" name="form[]">
+										<label for="g_21" class="checkbox-opt__label"><span class="checkbox-opt__text">Штора</span></label>
+									</div>
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="g_22" data-error="Error" class="checkbox-opt__input" type="checkbox" value="22" name="form[]">
+										<label for="g_22" class="checkbox-opt__label"><span class="checkbox-opt__text">Пирамида</span></label>
+									</div>
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="g_23" data-error="Error" class="checkbox-opt__input" type="checkbox" value="23" name="form[]">
+										<label for="g_23" class="checkbox-opt__label"><span class="checkbox-opt__text">Обрешетка</span></label>
+									</div>
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="g_24" data-error="Error" class="checkbox-opt__input" type="checkbox" value="24" name="form[]">
+										<label for="g_24" class="checkbox-opt__label"><span class="checkbox-opt__text">Манипулятор</span></label>
+									</div>
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="g_25" data-error="Error" class="checkbox-opt__input" type="checkbox" value="25" name="form[]">
+										<label for="g_25" class="checkbox-opt__label"><span class="checkbox-opt__text">Рокла (гидравлическая тележка)</span></label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="condition__column column-condition">
+							<h4 class="column-condition__title">Условия</h4>
+							<div class="column-condition__checkboxes">
+								<div class="column-condition__checkbox-inp checkbox-inp">
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="v_1" data-error="Error" class="checkbox-opt__input" type="checkbox" value="1" name="form[]">
+										<label for="v_1" class="checkbox-opt__label"><span class="checkbox-opt__text">Температура</span></label>
+									</div>
+									<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="column-condition__input input">
+								</div>
+								<div class="column-condition__checkbox checkbox-opt">
+									<input id="v_2" data-error="Error" class="checkbox-opt__input" type="checkbox" value="2" name="form[]">
+									<label for="v_2" class="checkbox-opt__label"><span class="checkbox-opt__text">Крюки</span></label>
+								</div>
+								<div class="column-condition__checkbox-inp checkbox-inp">
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="v_3" data-error="Error" class="checkbox-opt__input" type="checkbox" value="3" name="form[]">
+										<label for="v_3" class="checkbox-opt__label"><span class="checkbox-opt__text">Кол. паллет</span></label>
+									</div>
+									<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="column-condition__input input">
+								</div>
+								<div class="column-condition__checkbox-inp checkbox-inp">
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="v_4" data-error="Error" class="checkbox-opt__input" type="checkbox" value="4" name="form[]">
+										<label for="v_4" class="checkbox-opt__label"><span class="checkbox-opt__text">Тип паллет</span></label>
+									</div>
+									<div class="column-condition__select">
+										<select name="form[]" data-class-modif="cond-min">
+											<option value="1" selected>Пункт №1</option>
+											<option value="2">Пункт №2</option>
+											<option value="3">Пункт №3</option>
+											<option value="4">Пункт №4</option>
+										</select>
+									</div>
+								</div>
+								<div class="column-condition__checkbox-inp checkbox-inp">
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="v_5" data-error="Error" class="checkbox-opt__input" type="checkbox" value="5" name="form[]">
+										<label for="v_5" class="checkbox-opt__label"><span class="checkbox-opt__text">Ремни</span></label>
+									</div>
+									<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="column-condition__input input">
+								</div>
+								<div class="column-condition__checkbox checkbox-opt">
+									<input id="v_6" data-error="Error" class="checkbox-opt__input" type="checkbox" value="6" name="form[]">
+									<label for="v_6" class="checkbox-opt__label"><span class="checkbox-opt__text">Съемн. стойки</span></label>
+								</div>
+								<div class="column-condition__checkbox checkbox-opt">
+									<input id="v_7" data-error="Error" class="checkbox-opt__input" type="checkbox" value="7" name="form[]">
+									<label for="v_7" class="checkbox-opt__label"><span class="checkbox-opt__text">Жесткий борт</span></label>
+								</div>
+								<div class="column-condition__checkbox checkbox-opt">
+									<input id="v_8" data-error="Error" class="checkbox-opt__input" type="checkbox" value="8" name="form[]">
+									<label for="v_8" class="checkbox-opt__label"><span class="checkbox-opt__text">Деревянный пол</span></label>
+								</div>
+								<div class="column-condition__checkbox checkbox-opt">
+									<input id="v_9" data-error="Error" class="checkbox-opt__input" type="checkbox" value="9" name="form[]">
+									<label for="v_9" class="checkbox-opt__label"><span class="checkbox-opt__text">Рога (коники)</span></label>
+								</div>
+								<div class="column-condition__checkbox checkbox-opt">
+									<input id="v_10" data-error="Error" class="checkbox-opt__input" type="checkbox" value="10" name="form[]">
+									<label for="v_10" class="checkbox-opt__label"><span class="checkbox-opt__text">Транспорт с GPS</span></label>
+								</div>
+								<div class="column-condition__checkbox checkbox-opt">
+									<input id="v_11" data-error="Error" class="checkbox-opt__input" type="checkbox" value="11" name="form[]">
+									<label for="v_11" class="checkbox-opt__label"><span class="checkbox-opt__text">Паром</span></label>
+								</div>
+								<div class="column-condition__checkbox checkbox-opt">
+									<input id="v_12" data-error="Error" class="checkbox-opt__input" type="checkbox" value="12" name="form[]">
+									<label for="v_12" class="checkbox-opt__label"><span class="checkbox-opt__text">Терморегистратор</span></label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button data-close type="button" class="condition__button button button--green-big">Сохранить</button>
+				</div>
+			</div>
+		</div>
+		<!-- //======================================================================================================================================================== -->
+		<div id="details" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content details">
+					<div class="details__top top-popup">
+						<div class="top-popup__empty"></div>
+						<h4 class="top-popup__title title-sm">Детали оплаты</h4>
+						<button data-close type="button" class="top-popup__cancel _icon-close"></button>
+					</div>
+					<div class="details__main">
+						<div class="details__item item-details">
+							<h4 class="item-details__title">Метод оплаты</h4>
+							<div class="item-details__chekboxes item-details__chekboxes--wrap">
+								<div class="item-details__checkbox checkbox-opt">
+									<input id="d_1" data-error="Error" class="checkbox-opt__input" type="checkbox" value="1" name="form[]">
+									<label for="d_1" class="checkbox-opt__label"><span class="checkbox-opt__text">Б/н</span></label>
+								</div>
+								<div class="item-details__checkbox checkbox-opt">
+									<input id="d_2" data-error="Error" class="checkbox-opt__input" type="checkbox" value="2" name="form[]">
+									<label for="d_2" class="checkbox-opt__label"><span class="checkbox-opt__text">Нал.</span></label>
+								</div>
+								<div class="item-details__checkbox checkbox-opt">
+									<input id="d_3" data-error="Error" class="checkbox-opt__input" type="checkbox" value="3" name="form[]">
+									<label for="d_3" class="checkbox-opt__label"><span class="checkbox-opt__text">Комбинир.</span></label>
+								</div>
+								<div class="item-details__checkbox checkbox-opt">
+									<input id="d_4" data-error="Error" class="checkbox-opt__input" type="checkbox" value="4" name="form[]">
+									<label for="d_4" class="checkbox-opt__label"><span class="checkbox-opt__text">Софт</span></label>
+								</div>
+								<div class="item-details__checkbox checkbox-opt">
+									<input id="d_5" data-error="Error" class="checkbox-opt__input" type="checkbox" value="5" name="form[]">
+									<label for="d_5" class="checkbox-opt__label"><span class="checkbox-opt__text">Любая</span></label>
+								</div>
+								<div class="item-details__checkbox checkbox-opt">
+									<input id="d_6" data-error="Error" class="checkbox-opt__input" type="checkbox" value="6" name="form[]">
+									<label for="d_6" class="checkbox-opt__label"><span class="checkbox-opt__text">На карту</span></label>
+								</div>
+							</div>
+						</div>
+						<div class="details__item item-details">
+							<h4 class="item-details__title">Срок расчета</h4>
+							<div class="item-details__chekboxes">
+								<div class="item-details__checkbox checkbox-opt">
+									<input id="r_1" data-error="Error" class="checkbox-opt__input" type="checkbox" value="1" name="form[]">
+									<label for="r_1" class="checkbox-opt__label"><span class="checkbox-opt__text">При погрузке</span></label>
+								</div>
+								<div class="item-details__checkbox checkbox-opt">
+									<input id="r_2" data-error="Error" class="checkbox-opt__input" type="checkbox" value="2" name="form[]">
+									<label for="r_2" class="checkbox-opt__label"><span class="checkbox-opt__text">На выгрузке</span></label>
+								</div>
+								<div class="item-details__checkbox-inp checkbox-inp">
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="r_3" data-error="Error" class="checkbox-opt__input" type="checkbox" value="3" name="form[]">
+										<label for="r_3" class="checkbox-opt__label"><span class="checkbox-opt__text">Предоплата</span></label>
+									</div>
+									<label for="#" class="checkbox-inp__label">
+										<span>%</span>
+										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" class="checkbox-inp__input input input--min">
+									</label>
+								</div>
+								<div class="item-details__checkbox-inp checkbox-inp">
+									<div class="column-condition__checkbox checkbox-opt">
+										<input id="r_4" data-error="Error" class="checkbox-opt__input" type="checkbox" value="4" name="form[]">
+										<label for="r_4" class="checkbox-opt__label"><span class="checkbox-opt__text">Отсрочка платежа</span></label>
+									</div>
+									<label for="#" class="checkbox-inp__label">
+										<span>дней</span>
+										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" class="checkbox-inp__input input input--min">
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="details__item item-details">
+							<h4 class="item-details__title">Другое</h4>
+							<div class="item-details__chekboxes">
+								<div class="item-details__checkbox checkbox-opt">
+									<input id="a_1" data-error="Error" class="checkbox-opt__input" type="checkbox" value="1" name="form[]">
+									<label for="a_1" class="checkbox-opt__label"><span class="checkbox-opt__text">Торг</span></label>
+								</div>
+								<div class="item-details__checkbox checkbox-opt">
+									<input id="a_2" data-error="Error" class="checkbox-opt__input" type="checkbox" value="2" name="form[]">
+									<label for="a_2" class="checkbox-opt__label"><span class="checkbox-opt__text">Без торга</span></label>
+								</div>
+								<div class="item-details__checkbox checkbox-opt">
+									<input id="a_3" data-error="Error" class="checkbox-opt__input" type="checkbox" value="3" name="form[]">
+									<label for="a_3" class="checkbox-opt__label"><span class="checkbox-opt__text">НДС</span></label>
+								</div>
+								<div class="item-details__checkbox checkbox-opt">
+									<input id="a_4" data-error="Error" class="checkbox-opt__input" type="checkbox" value="4" name="form[]">
+									<label for="a_4" class="checkbox-opt__label"><span class="checkbox-opt__text">За топливо</span></label>
+								</div>
+								<div class="item-details__checkbox checkbox-opt">
+									<input id="a_5" data-error="Error" class="checkbox-opt__input" type="checkbox" value="5" name="form[]">
+									<label for="a_5" class="checkbox-opt__label"><span class="checkbox-opt__text">Запрос цены</span></label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button data-close type="button" class="details__button button button--green-big">Сохранить</button>
+				</div>
+			</div>
+		</div>
+		<!-- //======================================================================================================================================================== -->
+		<!-- <button data-close type="button" class="popup__close">Закрити</button> -->
+
 	</div>
-	<script src="js/app.min.js?_v=20240113231659"></script>
+	<script src="js/app.min.js?_v=20240115190921"></script>
 </body>
 
 </html>

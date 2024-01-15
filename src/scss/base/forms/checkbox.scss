@@ -38,4 +38,56 @@
 		align-self: center;
 	}
 }
+// ========================================================================================================================================================
+// Checkbox Like Option
+.checkbox-opt {
+	position: relative;
+	cursor: pointer;
+	&__input {
+		width: 0;
+		height: 0;
+		opacity: 0;
+		position: absolute;
+		&:focus-visible + .checkbox-opt__label:before {
+			box-shadow: 0 0 5px #000;
+		}
+		&:checked + .checkbox-opt__label:before {
+		}
+		&:checked + .checkbox-opt__label:after {
+			transform: scale(1);
+		}
+	}
+
+	&__label {
+		display: inline-flex;
+		align-items: center;
+		cursor: pointer;
+		gap: 7px;
+		&:before {
+			content: "";
+			margin-top: toRem(4);
+			align-self: flex-start;
+			width: 18px;
+			height: 18px;
+			flex: 0 0 18px;
+			border-radius: 50%;
+			border: 1px solid $grenColor;
+		}
+		&:after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			transform: scale(0);
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: $grenColor;
+			position: absolute;
+			left: 4px;
+			top: 8px;
+		}
+	}
+
+	&__text {
+	}
+}
 //========================================================================================================================================================
