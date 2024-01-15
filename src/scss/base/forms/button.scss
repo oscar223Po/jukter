@@ -41,6 +41,9 @@
 				background-color: $blueColor;
 			}
 		}
+		@media (max-width: $mobileSmall) {
+			height: toRem(40);
+		}
 	}
 	&--white {
 		background-color: $whiteColor;
@@ -64,6 +67,11 @@
 			&:hover {
 				background-color: $grenColor;
 			}
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(15);
+			border-radius: toRem(25);
+			padding: toRem(0) toRem(10);
 		}
 	}
 	&--fw {

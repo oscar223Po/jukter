@@ -58,6 +58,9 @@ body::after {
 	.lock & {
 		visibility: visible;
 	}
+	@media (max-width: $mobile) {
+		border-radius: toRem(15);
+	}
 }
 //========================================================================================================================================================
 .top-popup {
@@ -89,12 +92,28 @@ body::after {
 .condition {
 	max-width: toRem(1255);
 	padding: toRem(25) toRem(45) toRem(45) toRem(45);
+	@media (max-width: $mobile) {
+		padding: toRem(25) toRem(25) toRem(45) toRem(25);
+	}
 	&__main {
 		display: grid;
 		justify-content: space-between;
 		grid-template-columns: toRem(195) toRem(600) toRem(245);
 		&:not(:last-child) {
 			margin-bottom: toRem(60);
+		}
+		@media (max-width: em(1200)) {
+			display: flex;
+			gap: toRem(20);
+			flex-wrap: wrap;
+		}
+		@media (max-width: $tablet) {
+			flex-direction: column;
+		}
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: toRem(30);
+			}
 		}
 	}
 
@@ -105,15 +124,23 @@ body::after {
 		display: flex;
 		margin: toRem(0) auto;
 		padding: toRem(0) toRem(90);
+		@media (max-width: $mobileSmall) {
+			padding: toRem(0) toRem(54);
+		}
 	}
 }
 .column-condition {
 	&__title {
 		font-weight: 800;
 		line-height: normal;
-		font-size: toRem(22);
+		@include adaptiveValue("font-size", 22, 18);
 		&:not(:last-child) {
 			margin-bottom: toRem(20);
+		}
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: toRem(15);
+			}
 		}
 	}
 
@@ -139,6 +166,10 @@ body::after {
 		display: grid;
 		gap: toRem(30);
 		grid-template-columns: toRem(260) auto;
+		@media (max-width: $tablet) {
+			gap: toRem(10);
+			grid-template-columns: auto;
+		}
 	}
 
 	&__select {
@@ -149,11 +180,19 @@ body::after {
 .details {
 	max-width: toRem(395);
 	padding: toRem(25) toRem(45) toRem(45) toRem(45);
+	@media (max-width: $mobile) {
+		padding: toRem(25) toRem(25) toRem(45) toRem(25);
+	}
 	&__main {
 		display: grid;
 		gap: toRem(25);
 		&:not(:last-child) {
 			margin-bottom: toRem(60);
+		}
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: toRem(30);
+			}
 		}
 	}
 
@@ -168,9 +207,14 @@ body::after {
 	&__title {
 		font-weight: 800;
 		line-height: normal;
-		font-size: toRem(22);
+		@include adaptiveValue("font-size", 22, 18);
 		&:not(:last-child) {
 			margin-bottom: toRem(20);
+		}
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: toRem(15);
+			}
 		}
 	}
 

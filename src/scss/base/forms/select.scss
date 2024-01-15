@@ -47,6 +47,10 @@
 				opacity: 0.5;
 			}
 		}
+		@media (max-width: $mobile) {
+			height: toRem(38);
+			padding: 0 toRem(15);
+		}
 	}
 	// .select__content
 	&__content {
@@ -117,6 +121,10 @@
 				background-color: rgba($darkGrayColor, 0.07);
 			}
 		}
+		@media (max-width: $mobile) {
+			font-size: toRem(18);
+			padding: toRem(10) toRem(15);
+		}
 	}
 
 	// Конструкція додаткових даних
@@ -144,6 +152,14 @@
 	&._select-open {
 		.select__title {
 			border-radius: toRem(25) toRem(25) toRem(0) toRem(0);
+			@media (max-width: $mobile) {
+				border-radius: toRem(15) toRem(15) toRem(0) toRem(0);
+			}
+		}
+		.select__options {
+			@media (max-width: $mobile) {
+				border-radius: toRem(0) toRem(0) toRem(15) toRem(15);
+			}
 		}
 	}
 	&._select-disabled {
@@ -165,6 +181,9 @@
 			font-size: toRem(22);
 			background-color: $blueColor;
 			border: toRem(1) solid $grayColor;
+			@media (max-width: $mobile) {
+				font-size: toRem(16);
+			}
 		}
 		.select__value {
 			width: 100%;
@@ -194,6 +213,9 @@
 			font-size: toRem(22);
 			background-color: $blueColor;
 			border: toRem(1) solid $grayColor;
+			@media (max-width: $mobile) {
+				font-size: toRem(16);
+			}
 		}
 		.select__value {
 			width: 100%;
@@ -220,8 +242,6 @@
 		}
 	}
 	&_req-regular {
-		flex: 1 1 100%;
-		max-width: toRem(352);
 		.select__title {
 			line-height: normal;
 			border: toRem(1) solid $grayColor;

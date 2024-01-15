@@ -411,6 +411,9 @@ summary::-webkit-details-marker {
 	gap: toRem(7);
 	align-items: center;
 	justify-content: space-between;
+	@media (max-width: $tablet) {
+		justify-content: start;
+	}
 	&__label {
 		position: relative;
 		span {

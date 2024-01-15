@@ -90,6 +90,13 @@
 			border-radius: toRem(50);
 			padding: toRem(0) toRem(88);
 		}
+		@media (max-width: $mobile) {
+			a {
+				height: toRem(40);
+				font-size: toRem(18);
+				padding: toRem(0) toRem(50);
+			}
+		}
 	}
 }
 .item-request {
@@ -98,6 +105,11 @@
 	grid-template-columns: toRem(40) 1fr;
 	border-bottom: toRem(1) solid #e8e8ea;
 	border-radius: toRem(10) toRem(0) toRem(0) toRem(10);
+	@media (max-width: $mobile) {
+		border-radius: toRem(10);
+		grid-template-columns: auto;
+		border: toRem(1) solid #e8e8ea;
+	}
 	&__number {
 		display: flex;
 		font-weight: 800;
@@ -109,10 +121,20 @@
 		border-radius: toRem(10);
 		text-transform: uppercase;
 		background-color: $grenColor;
+		@media (max-width: $mobileSmall) {
+			height: toRem(35);
+			font-size: toRem(20);
+		}
 	}
 
 	&__content {
 		padding: toRem(32) toRem(20) toRem(32) toRem(60);
+		@media (max-width: em(1140)) {
+			padding: toRem(25) toRem(20) toRem(25) toRem(25);
+		}
+		@media (max-width: $mobile) {
+			padding: toRem(30) toRem(12) toRem(30) toRem(12);
+		}
 	}
 
 	&__title {
@@ -138,6 +160,9 @@
 		&:not(:last-child) {
 			margin-bottom: toRem(5);
 		}
+		@media (max-width: $mobile) {
+			font-size: toRem(14);
+		}
 	}
 
 	&__add {
@@ -145,12 +170,19 @@
 		color: $darkGrayColor;
 		margin-top: toRem(10);
 		text-decoration-line: underline;
+		@media (max-width: $mobile) {
+			font-size: toRem(16);
+		}
 	}
 }
+// ========================================================================================================================================================
 .item-request-first {
 	&__content {
 		display: flex;
-		gap: toRem(50);
+		@include adaptiveValue("gap", 50, 20, 0, $containerWidth, 991.98);
+		@media (max-width: $tablet) {
+			flex-direction: column;
+		}
 	}
 
 	&__select {
@@ -164,26 +196,43 @@
 
 	&__main {
 		display: flex;
-		gap: toRem(50);
+		@include adaptiveValue("gap", 50, 20, 0, $containerWidth, 991.98);
 		&:not(:last-child) {
 			margin-bottom: toRem(40);
+		}
+		@media (max-width: em(1060)) {
+			flex-direction: column;
 		}
 	}
 
 	&__selects {
 		display: flex;
-		gap: toRem(50);
 		flex: 1 1 100%;
+		@include adaptiveValue("gap", 50, 20, 0, $containerWidth, 991.98);
+		@media (max-width: $mobile) {
+			flex-direction: column;
+		}
+	}
+
+	&__select {
+		flex: 1 1 100%;
+		max-width: toRem(352);
+		@media (max-width: $mobile) {
+			max-width: 100%;
+		}
 	}
 
 	&__info {
 		display: flex;
 		flex: 1 1 100%;
 		&.info-max-gap {
-			gap: toRem(50);
+			@include adaptiveValue("gap", 50, 20, 0, $containerWidth, 991.98);
 		}
 		&.info-min-gap {
 			gap: toRem(15);
+		}
+		@media (max-width: em(615)) {
+			flex-wrap: wrap;
 		}
 	}
 
@@ -193,14 +242,20 @@
 
 	&__bottom {
 		display: grid;
-		gap: toRem(50);
 		grid-template-columns: toRem(175) auto;
+		@include adaptiveValue("gap", 50, 20, 0, $containerWidth, 991.98);
+		@media (max-width: em(615)) {
+			grid-template-columns: auto;
+		}
 	}
 
 	&__options {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		@media (max-width: em(615)) {
+			gap: toRem(10);
+		}
 	}
 
 	&__optional {
@@ -221,7 +276,21 @@
 
 	&__body {
 		display: flex;
-		gap: toRem(50);
+		@include adaptiveValue("gap", 50, 20, 0, $containerWidth, 991.98);
+		@media (max-width: $tablet) {
+			flex-direction: column;
+		}
+	}
+
+	&__options {
+		display: flex;
+		flex: 1 1 auto;
+		align-items: end;
+		@include adaptiveValue("gap", 50, 20, 0, $containerWidth, 991.98);
+		@media (max-width: $mobile) {
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
 	}
 
 	&__input {
@@ -229,6 +298,9 @@
 
 	&__currency {
 		max-width: toRem(162);
+		@media (max-width: $mobileSmall) {
+			max-width: 100%;
+		}
 	}
 
 	&__condition {
@@ -248,9 +320,18 @@
 
 	&__details {
 		position: relative;
+		@media (max-width: $mobile) {
+			width: 100%;
+			.item-request__span {
+				display: none;
+			}
+		}
 	}
 
 	&__button {
+		@media (max-width: $mobile) {
+			width: 100%;
+		}
 	}
 }
 .item-request-four {
@@ -259,12 +340,16 @@
 
 	&__body {
 		display: flex;
-		gap: toRem(50);
+		align-items: end;
+		@include adaptiveValue("gap", 50, 20, 0, $containerWidth, 991.98);
+		@media (max-width: $tablet) {
+			flex-direction: column;
+		}
 	}
 
 	&__label {
 		width: 100%;
-		max-width: toRem(300);
+		@include adaptiveValue("max-width", 300, 200, 2, $containerWidth, 991.98);
 	}
 
 	&__input {
@@ -274,9 +359,18 @@
 .item-request-five {
 	&__content {
 		padding: toRem(60) toRem(20) toRem(60) toRem(60);
+		@media (max-width: em(1140)) {
+			padding: toRem(30) toRem(20) toRem(30) toRem(25);
+		}
+		@media (max-width: $mobile) {
+			padding: toRem(30) toRem(12) toRem(30) toRem(12);
+		}
 	}
 
 	&__button {
+		@media (max-width: $mobile) {
+			width: 100%;
+		}
 	}
 }
 // ========================================================================================================================================================

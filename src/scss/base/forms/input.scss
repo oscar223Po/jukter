@@ -27,6 +27,14 @@ textarea {
 		width: toRem(98);
 		height: toRem(35);
 		padding: toRem(0) toRem(50) toRem(0) toRem(10);
+		@media (max-width: $mobile) {
+			width: toRem(90);
+			height: toRem(30);
+		}
+	}
+	@media (max-width: $mobile) {
+		height: toRem(38);
+		font-size: toRem(16);
 	}
 }
 .input[placeholder]:not([data-placeholder-nohiden]) {

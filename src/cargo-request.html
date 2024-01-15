@@ -59,7 +59,7 @@
 								<div class="item-request-second__body">
 									<div class="item-request-second__main">
 										<div class="item-request-second__selects">
-											<div class="item-request__select">
+											<div class="item-request-second__select">
 												<span class="item-request__span">Характер груза</span>
 												<select name="form[]" data-class-modif="req-regular">
 													<option data-class="_icon-box" value="1">Выбрать</option>
@@ -67,7 +67,7 @@
 													<option data-class="_icon-box" value="3">Мурманск, Россия</option>
 												</select>
 											</div>
-											<div class="item-request__select">
+											<div class="item-request-second__select">
 												<span class="item-request__span">Тип транспорта</span>
 												<select name="form[]" data-class-modif="req-regular">
 													<option data-class="_icon-bus" value="1">Выбрать</option>
@@ -139,24 +139,29 @@
 										<span class="item-request__span">Стоимость</span>
 										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Указать стоимость" class="item-request-third__input input">
 									</label>
-									<div class="item-request__select item-request-third__currency">
-										<span class="item-request__span">Валюта</span>
-										<select name="form[]" data-class-modif="req-selected">
-											<option value="1">RUB</option>
-											<option value="2">KAZ</option>
-											<option value="3">KGS</option>
-											<option value="4">USD</option>
-										</select>
-									</div>
-									<div class="item-request-third__condition">
-										<label for="#" class="item-request-third__label">
+									<div class="item-request-third__options">
+										<div class="item-request__select item-request-third__currency">
+											<span class="item-request__span">Валюта</span>
+											<select name="form[]" data-class-modif="req-selected">
+												<option value="1">RUB</option>
+												<option value="2">KAZ</option>
+												<option value="3">KGS</option>
+												<option value="4">USD</option>
+											</select>
+										</div>
+										<div class="item-request__select item-request-third__currency">
 											<span class="item-request__span">Доп. условие</span>
-											<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="всего" class="item-request-third__inp input-actions input-actions--active input">
-										</label>
-									</div>
-									<div class="item-request-third__details">
-										<span class="item-request__span">Доп. условие</span>
-										<button data-popup="#details" type="button" class="item-request-third__button button button--blue">Детали оплаты</button>
+											<select name="form[]" data-class-modif="req-selected">
+												<option value="1">всего</option>
+												<option value="2">KAZ</option>
+												<option value="3">KGS</option>
+												<option value="4">USD</option>
+											</select>
+										</div>
+										<div class="item-request-third__details">
+											<span class="item-request__span">Доп. условие</span>
+											<button data-popup="#details" type="button" class="item-request-third__button button button--blue">Детали оплаты</button>
+										</div>
 									</div>
 								</div>
 							</div>
