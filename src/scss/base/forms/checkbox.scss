@@ -85,16 +85,31 @@
 			left: 4px;
 			top: 8px;
 		}
-		@media (max-width: $mobileSmall) {
+		@media (max-width: $mobile) {
 			&::before {
 				margin-top: toRem(2.5);
+			}
+			&::after {
+				top: 6.5px;
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			&::before {
+				margin-top: toRem(2);
+			}
+			&::after {
+				top: 6px;
 			}
 		}
 	}
 
 	&__text {
-		@media (max-width: $mobileSmall) {
+		line-height: normal;
+		@media (max-width: $mobile) {
 			font-size: toRem(16);
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(14);
 		}
 	}
 }

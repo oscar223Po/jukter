@@ -74,6 +74,25 @@
 			padding: toRem(0) toRem(10);
 		}
 	}
+	&--gray {
+		font-weight: 500;
+		height: toRem(43);
+		color: $grenColor;
+		line-height: normal;
+		border-radius: toRem(50);
+		padding: toRem(0) toRem(25);
+		border: toRem(1) solid $grenColor;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $whiteColor;
+				background-color: $grenColor;
+			}
+		}
+		@media (max-width: $tablet) {
+			height: toRem(35);
+			padding: toRem(0) toRem(15);
+		}
+	}
 	&--fw {
 		width: 100%;
 	}

@@ -135,11 +135,19 @@
 		@media (max-width: $mobile) {
 			padding: toRem(30) toRem(12) toRem(30) toRem(12);
 		}
+		@media (max-width: $mobileSmall) {
+			padding: toRem(20) toRem(12) toRem(25) toRem(12);
+		}
 	}
 
 	&__title {
 		&:not(:last-child) {
 			margin-bottom: toRem(30);
+		}
+		@media (max-width: $mobileSmall) {
+			&:not(:last-child) {
+				margin-bottom: toRem(20);
+			}
 		}
 	}
 

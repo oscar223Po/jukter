@@ -353,10 +353,8 @@ class Popup {
 			this.lastFocusEl.focus();
 		}
 		/*
-		else if (focusable.length > 0) {
-			focusable[0].focus();
-		}
 		else {
+			focusable[0].focus();
 		}
 		*/
 	}

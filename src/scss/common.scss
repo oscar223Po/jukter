@@ -42,8 +42,69 @@ summary::-webkit-details-marker {
 	@media (max-width: $mobile) {
 		text-align: center;
 	}
+	&--min {
+		@include adaptiveValue("font-size", 22, 16);
+		@media (max-width: $mobile) {
+			text-align: left;
+		}
+	}
+}
+.title-blue {
+	&--big {
+		font-weight: 800;
+		color: $blueColor;
+		line-height: normal;
+		font-family: "Raleway";
+		@include adaptiveValue("font-size", 34, 18);
+	}
+}
+.title {
+	font-weight: 800;
+	text-align: center;
+	line-height: normal;
+	font-family: "Raleway";
+	@include adaptiveValue("font-size", 42, 22);
+}
+// ========================================================================================================================================================
+// Arrow Back
+.back {
+	@media (max-width: $tablet) {
+		display: none;
+	}
+	&__container {
+		position: relative;
+	}
+
+	&__button {
+		gap: toRem(15);
+		left: toRem(15);
+		font-weight: 800;
+		position: absolute;
+		align-items: center;
+		line-height: normal;
+		display: inline-flex;
+		color: $darkGrayColor;
+		border-radius: toRem(50);
+		padding: toRem(10) toRem(25);
+		background-color: rgba(232, 232, 234, 0.5);
+		@include adaptiveValue("top", 45, 17, 2, $containerWidth, 991.98);
+		transition:
+			background-color 0.3s ease 0s,
+			color 0.3s ease 0s;
+		&::before {
+			margin-top: toRem(1);
+			font-size: toRem(17);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $whiteColor;
+				background-color: $blueColor;
+			}
+		}
+	}
 }
 //========================================================================================================================================================
+// Styles Of Articles Blocks
 .articles {
 	@media (min-width: $mobile) {
 		background-color: $blueColor;
@@ -105,7 +166,7 @@ summary::-webkit-details-marker {
 	&__town {
 		font-weight: 800;
 		line-height: normal;
-		font-size: toRem(20);
+		@include adaptiveValue("font-size", 20, 16);
 		span {
 			font-weight: 400;
 			font-size: toRem(16);
@@ -428,12 +489,6 @@ summary::-webkit-details-marker {
 	}
 
 	&__text {
-		line-height: normal;
-	}
-}
-.checkbox-opt {
-	&__text {
-		line-height: normal;
 	}
 }
 // ========================================================================================================================================================

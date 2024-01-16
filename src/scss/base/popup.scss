@@ -63,8 +63,10 @@ body::after {
 	}
 }
 //========================================================================================================================================================
+// Bem Code For All Top Of Popups
 .top-popup {
 	display: grid;
+	gap: toRem(25);
 	align-items: center;
 	grid-template-columns: toRem(24) auto toRem(24);
 	&:not(:last-child) {

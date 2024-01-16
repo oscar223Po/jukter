@@ -1,0 +1,370 @@
+// ========================================================================================================================================================
+// Info
+.info {
+	@include adaptiveValue("padding-top", 130, 40);
+	@include adaptiveValue("padding-bottom", 160, 50);
+	&__container {
+	}
+
+	&__title-mb {
+		@media (min-width: $mobile) {
+			display: none;
+		}
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 40, 25, 2, 767.98, 320);
+			}
+		}
+	}
+
+	&__body {
+		display: flex;
+		gap: toRem(30);
+		justify-content: space-between;
+		@media (max-width: $mobile) {
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__main {
+	}
+
+	&__profile {
+	}
+}
+.main-info {
+	&__top {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		@include adaptiveValue("gap", 60, 15, 0, $containerWidth, 991.98);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 60, 30);
+		}
+	}
+
+	&__title {
+		font-weight: 800;
+		line-height: normal;
+		@include adaptiveValue("font-size", 24, 20);
+		@media (max-width: $mobile) {
+			text-align: center;
+		}
+	}
+
+	&__base {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		@include adaptiveValue("gap", 40, 15, 0, $containerWidth, 991.98);
+	}
+
+	&__base-item {
+		@include adaptiveValue("font-size", 18, 14);
+		@media (max-width: $tablet) {
+			&:nth-child(2),
+			&:nth-child(3) {
+				border-radius: toRem(25);
+				padding: toRem(5) toRem(40);
+				border: toRem(1) solid $grayColor;
+			}
+		}
+	}
+
+	&__list {
+		display: grid;
+		gap: toRem(15);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 20);
+		}
+	}
+
+	&__item {
+		display: flex;
+		gap: toRem(24);
+		align-items: center;
+		line-height: normal;
+		@include adaptiveValue("font-size", 20, 14);
+		h5 {
+			min-width: toRem(220);
+		}
+		span {
+			font-weight: 600;
+		}
+		@media (max-width: $tablet) {
+			gap: toRem(15);
+			h5 {
+				min-width: toRem(190);
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			gap: toRem(3);
+			align-items: start;
+			flex-direction: column;
+		}
+	}
+
+	&__item-buttons {
+		display: flex;
+		gap: toRem(5);
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	&__item-button {
+		@media (max-width: $tablet) {
+			font-size: toRem(16);
+		}
+	}
+
+	&__contacts {
+		padding: toRem(25);
+		display: inline-flex;
+		flex-direction: column;
+		border-radius: toRem(10);
+		border: toRem(1) solid $grayColor;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 20);
+		}
+		@media (max-width: $tablet) {
+			padding: toRem(15);
+		}
+		@media (max-width: $mobile) {
+			width: 100%;
+			padding: toRem(10);
+			border: toRem(1) solid transparent;
+			background-color: rgba(232, 232, 234, 0.5);
+		}
+	}
+
+	&__contact {
+		display: flex;
+		gap: toRem(24);
+		align-items: center;
+		line-height: normal;
+		@include adaptiveValue("font-size", 20, 14);
+		h5 {
+			width: toRem(90);
+		}
+		a {
+			font-weight: 600;
+			color: $grenColor;
+			transition: color 0.3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					color: $mainColor;
+				}
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+		@media (max-width: $tablet) {
+			gap: toRem(14);
+			h5 {
+				width: toRem(80);
+			}
+		}
+		@media (max-width: $mobile) {
+			gap: toRem(5);
+			align-items: start;
+			flex-direction: column;
+		}
+	}
+
+	&__bottom {
+	}
+
+	&__bottom-item {
+		display: flex;
+		gap: toRem(45);
+		line-height: normal;
+		@include adaptiveValue("font-size", 18, 14);
+		h5 {
+			width: toRem(235);
+		}
+		span {
+			font-weight: 600;
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+		@media (max-width: $tablet) {
+			gap: toRem(15);
+			h5 {
+				width: toRem(210);
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			gap: toRem(3);
+			align-items: start;
+			flex-direction: column;
+		}
+	}
+}
+.main-profile {
+	&__body {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 15);
+		}
+		@media (max-width: $mobile) {
+			display: flex;
+			gap: toRem(10);
+			align-items: center;
+		}
+	}
+
+	&__image {
+		overflow: hidden;
+		border-radius: toRem(50);
+		img {
+			max-width: 100%;
+		}
+		@media (max-width: $tablet) {
+			@include adaptiveValue("min-width", 300, 260, 2, 991.98, 800);
+		}
+		@media (min-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: toRem(15);
+			}
+		}
+		@media (max-width: $mobile) {
+			min-width: auto;
+			border-radius: 50%;
+			max-width: toRem(100);
+			img {
+				width: 100%;
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			max-width: toRem(80);
+		}
+	}
+
+	&__block {
+	}
+
+	&__name {
+		display: flex;
+		gap: toRem(5);
+		align-items: center;
+		justify-content: start;
+		flex-direction: row-reverse;
+		&::before {
+			color: rgba(101, 123, 216, 1);
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(5);
+		}
+	}
+
+	&__location {
+		font-weight: 500;
+		line-height: normal;
+		&:not(:last-child) {
+			margin-bottom: toRem(5);
+		}
+		@media (max-width: $mobile) {
+			font-size: toRem(14);
+		}
+	}
+
+	&__rate {
+		display: flex;
+		line-height: normal;
+		span {
+			font-weight: 800;
+			margin-left: toRem(20);
+		}
+		img {
+			margin-left: toRem(5);
+		}
+		@media (max-width: $mobile) {
+			font-size: toRem(14);
+			img {
+				width: toRem(100);
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			span {
+				margin-left: toRem(5);
+			}
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		gap: toRem(10);
+		align-items: start;
+		flex-direction: column;
+		@media (max-width: $mobile) {
+			flex-direction: row;
+		}
+		@media (max-width: em(560)) {
+			flex-direction: column;
+		}
+	}
+
+	&__button {
+		display: flex;
+		gap: toRem(10);
+		font-weight: 800;
+		align-items: center;
+		line-height: normal;
+		color: $darkGrayColor;
+		justify-content: center;
+		border-radius: toRem(50);
+		padding: toRem(10) toRem(25);
+		transition: all 0.3s ease 0s;
+		&::before {
+			display: flex;
+			width: toRem(24);
+			height: toRem(24);
+			align-items: center;
+			justify-content: center;
+			transition: color 0.3s ease 0s;
+		}
+		&--add {
+			border: toRem(1) solid $redColor;
+			&::before {
+				color: $redColor;
+				font-size: toRem(19);
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					color: $whiteColor;
+					background-color: $redColor;
+					&::before {
+						color: $whiteColor;
+					}
+				}
+			}
+		}
+		&--block {
+			border: toRem(1) solid $mainColor;
+			&::before {
+				font-size: toRem(24);
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					color: $whiteColor;
+					background-color: $mainColor;
+					&::before {
+						color: $whiteColor;
+					}
+				}
+			}
+		}
+		@media (max-width: $tablet) {
+			font-size: toRem(16);
+			padding: toRem(7) toRem(15);
+		}
+		@media (max-width: $mobile) {
+			width: 100%;
+		}
+		@media (max-width: em(560)) {
+			width: auto;
+		}
+	}
+}
+// ========================================================================================================================================================

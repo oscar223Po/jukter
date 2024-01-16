@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Jukter (Расчёт расстояни) - CompanyInfoPage"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<!-- [Back] -->
+			<div class="back"><div class="back__container"><a href="" class="back__button _icon-arrow-back">Назад</a></div></div>
+			<!-- [Calculation] -->
+			<section class="calculation">
+				<div class="calculation__container">
+					<h2 class="calculation__title title">Расчёт расстояния</h2>
+					<div class="calculation__body">
+						<h4 class="calculation__subtitle title-blue title-blue--big">Расчет расстояний между городами Казахстана, остальными странами СНГ, Европы и Азии</h4>
+						<div class="calculation__logic">
+							<div class="calculation__main">
+								<div class="item-request-first__select">
+									<span class="item-request__span">Откуда</span>
+									<select name="form[]" data-class-modif="req-selected">
+										<option value="1">Пермь, Россия</option>
+										<option value="2">Москва, Россия</option>
+										<option value="3">Мурманск, Россия</option>
+									</select>
+									<button type="button" class="item-request__add">Добавить 2-ой пункт погрузки</button>
+								</div>
+								<div class="item-request-first__select">
+									<span class="item-request__span">Куда</span>
+									<select name="form[]" data-class-modif="req-selected">
+										<option value="1" selected>Пермь, Россия</option>
+										<option value="2">Пермь, Россия</option>
+										<option value="3">Пермь, Россия</option>
+										<option value="4">Пермь, Россия</option>
+										<option value="5">Пермь, Россия</option>
+									</select>
+									<button type="button" class="item-request__add">Добавить 2-ой пункт погрузки</button>
+								</div>
+							</div>
+							<a href="" class="calculation__button button button--green">Рассчитать</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

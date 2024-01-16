@@ -64,8 +64,12 @@
 	}
 	// .options__text
 	&__text {
+		line-height: normal;
 		@media (max-width: $mobile) {
 			font-size: toRem(16);
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(14);
 		}
 	}
 }
