@@ -50,11 +50,11 @@ summary::-webkit-details-marker {
 	}
 }
 .title-blue {
+	font-weight: 800;
+	color: $blueColor;
+	line-height: normal;
+	font-family: "Raleway";
 	&--big {
-		font-weight: 800;
-		color: $blueColor;
-		line-height: normal;
-		font-family: "Raleway";
 		@include adaptiveValue("font-size", 34, 18);
 	}
 }
@@ -492,15 +492,31 @@ summary::-webkit-details-marker {
 	}
 }
 // ========================================================================================================================================================
+// Styles For Active Value Input Js
 .input-actions {
 	font-weight: 800;
 	color: $whiteColor;
 	transition: background-color 0.3s ease 0s;
 	&::placeholder {
-		color: $whiteColor;
+		font-weight: 400;
 	}
 	&--active {
 		background-color: $blueColor;
+	}
+}
+// ========================================================================================================================================================
+// Styles For Contact Item
+.contact-info {
+	line-height: normal;
+	a {
+		font-weight: 600;
+		color: $grenColor;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainColor;
+			}
+		}
 	}
 }
 //========================================================================================================================================================

@@ -172,6 +172,7 @@
 		flex: 1 1 auto;
 		font-size: toRem(20);
 		color: $darkGrayColor;
+		min-height: toRem(50);
 		border-radius: toRem(50);
 		padding: toRem(13) toRem(25);
 		transition:
@@ -183,14 +184,18 @@
 		}
 		@media (max-width: $mobileSmall) {
 			font-size: toRem(17);
-			padding: toRem(10) toRem(15);
+			min-height: toRem(45);
+			padding: toRem(0) toRem(15);
 		}
 	}
 
 	&__button {
-		height: toRem(53);
 		font-weight: 400;
-		padding: toRem(0) toRem(30);
+		min-height: toRem(53);
+		padding: toRem(10) toRem(30);
+		@media (max-width: $mobileSmall) {
+			min-height: toRem(45);
+		}
 	}
 
 	&__icon {

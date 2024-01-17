@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Jukter (Расчёт расстояни) - CompanyInfoPage</title>
+	<title>Jukter (Тарифы) - TarifPage</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -47,72 +47,52 @@
 			<div class="back">
 				<div class="back__container"><a href="" class="back__button _icon-arrow-back">Назад</a></div>
 			</div>
-			<!-- [Calc] -->
-			<section class="calc">
-				<div class="calc__container">
-					<h2 class="calc__title title">Расчёт расстояния</h2>
-					<div class="calc__top top-calc">
-						<h4 class="top-calc__subtitle title-blue title-blue--big">Расчет расстояний между городами Казахстана, остальными странами СНГ, Европы и Азии</h4>
-						<div class="top-calc__body">
-							<div class="top-calc__main">
-								<div class="item-request-first__select">
-									<span class="item-request__span">Откуда</span>
-									<select name="form[]" data-class-modif="req-selected">
-										<option value="1">Пермь, Россия</option>
-										<option value="2">Москва, Россия</option>
-										<option value="3">Мурманск, Россия</option>
-									</select>
-									<button type="button" class="item-request__add">Добавить 2-ой пункт погрузки</button>
-								</div>
-								<div class="item-request-first__select">
-									<span class="item-request__span">Куда</span>
-									<select name="form[]" data-class-modif="req-selected">
-										<option value="1" selected>Пермь, Россия</option>
-										<option value="2">Пермь, Россия</option>
-										<option value="3">Пермь, Россия</option>
-										<option value="4">Пермь, Россия</option>
-										<option value="5">Пермь, Россия</option>
-									</select>
-									<button type="button" class="item-request__add">Добавить 2-ой пункт погрузки</button>
+			<!-- [Tarif] -->
+			<section class="tarif">
+				<div class="tarif__container">
+					<h3 class="tarif__title title">Тарифы</h3>
+					<div class="tarif__items customs">
+						<div class="customs__item customs__item--white">
+							<div class="customs__body">
+								<h3 class="customs__title">Júkter</h3>
+								<div class="customs__list">
+									<div class="customs__list-item">1 пользователь</div>
+									<div class="customs__list-item">Все грузы</div>
+									<div class="customs__list-item">Все машины</div>
+									<div class="customs__list-item">Безлимитные уведомления</div>
+									<div class="customs__list-item customs__list-item--span">Доступ в Jukter <span>(Подходит для физ. лиц)</span></div>
 								</div>
 							</div>
-							<a href="" class="top-calc__button button button--green">Рассчитать</a>
+							<div class="customs__cost _icon-cart-mini">5.000 ₸</div>
+							<button type="button" class="customs__button _icon-cart">Купить</button>
 						</div>
-					</div>
-					<div class="calc__bot bot-calc">
-						<div class="bot-calc__body">
-							<h4 class="bot-calc__title">Детали маршрута:</h4>
-							<div class="bot-calc__item">
-								<div class="item-articles__desktop">
-									<div class="item-articles__top"><img src="img/icons/rus.svg" alt="Icon"><img src="img/icons/kaz.svg" alt="Icon"></div>
-									<div class="item-articles__way">
-										<div class="item-articles__town">Пермь <span>(RU)</span></div>
-										<span class="item-articles__line"></span>
-										<div class="item-articles__long">2921 км</div>
-										<span class="item-articles__arrow _icon-arrow-big"></span>
-										<div class="item-articles__town">Талдыкорган <span>(KZ)</span></div>
-									</div>
-								</div>
-								<div class="item-articles__mobile mobile-item-articles">
-									<div class="mobile-item-articles__columns">
-										<div class="mobile-item-articles__column">
-											<div class="mobile-item-articles__ways">
-												<div class="mobile-item-articles__town"><img src="img/icons/rus.svg" alt="Icon">Пермь <span>(RU)</span></div>
-												<div class="mobile-item-articles__town"><img src="img/icons/kaz.svg" alt="Icon">Талдыкорган <span>(KZ)</span></div>
-											</div>
-											<div class="mobile-item-articles__long">2921 км</div>
-										</div>
-									</div>
+						<div class="customs__item customs__item--grad">
+							<div class="customs__body">
+								<h3 class="customs__title">Júkter Plus</h3>
+								<div class="customs__list">
+									<div class="customs__list-item">3 пользователь</div>
+									<div class="customs__list-item">Все грузы</div>
+									<div class="customs__list-item">Все машины</div>
+									<div class="customs__list-item">Безлимитные уведомления</div>
+									<div class="customs__list-item">Доступ в Jukter Plus <span>(Подходит для физ. лиц)</span></div>
 								</div>
 							</div>
-							<div class="bot-calc__list">
-								<div class="bot-calc__list-item">Расстояние по маршруту ≈ <span>2921 км</span></div>
-								<div class="bot-calc__list-item">Примерное время поездки ≈ <span>28ч 43м</span></div>
-							</div>
+							<div class="customs__cost _icon-cart-mini">7.500 ₸</div>
+							<button type="button" class="customs__button _icon-cart">Купить</button>
 						</div>
-						<div class="bot-calc__map">
-							<div class="bot-calc__image"><picture><source srcset="img/map.webp" type="image/webp"><img src="img/map.png" alt="Image"></picture></div>
-							<div class="bot-calc__button"><a href="" class="button button--blue">Смотреть расстояние на карте</a></div>
+						<div class="customs__item customs__item--grad">
+							<div class="customs__body">
+								<h3 class="customs__title">Júkter Max</h3>
+								<div class="customs__list">
+									<div class="customs__list-item">5 пользователь</div>
+									<div class="customs__list-item">Все грузы</div>
+									<div class="customs__list-item">Все машины</div>
+									<div class="customs__list-item">Безлимитные уведомления</div>
+									<div class="customs__list-item">Доступ в Jukter Max <span>(Подходит для физ. лиц)</span></div>
+								</div>
+							</div>
+							<div class="customs__cost _icon-cart-mini">10.000 ₸</div>
+							<button type="button" class="customs__button _icon-cart">Купить</button>
 						</div>
 					</div>
 				</div>

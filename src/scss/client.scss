@@ -1,0 +1,787 @@
+// ========================================================================================================================================================
+// Tarif
+.tarif {
+	@include adaptiveValue("padding-top", 58, 35);
+	@include adaptiveValue("padding-bottom", 100, 35);
+	&__container {
+	}
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+
+	&__items {
+		margin: toRem(0) auto;
+	}
+}
+.customs {
+	display: grid;
+	gap: toRem(15);
+	max-width: toRem(1295);
+	border-radius: toRem(25);
+	padding: toRem(25) toRem(27);
+	background-color: rgba(232, 232, 234, 0.5);
+	grid-template-columns: repeat(auto-fit, minmax(toRem(350), 1fr));
+	@media (max-width: $mobile) {
+		padding: toRem(0);
+		grid-template-columns: auto;
+		background-color: transparent;
+	}
+	&__item {
+		position: relative;
+		padding-top: toRem(20);
+		border-radius: toRem(25) toRem(25) toRem(30) toRem(30);
+		&::before {
+			opacity: 0;
+			z-index: 1;
+			content: "";
+			width: 100%;
+			height: 100%;
+			top: toRem(0);
+			left: toRem(0);
+			right: toRem(0);
+			bottom: toRem(0);
+			visibility: hidden;
+			position: absolute;
+			border-radius: toRem(25);
+			transition: all 0.3s ease 0s;
+		}
+		&--white {
+			background-color: $whiteColor;
+			border: toRem(1) solid #e8e8ea;
+			&::before {
+				background-color: rgba(0, 0, 0, 0.65);
+			}
+		}
+
+		&--grad {
+			color: $whiteColor;
+			box-shadow: toRem(0) toRem(0) toRem(30) toRem(0) #42578e;
+			background: linear-gradient(157deg, #2a3c6b 11.05%, #5e91e0 94.5%);
+			&::before {
+				background-color: rgba(42, 60, 107, 0.8);
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					opacity: 1;
+					visibility: visible;
+				}
+				.customs__button {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+
+	&__body {
+		max-width: toRem(260);
+		margin: toRem(0) auto toRem(60) auto;
+		@media (max-width: $mobileSmall) {
+			max-width: toRem(200);
+			margin: toRem(0) auto toRem(40) auto;
+		}
+	}
+
+	&__title {
+		font-weight: 800;
+		text-align: center;
+		line-height: normal;
+		font-size: toRem(28);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 30);
+		}
+	}
+
+	&__list {
+		display: grid;
+		gap: toRem(15);
+	}
+
+	&__list-item {
+		position: relative;
+		line-height: normal;
+		padding-left: toRem(25);
+		span {
+			display: flex;
+			font-size: toRem(16);
+			color: $liteGrayColor;
+		}
+		&--span {
+			span {
+				color: $darkGrayColor;
+			}
+		}
+		&::before {
+			content: "";
+			top: toRem(8);
+			left: toRem(0);
+			width: toRem(10);
+			height: toRem(10);
+			position: absolute;
+			border-radius: 50%;
+			background-color: $grenColor;
+			border: toRem(1) solid $grenColor;
+		}
+		&::after {
+			content: "";
+			top: toRem(4);
+			left: toRem(-4);
+			width: toRem(18);
+			height: toRem(18);
+			position: absolute;
+			border-radius: 50%;
+			border: toRem(1) solid $grenColor;
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(14);
+			padding-left: toRem(21);
+			span {
+				font-size: toRem(12);
+			}
+			&::before {
+				top: toRem(6);
+				left: toRem(0);
+				width: toRem(8);
+				height: toRem(8);
+			}
+			&::after {
+				top: toRem(2);
+				left: toRem(-4);
+				width: toRem(16);
+				height: toRem(16);
+			}
+		}
+	}
+
+	&__cost {
+		display: grid;
+		font-weight: 800;
+		height: toRem(59);
+		text-align: center;
+		color: $whiteColor;
+		align-items: center;
+		font-size: toRem(20);
+		border-radius: toRem(50);
+		padding: toRem(0) toRem(18);
+		background-color: $grenColor;
+		grid-template-columns: toRem(32) auto toRem(32);
+		&::before {
+			display: flex;
+			align-items: center;
+			font-size: toRem(22);
+			justify-content: center;
+		}
+		@media (max-width: $mobile) {
+			height: toRem(48);
+			font-size: toRem(16);
+			grid-template-columns: toRem(24) auto toRem(24);
+			&::before {
+				font-size: toRem(18);
+			}
+		}
+	}
+
+	&__button {
+		top: 50%;
+		left: 50%;
+		z-index: 3;
+		opacity: 0;
+		display: flex;
+		font-weight: 800;
+		color: $whiteColor;
+		visibility: hidden;
+		position: absolute;
+		line-height: normal;
+		align-items: center;
+		font-size: toRem(20);
+		flex-direction: column;
+		transition: all 0.3s ease 0s;
+		transform: translate(-50%, -50%);
+		&::before {
+			font-size: toRem(50);
+			margin-bottom: toRem(7);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: rgba($whiteColor, 0.7);
+			}
+		}
+	}
+}
+// ========================================================================================================================================================
+// Order
+.order {
+	@include adaptiveValue("padding-top", 170, 35);
+	&__container {
+	}
+
+	&__more {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 90, 70);
+		}
+	}
+
+	&__review {
+	}
+}
+.more-order {
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 30, 40);
+		}
+	}
+
+	&__body {
+		display: grid;
+		border-radius: toRem(5);
+		background-color: #fcfcfc;
+		border: toRem(1) solid $blueColor;
+		grid-template-columns: auto 22.891566%;
+		box-shadow: toRem(0) toRem(0) toRem(30) toRem(0) rgba(0, 0, 0, 0.1);
+		@media (max-width: em(1410.98)) {
+			grid-template-columns: auto;
+		}
+		@media (max-width: $mobile) {
+			border-radius: toRem(10);
+			padding: toRem(30) toRem(15);
+			border: toRem(1) solid #e8e8ea;
+			box-shadow: toRem(0) toRem(0) toRem(15) toRem(0) rgba(0, 0, 0, 0.1);
+		}
+	}
+
+	&__inner {
+		gap: toRem(40);
+		display: flex;
+		padding: toRem(17) toRem(25);
+		@media (max-width: em(1410.98)) {
+			display: grid;
+			grid-template-columns: 1fr auto;
+		}
+		@media (max-width: $tablet) {
+			grid-template-columns: auto;
+		}
+		@media (max-width: $mobile) {
+			gap: toRem(0);
+			padding: toRem(0);
+		}
+	}
+
+	&__main {
+		width: 100%;
+		@media (min-width: em(1410.98)) {
+			max-width: toRem(655);
+		}
+	}
+
+	&__options {
+	}
+
+	&__result {
+	}
+}
+.main-more-order {
+	display: grid;
+	justify-items: start;
+	@media (min-width: $mobile) {
+		gap: toRem(40);
+	}
+	&__item {
+		width: 100%;
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: toRem(30);
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			.mobile-item-articles__town {
+				font-size: toRem(14);
+			}
+		}
+	}
+
+	&__name {
+		font-weight: 800;
+		line-height: normal;
+		@include adaptiveValue("font-size", 20, 16);
+	}
+
+	&__company {
+		gap: toRem(40);
+		display: inline-flex;
+		border-radius: toRem(4);
+		padding: toRem(15) toRem(25);
+		border: toRem(1) solid $grayColor;
+		@media (max-width: em(1040)) {
+			gap: toRem(20);
+			padding: toRem(15);
+			flex-direction: column;
+		}
+		@media (max-width: $mobile) {
+			width: 100%;
+			gap: toRem(10);
+			border-radius: toRem(10);
+			border: toRem(1) solid transparent;
+			background-color: rgba(232, 232, 234, 0.5);
+			&:not(:last-child) {
+				margin-bottom: toRem(30);
+			}
+		}
+	}
+
+	&__profile {
+		display: flex;
+		gap: toRem(15);
+		align-items: center;
+		.main-profile__name {
+			font-weight: 800;
+			font-size: toRem(16);
+		}
+		.main-profile__location {
+			font-size: toRem(16);
+		}
+		.main-profile__rate {
+			font-size: toRem(16);
+			span {
+				margin-left: toRem(10);
+			}
+			img {
+				width: toRem(94);
+				margin-top: toRem(1);
+			}
+		}
+		@media (max-width: em(380)) {
+			gap: toRem(10);
+			align-items: start;
+			flex-direction: column;
+		}
+	}
+
+	&__icon {
+		overflow: hidden;
+		max-width: toRem(70);
+		border-radius: toRem(25);
+		img {
+			max-width: 100%;
+		}
+	}
+
+	&__contacts {
+	}
+
+	&__contact {
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+		@media (max-width: $mobile) {
+			font-size: toRem(14);
+		}
+	}
+
+	&__bottom {
+		width: 100%;
+		display: flex;
+		border-radius: toRem(4);
+		padding: toRem(15) toRem(25);
+		justify-content: space-between;
+		background-color: rgba(232, 232, 234, 0.5);
+		@media (max-width: $mobile) {
+			flex-wrap: wrap;
+			row-gap: toRem(15);
+			column-gap: toRem(30);
+		}
+		@media (max-width: em(380)) {
+			padding: toRem(10);
+		}
+	}
+
+	&__bottom-item {
+		line-height: normal;
+		font-size: toRem(16);
+		&:first-child {
+			span {
+				color: $grenColor;
+			}
+		}
+		span {
+			display: flex;
+			font-weight: 600;
+			font-size: toRem(18);
+		}
+	}
+
+	&__title-mob {
+		margin-top: toRem(30);
+		@media (min-width: $mobile) {
+			display: none;
+		}
+	}
+
+	&__result-mb {
+		width: 100%;
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+		@media (min-width: $mobile) {
+			display: none;
+		}
+	}
+
+	&__ordt-title-mb {
+		width: 100%;
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+		@media (min-width: $mobile) {
+			display: none;
+		}
+	}
+}
+.options-more-order {
+	&__title {
+		font-weight: 800;
+		line-height: normal;
+		@include adaptiveValue("font-size", 20, 14);
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+		@media (max-width: $tablet) {
+			width: 100%;
+			height: toRem(46);
+			color: $whiteColor;
+			border-radius: toRem(50);
+			background-color: $grenColor;
+			&:not(:last-child) {
+				margin-bottom: toRem(0);
+			}
+		}
+	}
+
+	&__columns {
+		display: grid;
+		gap: toRem(30);
+		justify-items: start;
+		@media (max-width: $tablet) {
+			display: none;
+		}
+	}
+
+	&__subtitle {
+		line-height: normal;
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+}
+.result-more-order {
+	display: flex;
+	gap: toRem(30);
+	color: $whiteColor;
+	align-items: start;
+	flex-direction: column;
+	border-radius: toRem(5);
+	padding: toRem(25) toRem(20);
+	background-color: $blueColor;
+	justify-content: space-between;
+	@media (max-width: $mobile) {
+		align-items: center;
+		flex-direction: row;
+		border-radius: toRem(10);
+	}
+	@media (max-width: em(380)) {
+		gap: toRem(10);
+		padding: toRem(15) toRem(10);
+	}
+	&__body {
+		display: grid;
+		gap: toRem(10);
+	}
+
+	&__cost {
+		font-weight: 800;
+		line-height: normal;
+		@include adaptiveValue("font-size", 24, 18);
+	}
+
+	&__long {
+		font-size: toRem(16);
+	}
+
+	&__type {
+		font-size: toRem(16);
+		span {
+			font-weight: 800;
+		}
+	}
+
+	&__button {
+		display: flex;
+		width: toRem(48);
+		color: $redColor;
+		height: toRem(48);
+		border-radius: 50%;
+		align-items: center;
+		font-size: toRem(20);
+		justify-content: center;
+		background-color: $whiteColor;
+		transition:
+			background-color 0.3s ease 0s,
+			color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $whiteColor;
+				background-color: $redColor;
+			}
+		}
+	}
+}
+// ========================================================================================================================================================
+// Review
+.review {
+	@include adaptiveValue("padding-bottom", 60, 25);
+	&__top {
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+
+	&__items {
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+}
+.top-review {
+	&__main {
+		display: flex;
+		align-items: center;
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+		@media (max-width: $mobile) {
+			gap: toRem(10);
+			align-items: start;
+			flex-direction: column;
+		}
+	}
+
+	&__title {
+		@media (min-width: $mobile) {
+			margin-right: toRem(40);
+		}
+	}
+
+	&__button {
+		min-height: toRem(48);
+		padding: toRem(0) toRem(26);
+		&--disable {
+			display: none;
+		}
+		@media (max-width: $mobile) {
+			min-height: toRem(40);
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		gap: toRem(15);
+		&.buttons-review-disable {
+			display: none;
+		}
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+			gap: toRem(10);
+		}
+	}
+
+	&__push {
+		min-height: toRem(48);
+		@media (max-width: $mobile) {
+			min-height: toRem(40);
+		}
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+			padding: toRem(0);
+		}
+	}
+
+	&__cancel {
+		min-height: toRem(48);
+		padding: toRem(0) toRem(67);
+		@media (any-hover: hover) {
+			&:hover {
+				color: $whiteColor;
+				background-color: $redColor;
+				border: toRem(1) solid $redColor;
+			}
+		}
+		@media (max-width: $mobile) {
+			min-height: toRem(40);
+			padding: toRem(0) toRem(30);
+		}
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+			padding: toRem(0);
+		}
+	}
+
+	&__area {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 30, 10, 0, $containerWidth, 991.98);
+		&.area-review-disable {
+			display: none;
+		}
+		@media (max-width: $mobile) {
+			align-items: start;
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__textarea {
+		width: 100%;
+		resize: none;
+		outline: none;
+		height: toRem(132);
+		line-height: normal;
+		font-size: toRem(16);
+		color: $darkGrayColor;
+		max-width: toRem(820);
+		border-radius: toRem(15);
+		padding: toRem(30) toRem(25);
+		background-color: rgba(232, 232, 234, 0.5);
+		&:focus {
+			&::placeholder {
+				opacity: 0;
+			}
+		}
+		&::placeholder {
+			color: $darkGrayColor;
+			transition: opacity 0.2s ease 0s;
+		}
+		@media (max-width: $mobile) {
+			padding: toRem(15);
+			font-size: toRem(14);
+		}
+	}
+
+	&__rating {
+		display: flex;
+		gap: toRem(5);
+		align-items: center;
+	}
+
+	&__star {
+		transition: opacity 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+		@media (max-width: $mobile) {
+			img {
+				width: toRem(24);
+			}
+		}
+	}
+}
+.items-review {
+	display: grid;
+	gap: toRem(10);
+	&__item {
+		border-radius: toRem(10);
+		padding: toRem(15) toRem(25);
+		background-color: $whiteColor;
+		box-shadow: toRem(0) toRem(0) toRem(20) toRem(0) rgba(0, 0, 0, 0.1);
+		@media (max-width: $mobile) {
+			padding: toRem(15);
+		}
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+
+	&__account {
+		display: flex;
+		gap: toRem(15);
+		align-items: center;
+		@media (max-width: $mobile) {
+			gap: toRem(7);
+		}
+	}
+
+	&__icon {
+		overflow: hidden;
+		border-radius: 50%;
+		max-width: toRem(44);
+		img {
+			max-width: 100%;
+		}
+		@media (max-width: $mobile) {
+			max-width: toRem(38);
+		}
+	}
+
+	&__name {
+		font-weight: 600;
+		line-height: normal;
+		color: $darkGrayColor;
+		@include adaptiveValue("font-size", 18, 14);
+	}
+
+	&__rate {
+		display: flex;
+		gap: toRem(7);
+		align-items: center;
+		span {
+			font-weight: 800;
+		}
+		@media (max-width: $mobile) {
+			gap: toRem(5);
+			font-size: toRem(14);
+			img {
+				width: toRem(90);
+			}
+		}
+	}
+
+	&__text {
+		line-height: normal;
+		color: $darkGrayColor;
+		max-width: toRem(1305);
+		@include adaptiveValue("font-size", 16, 14);
+	}
+}
+.navigation-review {
+	display: flex;
+	gap: toRem(14);
+	align-items: center;
+	@media (max-width: $mobile) {
+		justify-content: center;
+	}
+	.navigation-articles__button {
+		color: $grenColor;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $whiteColor;
+			}
+		}
+	}
+	.navigation-articles__link {
+		color: $mainColor;
+		&--active {
+			color: $whiteColor;
+		}
+	}
+}
+// ========================================================================================================================================================

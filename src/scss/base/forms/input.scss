@@ -22,6 +22,10 @@ textarea {
 	&._form-focus {
 	}
 	&._form-error {
+		&::placeholder {
+			color: $redColor;
+			font-weight: 600;
+		}
 	}
 	&--min {
 		width: toRem(98);
@@ -31,6 +35,9 @@ textarea {
 			width: toRem(90);
 			height: toRem(30);
 		}
+	}
+	&--big {
+		height: toRem(53);
 	}
 	@media (max-width: $mobile) {
 		height: toRem(38);
@@ -47,6 +54,5 @@ textarea {
 }
 textarea.input {
 	resize: none;
-	padding: 0px 0px;
 }
 // ========================================================================================================================================================

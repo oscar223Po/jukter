@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Jukter (Контакты) - SystemContactPage"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<!-- [Back] -->
+			<div class="back"><div class="back__container"><a href="" class="back__button _icon-arrow-back">Назад</a></div></div>
+			<!-- [Contact] -->
+			<section class="contact">
+				<div class="contact__container">
+					<h3 class="contact__title title">Контакты</h3>
+					<div class="contact__body">
+						<div class="contact__main main-contact">
+							<h4 class="main-contact__title title-blue">Технические вопросы и помощь в работе с сайтом</h4>
+							<form action="#" class="main-contact__form">
+								<div class="main-contact__inner">
+									<label for="#" class="main-contact__label">
+										<span class="item-request__span">ФИО</span>
+										<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите имя" class="main-contact__input input-actions input input--big">
+									</label>
+									<label for="#" class="main-contact__label">
+										<span class="item-request__span">Телефон</span>
+										<input data-required="tel" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите номер телефона" class="main-contact__input input-actions input input--big">
+									</label>
+									<label for="#" class="main-contact__label">
+										<span class="item-request__span">Email</span>
+										<input data-required="email" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите Email" class="main-contact__input input-actions input input--big">
+									</label>
+									<label for="#" class="main-contact__label">
+										<span class="item-request__span">Вопрос</span>
+										<textarea autocomplete="off" name="form[]" placeholder="Введите сообщение" data-error="Error" class="main-contact__textarea input"></textarea>
+									</label>
+								</div>
+								<button type="submit" class="main-contact__button button button--green">Задать вопрос</button>
+							</form>
+						</div>
+						<div class="contact__option option-contact">
+							<div class="option-contact__top">
+								<p>А так же все вопросы по работе Júkter Вы можете задать в месcенджерах</p>
+								<div class="option-contact__socials">
+									<a href="" class="option-contact__social option-contact__social--wh _icon-social-wh"></a>
+									<a href="" class="option-contact__social option-contact__social--tg _icon-social-tg"></a>
+								</div>
+							</div>
+							<div class="option-contact__main">
+								<div class="option-contact__item">Телефон:<a href="tel:+77007600600">+ 7 7007 600 600</a></div>
+								<div class="option-contact__item">Email:<a href="mailto:jukter@jukter.kz">jukter@jukter.kz</a></div>
+								<div class="option-contact__item">Время работы:<span>пн-пт с 9:00 до 18:00, по времени г. Астана</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

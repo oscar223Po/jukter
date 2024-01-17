@@ -4,15 +4,15 @@
 .button {
 	gap: toRem(10);
 	font-weight: 800;
-	padding: 0px 0px;
-	height: toRem(44);
 	align-items: center;
 	display: inline-flex;
+	min-height: toRem(44);
 	justify-content: center;
 	border-radius: toRem(25);
 	transition:
 		background-color 0.3s ease 0s,
-		color 0.3s ease 0s;
+		color 0.3s ease 0s,
+		border 0.3s ease 0s;
 	@include adaptiveValue("font-size", 20, 15);
 	&::before {
 		display: flex;
@@ -21,6 +21,9 @@
 		align-items: center;
 		font-size: toRem(24);
 		justify-content: center;
+	}
+	@media (max-width: $mobile) {
+		min-height: toRem(40);
 	}
 	&--green {
 		color: $whiteColor;
@@ -56,11 +59,10 @@
 	}
 	&--blue {
 		font-weight: 800;
-		height: toRem(45);
 		color: $whiteColor;
 		line-height: normal;
 		border-radius: toRem(50);
-		padding: toRem(0) toRem(25);
+		padding: toRem(10) toRem(25);
 		background-color: $blueColor;
 		transition: background-color 0.15s ease 0s;
 		@media (any-hover: hover) {
@@ -71,7 +73,7 @@
 		@media (max-width: $mobileSmall) {
 			font-size: toRem(15);
 			border-radius: toRem(25);
-			padding: toRem(0) toRem(10);
+			padding: toRem(7) toRem(20);
 		}
 	}
 	&--gray {
@@ -92,6 +94,11 @@
 			height: toRem(35);
 			padding: toRem(0) toRem(15);
 		}
+	}
+	&--bord {
+		font-weight: 800;
+		border-radius: toRem(50);
+		border: toRem(1) solid $mainColor;
 	}
 	&--fw {
 		width: 100%;

@@ -108,31 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 		});
 	}
-	// ================[ JavaScript Section Conditional Window ]================
-	/* 
-	const conditionWindow = document.querySelector(".condition");
-	const conditionButtonClose = document.querySelector(".condition__cancel");
-	const conditionButton = document.querySelector(".item-request-third__all");
-	if (conditionButton !== null) {
-		conditionButton.addEventListener("click", () => {
-			conditionWindow.classList.remove("condition-close");
-		})
-		conditionButtonClose.addEventListener("click", () => {
-			conditionWindow.classList.add("condition-close");
-		})
-	}
-	const detailsWindow = document.querySelector(".details");
-	const detailsButtonClose = document.querySelector(".details__cancel");
-	const detailsButton = document.querySelector(".item-request-third__button");
-	if (detailsButton !== null) {
-		detailsButton.addEventListener("click", () => {
-			detailsWindow.classList.remove("details-close");
-		})
-		detailsButtonClose.addEventListener("click", () => {
-			detailsWindow.classList.add("details-close");
-		})
-	}
-	*/
 	// ================[ JavaScript Section Input Active ]================
 	const inputs = document.querySelectorAll('.input-actions');
 	if (inputs !== null) {
@@ -144,6 +119,23 @@ document.addEventListener("DOMContentLoaded", function () {
 					input.classList.remove('input-actions--active');
 				}
 			});
+		})
+	}
+	// ================[ JavaScript Section Review ]================
+	const reviewBtn = document.querySelector('.top-review__button');
+	const reviewContrl = document.querySelector('.top-review__buttons');
+	const reviewArea = document.querySelector('.top-review__area');
+	const reviewBtnCancel = document.querySelector('.top-review__cancel');
+	if (reviewBtn !== null) {
+		reviewBtn.addEventListener("click", () => {
+			reviewBtn.classList.add("top-review__button--disable");
+			reviewContrl.classList.remove("buttons-review-disable");
+			reviewArea.classList.remove("area-review-disable");
+		})
+		reviewBtnCancel.addEventListener("click", () => {
+			reviewBtn.classList.remove("top-review__button--disable");
+			reviewContrl.classList.add("buttons-review-disable");
+			reviewArea.classList.add("area-review-disable");
 		})
 	}
 });

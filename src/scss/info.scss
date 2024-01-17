@@ -141,21 +141,7 @@
 		display: flex;
 		gap: toRem(24);
 		align-items: center;
-		line-height: normal;
 		@include adaptiveValue("font-size", 20, 14);
-		h5 {
-			width: toRem(90);
-		}
-		a {
-			font-weight: 600;
-			color: $grenColor;
-			transition: color 0.3s ease 0s;
-			@media (any-hover: hover) {
-				&:hover {
-					color: $mainColor;
-				}
-			}
-		}
 		&:not(:last-child) {
 			margin-bottom: toRem(15);
 		}
@@ -300,7 +286,7 @@
 		@media (max-width: $mobile) {
 			flex-direction: row;
 		}
-		@media (max-width: em(560)) {
+		@media (max-width: em(650)) {
 			flex-direction: column;
 		}
 	}
@@ -362,7 +348,7 @@
 		@media (max-width: $mobile) {
 			width: 100%;
 		}
-		@media (max-width: em(560)) {
+		@media (max-width: em(650)) {
 			width: auto;
 		}
 	}
