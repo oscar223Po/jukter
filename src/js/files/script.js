@@ -5,26 +5,10 @@ import { isMobile } from "./functions.js";
 import { flsModules } from "./modules.js";
 // ================[ JavaScript Section Active Link Var Header ]================
 document.addEventListener("DOMContentLoaded", function () {
-
-	// Получаем все кнопки
-	var buttons = document.querySelectorAll('.menu__var');
-
-	// Добавляем обработчик события для каждой кнопки
-	buttons.forEach(function (button) {
-		button.addEventListener('click', function () {
-			// Удаляем активный класс у всех кнопок
-			buttons.forEach(function (btn) {
-				btn.classList.remove('menu__var--active');
-			});
-
-			// Добавляем активный класс к нажатой кнопке
-			button.classList.add('menu__var--active');
-		});
-	});
 	// ================[ JavaScript Section Current Date For Header ]================
 	function updateCurrentDate() {
-		// Получаем элемент, в который будем выводить дату
-		const currentDateElement = document.getElementById('currentDate');
+		// Получаем все элементы с классом "currentDate"
+		const currentDateElements = document.querySelectorAll('#currentDate');
 
 		// Получаем текущую дату
 		const currentDate = new Date();
@@ -34,14 +18,16 @@ document.addEventListener("DOMContentLoaded", function () {
 			day: 'numeric',
 			month: 'long',
 			weekday: 'short',
-			year: 'numeric'  // Добавляем опцию для отображения года
+			year: 'numeric'
 		};
 
 		// Форматируем дату с использованием опций
 		const formattedDate = currentDate.toLocaleDateString('ru-RU', options);
 
-		// Выводим отформатированную дату на страницу
-		currentDateElement.textContent = formattedDate;
+		// Обновляем каждый элемент с классом "currentDate"
+		currentDateElements.forEach(element => {
+			element.textContent = formattedDate;
+		});
 	}
 
 	// Вызываем функцию обновления текущей даты
@@ -73,41 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
 			changeInputs.classList.toggle('form-hero__inputs--reverse')
 		})
 	}
-	// ================[ JavaScript Section Navigation Articles ]================
-	const links = document.querySelectorAll('.navigation-articles__link');
-	const prevButton = document.querySelector('.navigation-articles__button--prev');
-	const nextButton = document.querySelector('.navigation-articles__button--next');
-
-	// Функция для удаления активного класса у всех ссылок
-	function removeActiveClass() {
-		links.forEach(link => {
-			link.classList.remove('navigation-articles__link--active');
-		});
-	}
-
-	// Функция для установки активного класса на определенную ссылку
-	function setActiveLink(index) {
-		removeActiveClass();
-		links[index].classList.add('navigation-articles__link--active');
-	}
-
-	if (prevButton) {
-		// Обработчик для кнопки "prev"
-		prevButton.addEventListener('click', () => {
-			const currentActiveIndex = [...links].findIndex(link => link.classList.contains('navigation-articles__link--active'));
-			if (currentActiveIndex > 0) {
-				setActiveLink(currentActiveIndex - 1);
-			}
-		});
-
-		// Обработчик для кнопки "next"
-		nextButton.addEventListener('click', () => {
-			const currentActiveIndex = [...links].findIndex(link => link.classList.contains('navigation-articles__link--active'));
-			if (currentActiveIndex < links.length - 1) {
-				setActiveLink(currentActiveIndex + 1);
-			}
-		});
-	}
 	// ================[ JavaScript Section Input Active ]================
 	const inputs = document.querySelectorAll('.input-actions');
 	if (inputs !== null) {
@@ -138,5 +89,18 @@ document.addEventListener("DOMContentLoaded", function () {
 			reviewArea.classList.add("area-review-disable");
 		})
 	}
+	// ================[ JavaScript Section Methods Active ]================
+	const payButtons = document.querySelectorAll('.payment__button');
+	// Добавляем слушатель событий для каждой кнопки
+	payButtons.forEach(function (button) {
+		button.addEventListener('click', function () {
+			// Убираем активный класс у всех кнопок
+			payButtons.forEach(function (btn) {
+				btn.classList.remove('payment__button--active');
+			});
+			// Добавляем активный класс только к текущей кнопке
+			button.classList.add('payment__button--active');
+		});
+	});
 });
 //--------------------------------------------------------------

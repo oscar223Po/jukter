@@ -1312,17 +1312,8 @@
     const da = new DynamicAdapt("max");
     da.init();
     document.addEventListener("DOMContentLoaded", (function() {
-        var buttons = document.querySelectorAll(".menu__var");
-        buttons.forEach((function(button) {
-            button.addEventListener("click", (function() {
-                buttons.forEach((function(btn) {
-                    btn.classList.remove("menu__var--active");
-                }));
-                button.classList.add("menu__var--active");
-            }));
-        }));
         function updateCurrentDate() {
-            const currentDateElement = document.getElementById("currentDate");
+            const currentDateElements = document.querySelectorAll("#currentDate");
             const currentDate = new Date;
             const options = {
                 day: "numeric",
@@ -1331,7 +1322,9 @@
                 year: "numeric"
             };
             const formattedDate = currentDate.toLocaleDateString("ru-RU", options);
-            currentDateElement.textContent = formattedDate;
+            currentDateElements.forEach((element => {
+                element.textContent = formattedDate;
+            }));
         }
         updateCurrentDate();
         setInterval(updateCurrentDate, 6e4);
@@ -1350,28 +1343,6 @@
         if (changeButton !== null) changeButton.addEventListener("click", (() => {
             changeInputs.classList.toggle("form-hero__inputs--reverse");
         }));
-        const links = document.querySelectorAll(".navigation-articles__link");
-        const prevButton = document.querySelector(".navigation-articles__button--prev");
-        const nextButton = document.querySelector(".navigation-articles__button--next");
-        function removeActiveClass() {
-            links.forEach((link => {
-                link.classList.remove("navigation-articles__link--active");
-            }));
-        }
-        function setActiveLink(index) {
-            removeActiveClass();
-            links[index].classList.add("navigation-articles__link--active");
-        }
-        if (prevButton) {
-            prevButton.addEventListener("click", (() => {
-                const currentActiveIndex = [ ...links ].findIndex((link => link.classList.contains("navigation-articles__link--active")));
-                if (currentActiveIndex > 0) setActiveLink(currentActiveIndex - 1);
-            }));
-            nextButton.addEventListener("click", (() => {
-                const currentActiveIndex = [ ...links ].findIndex((link => link.classList.contains("navigation-articles__link--active")));
-                if (currentActiveIndex < links.length - 1) setActiveLink(currentActiveIndex + 1);
-            }));
-        }
         const inputs = document.querySelectorAll(".input-actions");
         if (inputs !== null) inputs.forEach((function(input) {
             input.addEventListener("input", (function() {
@@ -1394,6 +1365,15 @@
                 reviewArea.classList.add("area-review-disable");
             }));
         }
+        const payButtons = document.querySelectorAll(".payment__button");
+        payButtons.forEach((function(button) {
+            button.addEventListener("click", (function() {
+                payButtons.forEach((function(btn) {
+                    btn.classList.remove("payment__button--active");
+                }));
+                button.classList.add("payment__button--active");
+            }));
+        }));
     }));
     window["FLS"] = false;
     isWebp();

@@ -103,6 +103,23 @@ summary::-webkit-details-marker {
 		}
 	}
 }
+// ========================================================================================================================================================
+// Date
+.date {
+	display: flex;
+	gap: toRem(10);
+	font-weight: 700;
+	align-items: center;
+	&::before {
+		display: flex;
+		width: toRem(24);
+		height: toRem(24);
+		align-items: center;
+		font-size: toRem(22);
+		margin-top: toRem(2);
+		justify-content: center;
+	}
+}
 //========================================================================================================================================================
 // Styles Of Articles Blocks
 .articles {
@@ -411,7 +428,7 @@ summary::-webkit-details-marker {
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				background-color: $grayColor;
+				background-color: $grenColor;
 			}
 		}
 		@media (max-width: $mobile) {
@@ -495,12 +512,12 @@ summary::-webkit-details-marker {
 // Styles For Active Value Input Js
 .input-actions {
 	font-weight: 800;
-	color: $whiteColor;
 	transition: background-color 0.3s ease 0s;
 	&::placeholder {
 		font-weight: 400;
 	}
 	&--active {
+		color: $whiteColor;
 		background-color: $blueColor;
 	}
 }
@@ -520,6 +537,58 @@ summary::-webkit-details-marker {
 	}
 }
 //========================================================================================================================================================
+// Styles For Profile Grid
+.grid-rofile {
+	display: grid;
+	gap: toRem(43);
+	align-items: start;
+	grid-template-columns: toRem(320) auto;
+	@media (max-width: em(1240.98)) {
+		grid-template-columns: auto;
+	}
+}
+// ========================================================================================================================================================
+// Styles For Rule Card Popup
+.rule {
+	display: flex;
+	gap: toRem(10);
+	align-items: center;
+	&__icon {
+		display: flex;
+		color: $grayColor;
+		align-items: center;
+		font-size: toRem(60);
+		min-width: toRem(140);
+		min-height: toRem(140);
+		justify-content: center;
+		border-radius: toRem(10);
+		background-color: #e8e8ea;
+		&--active {
+			color: $whiteColor;
+			background-color: $grenColor;
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(40);
+			min-width: toRem(100);
+			min-height: toRem(100);
+		}
+	}
+
+	&__text {
+		line-height: 125%;
+		@include adaptiveValue("font-size", 16, 14);
+	}
+}
+// ========================================================================================================================================================
+// Styles For Text Span
+.span {
+	font-weight: 800;
+	color: $blueColor;
+	&--black {
+		color: $mainColor;
+	}
+}
+// ========================================================================================================================================================
 /*
 <div class="item-articles__last">
 	<div class="item-articles__sec">48 секунд назад</div>

@@ -70,35 +70,33 @@
 			width: 18px;
 			height: 18px;
 			flex: 0 0 18px;
-			border-radius: 50%;
+			border-radius: toRem(4);
 			border: 1px solid $grenColor;
 		}
 		&:after {
-			content: "";
+			@extend %ic;
+			display: flex;
+			content: "\e91b";
+			color: $whiteColor;
+			font-size: toRem(18);
+			align-items: center;
+			justify-content: center;
 			transition: all 0.3s ease 0s;
 			transform: scale(0);
-			width: 10px;
-			height: 10px;
-			border-radius: 50%;
+			width: 18px;
+			height: 18px;
+			border-radius: toRem(4);
 			background-color: $grenColor;
 			position: absolute;
-			left: 4px;
-			top: 8px;
+			left: 0px;
+			top: 4px;
 		}
 		@media (max-width: $mobile) {
 			&::before {
 				margin-top: toRem(2.5);
 			}
 			&::after {
-				top: 6.5px;
-			}
-		}
-		@media (max-width: $mobileSmall) {
-			&::before {
-				margin-top: toRem(2);
-			}
-			&::after {
-				top: 6px;
+				top: 2.5px;
 			}
 		}
 	}

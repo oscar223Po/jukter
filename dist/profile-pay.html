@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Jukter (Добавление заявки груза) - RequestPage</title>
+	<title>Jukter (Профиль - платежи) - ProfilePayPage</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -51,196 +51,82 @@
 		</header>
 		<!-- $=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-> -->
 		<main class="page">
-			<!-- [Request] -->
-			<section class="request">
-				<div class="request__container">
-					<div class="request__top">
-						<h2 class="request__title title-big">Добавление заявки груза</h2>
-						<ul class="request__list">
-							<li class="request__item"><a href="" class="request__link">Транспорт</a></li>
-							<li class="request__item"><a href="" class="request__link request__link--active">Груз</a></li>
-						</ul>
+			<!-- [Pay] -->
+			<section class="pay">
+				<div class="pay__container grid-rofile">
+					<div class="pay__user user">
+						<div class="user__main">
+							<div class="user__image"><picture><source srcset="img/profile.webp" type="image/webp"><img src="img/profile.jpg" alt="Image"></picture></div>
+							<div class="user__info">
+								<h4 class="user__name _icon-verified">Компания</h4>
+								<div class="user__location">Россия, Москва</div>
+								<div class="user__rate">Рейтинг <div class="user__stat"><span>5.0</span><img src="img/icons/rate.svg" alt="Icon"></div>
+								</div>
+							</div>
+						</div>
+						<div class="user__navigation">
+							<ul class="user__list">
+								<li class="user__item"><a href="" class="user__link _icon-assignment">Мои заказы</a></li>
+								<li class="user__item"><a href="" class="user__link _icon-favorite">Избранное</a></li>
+							</ul>
+							<ul class="user__list">
+								<li class="user__item"><a href="" class="user__link _icon-account-box">Профиль</a></li>
+								<li class="user__item"><a href="" class="user__link _icon-account-balance">Моя организация</a></li>
+								<li class="user__item"><a href="" class="user__link _icon-people-alt">Сотрудники</a></li>
+								<li class="user__item"><a href="" class="user__link user__link--active _icon-wallet">Платежи</a></li>
+							</ul>
+							<ul class="user__list">
+								<li class="user__item"><a href="" class="user__link _icon-exit-app">Выйти</a></li>
+							</ul>
+						</div>
 					</div>
-					<div class="request__body">
-						<div class="request__item item-request item-request-first">
-							<div class="item-request__number">1</div>
-							<div class="item-request__content item-request-first__content">
-								<div class="item-request-first__select">
-									<span class="item-request__span">Откуда</span>
-									<select name="form[]" data-class-modif="req-selected">
-										<option value="1">Пермь, Россия</option>
-										<option value="2">Москва, Россия</option>
-										<option value="3">Мурманск, Россия</option>
-									</select>
-									<button type="button" class="item-request__add">Добавить 2-ой пункт погрузки</button>
-								</div>
-								<div class="item-request-first__select">
-									<span class="item-request__span">Куда</span>
-									<select name="form[]" data-class-modif="req-selected">
-										<option value="1" selected>Пермь, Россия</option>
-										<option value="2">Пермь, Россия</option>
-										<option value="3">Пермь, Россия</option>
-										<option value="4">Пермь, Россия</option>
-										<option value="5">Пермь, Россия</option>
-									</select>
-									<button type="button" class="item-request__add">Добавить 2-ой пункт погрузки</button>
-								</div>
-								<div class="item-request-first__select">
-									<span class="item-request__span">Дата</span>
-									<select name="form[]" data-class-modif="req-date">
-										<option value="1" selected>02.02.2024</option>
-										<option value="2">02.03.2024</option>
-										<option value="3">02.04.2024</option>
-									</select>
-								</div>
-							</div>
-						</div>
-						<div class="request__item item-request item-request-second">
-							<div class="item-request__number">2</div>
-							<div class="item-request__content item-request-second__content">
-								<h4 class="item-request__title title-sm">Информация о грузе</h4>
-								<div class="item-request-second__body">
-									<div class="item-request-second__main">
-										<div class="item-request-second__selects">
-											<div class="item-request-second__select">
-												<span class="item-request__span">Характер груза</span>
-												<select name="form[]" data-class-modif="req-regular">
-													<option data-class="_icon-box" value="1">Выбрать</option>
-													<option data-class="_icon-box" value="2">Москва, Россия</option>
-													<option data-class="_icon-box" value="3">Мурманск, Россия</option>
-												</select>
-											</div>
-											<div class="item-request-second__select">
-												<span class="item-request__span">Тип транспорта</span>
-												<select name="form[]" data-class-modif="req-regular">
-													<option data-class="_icon-bus" value="1">Выбрать</option>
-													<option data-class="_icon-bus" value="2">Москва, Россия</option>
-													<option data-class="_icon-bus" value="3">Мурманск, Россия</option>
-												</select>
-											</div>
-										</div>
-										<div class="item-request-second__info info-max-gap">
-											<label for="#" class="item-request__label">
-												<span class="item-request__span">Вес груза, т</span>
-												<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="item-request-second__input input">
-											</label>
-											<label for="#" class="item-request__label">
-												<span class="item-request__span">Вес груза, т</span>
-												<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="item-request-second__input input">
-											</label>
-											<label for="#" class="item-request__label">
-												<span class="item-request__span">Вес груза, т</span>
-												<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="item-request-second__input input">
-											</label>
-										</div>
-									</div>
-									<div class="item-request-second__bottom">
-										<div class="item-request-second__options">
-											<div class="options__item">
-												<input id="o_1" class="options__input" checked type="radio" value="1" name="option-01">
-												<label for="o_1" class="options__label"><span class="options__text">Без догруза</span></label>
-											</div>
-											<div class="options__item">
-												<input id="o_2" class="options__input" type="radio" value="2" name="option-01">
-												<label for="o_2" class="options__label"><span class="options__text">Догруз</span></label>
-											</div>
-											<div class="options__item">
-												<input id="o_3" class="options__input" type="radio" value="3" name="option-01">
-												<label for="o_3" class="options__label"><span class="options__text">Возможен догруз</span></label>
-											</div>
-										</div>
-										<div class="item-request-second__optional">
-											<div class="item-request-second__opt options__item">
-												<input id="o_1" class="options__input" checked type="radio" value="1" name="option-02">
-												<label for="o_1" class="options__label"><span class="options__text">Указать размеры груза, в метрах</span></label>
-											</div>
-											<div class="item-request-second__info info-min-gap">
-												<label for="#" class="item-request__label">
-													<span class="item-request__span">Длина, м</span>
-													<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="item-request-second__input input">
-												</label>
-												<label for="#" class="item-request__label">
-													<span class="item-request__span">Ширина, м</span>
-													<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="item-request-second__input input">
-												</label>
-												<label for="#" class="item-request__label">
-													<span class="item-request__span">Высота, м</span>
-													<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="0" class="item-request-second__input input">
-												</label>
-											</div>
-										</div>
+					<div class="pay__tarif">
+						<h4 class="pay__title title-sm">Платежи</h4>
+						<div class="pay__items customs">
+							<div class="customs__item customs__item--white">
+								<div class="customs__body">
+									<h3 class="customs__title">Júkter</h3>
+									<div class="customs__list">
+										<div class="customs__list-item">1 пользователь</div>
+										<div class="customs__list-item">Все грузы</div>
+										<div class="customs__list-item">Все машины</div>
+										<div class="customs__list-item">Безлимитные уведомления</div>
+										<div class="customs__list-item customs__list-item--span">Доступ в Jukter <span>(Подходит для физ. лиц)</span></div>
 									</div>
 								</div>
+								<div class="customs__cost _icon-cart-mini">5.000 ₸</div>
+								<button data-popup="#verif" type="button" class="customs__button _icon-cart">Купить</button>
 							</div>
-						</div>
-						<div class="request__item item-request item-request-third">
-							<div class="item-request__number">3</div>
-							<div class="item-request__content item-request-third__content">
-								<h4 class="item-request__title title-sm">Стоимость</h4>
-								<div class="item-request-third__body">
-									<label for="#" class="item-request__label">
-										<span class="item-request__span">Стоимость</span>
-										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Указать стоимость" class="item-request-third__input input">
-									</label>
-									<div class="item-request-third__options">
-										<div class="item-request__select item-request-third__currency">
-											<span class="item-request__span">Валюта</span>
-											<select name="form[]" data-class-modif="req-selected">
-												<option value="1">RUB</option>
-												<option value="2">KAZ</option>
-												<option value="3">KGS</option>
-												<option value="4">USD</option>
-											</select>
-										</div>
-										<div class="item-request__select item-request-third__currency">
-											<span class="item-request__span">Доп. условие</span>
-											<select name="form[]" data-class-modif="req-selected">
-												<option value="1">всего</option>
-												<option value="2">KAZ</option>
-												<option value="3">KGS</option>
-												<option value="4">USD</option>
-											</select>
-										</div>
-										<div class="item-request-third__details">
-											<span class="item-request__span">Доп. условие</span>
-											<button data-popup="#details" type="button" class="item-request-third__button button button--blue">Детали оплаты</button>
-										</div>
+							<div class="customs__item customs__item--grad">
+								<div class="customs__body">
+									<h3 class="customs__title">Júkter Plus</h3>
+									<div class="customs__list">
+										<div class="customs__list-item">3 пользователь</div>
+										<div class="customs__list-item">Все грузы</div>
+										<div class="customs__list-item">Все машины</div>
+										<div class="customs__list-item">Безлимитные уведомления</div>
+										<div class="customs__list-item">Доступ в Jukter Plus <span>(Подходит для физ. лиц)</span></div>
 									</div>
 								</div>
+								<div class="customs__cost _icon-cart-mini">7.500 ₸</div>
+								<button data-popup="#verif-next" type="button" class="customs__button _icon-cart">Купить</button>
 							</div>
-						</div>
-						<div class="request__item item-request item-request-four">
-							<div class="item-request__number">4</div>
-							<div class="item-request__content item-request-four__content">
-								<h4 class="item-request__title title-sm">Контактная информация</h4>
-								<div class="item-request-four__body">
-									<label for="#" class="item-request-four__label">
-										<span class="item-request__span">Номер телефона</span>
-										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" class="item-request-four__input input-actions input">
-									</label>
-									<label for="#" class="item-request-four__label">
-										<span class="item-request__span">Номер WhatsApp</span>
-										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" class="item-request-four__input input-actions input">
-									</label>
-									<label for="#" class="item-request-four__label">
-										<span class="item-request__span">Номер Telegram</span>
-										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" class="item-request-four__input input-actions input">
-									</label>
-									<label for="#" class="item-request-four__label">
-										<span class="item-request__span">Дополнительный номер телефона</span>
-										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" class="item-request-four__input input-actions input">
-									</label>
+							<div class="customs__item customs__item--grad">
+								<div class="customs__body">
+									<h3 class="customs__title">Júkter Max</h3>
+									<div class="customs__list">
+										<div class="customs__list-item">5 пользователь</div>
+										<div class="customs__list-item">Все грузы</div>
+										<div class="customs__list-item">Все машины</div>
+										<div class="customs__list-item">Безлимитные уведомления</div>
+										<div class="customs__list-item">Доступ в Jukter Max <span>(Подходит для физ. лиц)</span></div>
+									</div>
 								</div>
-							</div>
-						</div>
-						<div class="request__item item-request item-request-five">
-							<div class="item-request__number">5</div>
-							<div class="item-request__content item-request-five__content">
-								<button data-popup="#condition" type="button" class="item-request-five__button button button--blue">Дополнительная информация</button>
+								<div class="customs__cost _icon-cart-mini">10.000 ₸</div>
+								<button data-popup="#payment" type="button" class="customs__button _icon-cart">Купить</button>
 							</div>
 						</div>
 					</div>
-					<div class="request__button"><a href="" class="button button--green">Разместить</a></div>
 				</div>
 			</section>
 		</main>

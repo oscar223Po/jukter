@@ -269,30 +269,30 @@
 			<div class="details__main">
 				<div class="details__item item-details">
 					<h4 class="item-details__title">Метод оплаты</h4>
-					<div class="item-details__chekboxes item-details__chekboxes--wrap">
-						<div class="item-details__checkbox checkbox-opt">
-							<input id="d_1" data-error="Error" class="checkbox-opt__input" type="checkbox" value="1" name="form[]">
-							<label for="d_1" class="checkbox-opt__label"><span class="checkbox-opt__text">Б/н</span></label>
+					<div class="item-details__options">
+						<div class="options__item">
+							<input id="d_1" class="options__input" checked type="radio" value="1" name="details-01">
+							<label for="d_1" class="options__label"><span class="options__text">Б/н</span></label>
 						</div>
-						<div class="item-details__checkbox checkbox-opt">
-							<input id="d_2" data-error="Error" class="checkbox-opt__input" type="checkbox" value="2" name="form[]">
-							<label for="d_2" class="checkbox-opt__label"><span class="checkbox-opt__text">Нал.</span></label>
+						<div class="options__item">
+							<input id="d_2" class="options__input" type="radio" value="2" name="details-01">
+							<label for="d_2" class="options__label"><span class="options__text">Нал.</span></label>
 						</div>
-						<div class="item-details__checkbox checkbox-opt">
-							<input id="d_3" data-error="Error" class="checkbox-opt__input" type="checkbox" value="3" name="form[]">
-							<label for="d_3" class="checkbox-opt__label"><span class="checkbox-opt__text">Комбинир.</span></label>
+						<div class="options__item">
+							<input id="d_3" class="options__input" checked type="radio" value="3" name="details-01">
+							<label for="d_3" class="options__label"><span class="options__text">Комбинир.</span></label>
 						</div>
-						<div class="item-details__checkbox checkbox-opt">
-							<input id="d_4" data-error="Error" class="checkbox-opt__input" type="checkbox" value="4" name="form[]">
-							<label for="d_4" class="checkbox-opt__label"><span class="checkbox-opt__text">Софт</span></label>
+						<div class="options__item">
+							<input id="d_4" class="options__input" checked type="radio" value="4" name="details-01">
+							<label for="d_4" class="options__label"><span class="options__text">Софт</span></label>
 						</div>
-						<div class="item-details__checkbox checkbox-opt">
-							<input id="d_5" data-error="Error" class="checkbox-opt__input" type="checkbox" value="5" name="form[]">
-							<label for="d_5" class="checkbox-opt__label"><span class="checkbox-opt__text">Любая</span></label>
+						<div class="options__item">
+							<input id="d_5" class="options__input" checked type="radio" value="5" name="details-01">
+							<label for="d_5" class="options__label"><span class="options__text">Любая</span></label>
 						</div>
-						<div class="item-details__checkbox checkbox-opt">
-							<input id="d_6" data-error="Error" class="checkbox-opt__input" type="checkbox" value="6" name="form[]">
-							<label for="d_6" class="checkbox-opt__label"><span class="checkbox-opt__text">На карту</span></label>
+						<div class="options__item">
+							<input id="d_6" class="options__input" checked type="radio" value="6" name="details-01">
+							<label for="d_6" class="options__label"><span class="options__text">На карту</span></label>
 						</div>
 					</div>
 				</div>
@@ -356,6 +356,171 @@
 				</div>
 			</div>
 			<button data-close type="button" class="details__button button button--green-big">Сохранить</button>
+		</div>
+	</div>
+</div>
+<!-- //======================================================================================================================================================== -->
+<div id="verif" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content verif">
+			<div class="verif__top top-popup">
+				<div class="top-popup__empty"></div>
+				<h4 class="top-popup__title title-sm">Верификация</h4>
+				<button data-close type="button" class="top-popup__cancel _icon-close"></button>
+			</div>
+			<div class="verif__date">
+				<span>Дата</span>
+				<div class="verif__date date _icon-today" id="currentDate"></div>
+			</div>
+			<div class="verif__body">
+				<div class="verif__rule rule">
+					<div class="rule__icon rule__icon--active _icon-id"></div>
+					<div class="rule__text">Фотография удостоверения с лицевой стороны</div>
+				</div>
+				<div class="verif__rule rule">
+					<div class="rule__icon rule__icon--active _icon-id"></div>
+					<div class="rule__text">Фотография удостоверения с обратной стороны</div>
+				</div>
+				<div class="verif__rule rule">
+					<div class="rule__icon _icon-id-open"></div>
+					<div class="rule__text">Паспорт на странице с фотографией</div>
+				</div>
+				<div class="verif__rule rule">
+					<div class="rule__icon _icon-id-user"></div>
+					<div class="rule__text">Селфи с удостоверением или паспортом, чтобы было видно Вас и фото на документе</div>
+				</div>
+			</div>
+			<button type="button" class="verif__button button button--green">Отправить</button>
+		</div>
+	</div>
+</div>
+<!-- //======================================================================================================================================================== -->
+<div id="verif-next" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content verif-next">
+			<div class="verif__top top-popup">
+				<div class="top-popup__empty"></div>
+				<h4 class="top-popup__title title-sm">Верификация</h4>
+				<button data-close type="button" class="top-popup__cancel _icon-close"></button>
+			</div>
+			<div class="verif__date">
+				<span>Дата</span>
+				<div class="verif__date date _icon-today" id="currentDate"></div>
+			</div>
+			<div class="verif-next__items">
+				<div class="verif-next__item">
+					<span>Устав</span>
+					<div class="verif-next__content">
+						<button type="button" class="verif-next__button verif-next__button--active _icon-done"></button>
+						<div class="verif-next__files">
+							<div class="verif-next__file _icon-file-drive"><button type="button" class="verif-next__close _icon-close"></button></div>
+							<div class="verif-next__name"><span>123.pdf</span></div>
+						</div>
+					</div>
+				</div>
+				<div class="verif-next__item">
+					<span>Приказ о назначении генерального директора</span>
+					<button type="button" class="verif-next__button _icon-pin"></button>
+				</div>
+				<div class="verif-next__item">
+					<span>Справка о регистрации юридического лица</span>
+					<button type="button" class="verif-next__button _icon-pin"></button>
+				</div>
+			</div>
+			<div class="verif-next__body">
+				<div class="verif__rule rule">
+					<div class="rule__icon rule__icon--active _icon-id"></div>
+					<div class="rule__text">Фотография удостоверения с лицевой стороны</div>
+				</div>
+				<div class="verif__rule rule">
+					<div class="rule__icon _icon-id"></div>
+					<div class="rule__text">Фотография удостоверения с обратной стороны</div>
+				</div>
+				<div class="verif__rule rule">
+					<div class="rule__icon _icon-id-open"></div>
+					<div class="rule__text">Паспорт на странице с фотографией</div>
+				</div>
+			</div>
+			<button type="button" class="verif__button button button--green">Отправить</button>
+		</div>
+	</div>
+</div>
+<!-- //======================================================================================================================================================== -->
+<div id="payment" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content payment">
+			<div class="payment__top top-popup">
+				<div class="top-popup__empty"></div>
+				<h4 class="top-popup__title title-sm">Выберите способ оплаты</h4>
+				<button data-close type="button" class="top-popup__cancel _icon-close"></button>
+			</div>
+			<div class="payment__body">
+				<div class="payment__methods">
+					<button type="button" class="payment__button"><img src="@img/icons/kaz-flag.svg" alt="Image">Оплата картой выпущенной в Казахстане</button>
+					<button type="button" class="payment__button payment__button--active"><img src="@img/icons/rus-flag.svg" alt="Image">Оплата картой выпущенной в России</button>
+					<button type="button" class="payment__button _icon-y-world">Оплата международными картами</button>
+					<button type="button" class="payment__button _icon-y-check">Запросить счет</button>
+				</div>
+				<div class="payment__tip"><span>Запросить счет</span> - (доступно для казахстанских и российских юридических лиц)</div>
+			</div>
+			<button data-popup="#props" type="button" class="payment__send button button--green">Отправить</button>
+		</div>
+	</div>
+</div>
+<!-- //======================================================================================================================================================== -->
+<div id="props" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content props">
+			<div class="props__top top-popup">
+				<div class="top-popup__empty"></div>
+				<h4 class="top-popup__title title-sm">Платежные реквизиты</h4>
+				<button data-close type="button" class="top-popup__cancel _icon-close"></button>
+			</div>
+			<form action="#" class="props__body">
+				<div class="props__item">
+					<h5 class="props__name">Организация</h5>
+					<label for="#" class="props__label">
+						<div class="props__select">
+							<select name="form[]" data-class-modif="req-regular">
+								<option value="1" selected>Выбрать</option>
+								<option value="2">Пункт №1</option>
+								<option value="3">Пункт №2</option>
+								<option value="4">Пункт №3</option>
+							</select>
+						</div>
+						<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" class="props__input input-actions input">
+					</label>
+				</div>
+				<div class="props__item">
+					<h5 class="props__name">Юр. адрес</h5>
+					<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" class="props__input input-actions input">
+				</div>
+				<div class="props__item">
+					<h5 class="props__name">Фактический адрес</h5>
+					<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" class="props__input input-actions input">
+				</div>
+				<div class="props__item">
+					<h5 class="props__name">БИН/ИИН/ИНН</h5>
+					<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" class="props__input input-actions input">
+				</div>
+				<div class="props__item">
+					<h5 class="props__name">КПП</h5>
+					<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" class="props__input input-actions input">
+				</div>
+				<div class="props__item">
+					<h5 class="props__name">Р/с</h5>
+					<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" class="props__input input-actions input">
+				</div>
+				<div class="props__item">
+					<h5 class="props__name">Банк</h5>
+					<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" class="props__input input-actions input">
+				</div>
+				<div class="props__item">
+					<h5 class="props__name">БИК</h5>
+					<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" class="props__input input-actions input">
+				</div>
+			</form>
+			<button type="button" class="payment__send button button--green">Запросить счет</button>
 		</div>
 	</div>
 </div>

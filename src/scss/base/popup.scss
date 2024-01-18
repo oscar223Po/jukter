@@ -206,6 +206,13 @@ body::after {
 	}
 }
 .item-details {
+	&__options {
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: toRem(10);
+		column-gap: toRem(25);
+	}
+
 	&__title {
 		font-weight: 800;
 		line-height: normal;
@@ -237,3 +244,307 @@ body::after {
 	}
 }
 //========================================================================================================================================================
+// Verification Window Close & Open
+.verif {
+	max-width: toRem(820);
+	padding: toRem(30) toRem(40) toRem(50) toRem(40);
+	@media (max-width: $mobile) {
+		padding: toRem(25) toRem(20) toRem(35) toRem(20);
+	}
+	&__top {
+	}
+
+	&__date {
+		span {
+			display: flex;
+			line-height: normal;
+			&:not(:last-child) {
+				margin-bottom: toRem(5);
+			}
+		}
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 35);
+		}
+	}
+
+	&__body {
+		display: grid;
+		gap: toRem(30);
+		grid-template-columns: repeat(2, 1fr);
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+		@media (max-width: em(720)) {
+			grid-template-columns: auto;
+		}
+	}
+
+	&__rule {
+	}
+
+	&__button {
+		display: flex;
+		min-height: toRem(50);
+		margin: toRem(0) auto;
+		padding: toRem(0) toRem(70);
+	}
+}
+.verif-next {
+	max-width: toRem(1215);
+	padding: toRem(30) toRem(40) toRem(50) toRem(40);
+	@media (max-width: $mobile) {
+		padding: toRem(25) toRem(20) toRem(35) toRem(20);
+	}
+	&__body {
+		display: grid;
+		gap: toRem(30);
+		grid-template-columns: repeat(3, 1fr);
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+		@media (max-width: $tablet) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: em(720)) {
+			grid-template-columns: auto;
+		}
+	}
+
+	&__items {
+		display: grid;
+		@include adaptiveValue("gap", 50, 25);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 35);
+		}
+	}
+
+	&__item {
+		span {
+			display: flex;
+			line-height: normal;
+			@include adaptiveValue("font-size", 18, 16);
+			&:not(:last-child) {
+				margin-bottom: toRem(5);
+			}
+		}
+	}
+
+	&__content {
+		display: flex;
+		gap: toRem(14);
+		align-items: center;
+	}
+
+	&__files {
+		display: flex;
+		gap: toRem(10);
+		align-items: center;
+	}
+
+	&__file {
+		display: flex;
+		width: toRem(44);
+		height: toRem(44);
+		border-radius: 50%;
+		position: relative;
+		align-items: center;
+		font-size: toRem(18);
+		justify-content: center;
+		color: rgba(0, 0, 0, 0.5);
+		background-color: #e8e8ea;
+	}
+
+	&__close {
+		top: toRem(-3);
+		right: toRem(-5);
+		width: toRem(18);
+		height: toRem(18);
+		border-radius: 50%;
+		position: absolute;
+		color: $whiteColor;
+		background-color: $blueColor;
+		transition: background-color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $redColor;
+			}
+		}
+	}
+
+	&__name {
+		line-height: 125%;
+		font-size: toRem(16);
+	}
+
+	&__button {
+		display: flex;
+		width: toRem(44);
+		color: $blueColor;
+		height: toRem(44);
+		border-radius: 50%;
+		align-items: center;
+		font-size: toRem(20);
+		justify-content: center;
+		border: toRem(1) solid $blueColor;
+		transition:
+			background-color 0.3s ease 0s,
+			color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $whiteColor;
+				background-color: $blueColor;
+			}
+		}
+		&--active {
+			color: $grenColor;
+			font-size: toRem(24);
+			border: toRem(1) solid $grenColor;
+			@media (any-hover: hover) {
+				&:hover {
+					color: $grenColor;
+					background-color: transparent;
+				}
+			}
+		}
+	}
+}
+// ========================================================================================================================================================
+// Payment Window Close & Open
+.payment {
+	max-width: toRem(640);
+	padding: toRem(30) toRem(40) toRem(50) toRem(40);
+	@media (max-width: $mobile) {
+		padding: toRem(25) toRem(20) toRem(35) toRem(20);
+	}
+	&__top {
+	}
+
+	&__body {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 60, 35);
+		}
+	}
+
+	&__methods {
+		display: grid;
+		gap: toRem(15);
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+
+	&__button {
+		width: 100%;
+		display: flex;
+		gap: toRem(10);
+		font-weight: 800;
+		align-items: center;
+		line-height: normal;
+		border-radius: toRem(50);
+		padding: toRem(10) toRem(50);
+		@include adaptiveValue("font-size", 20, 14);
+		transition:
+			background-color 0.3s ease 0s,
+			color 0.3s ease 0s;
+		background-color: rgba(232, 232, 234, 0.5);
+		img,
+		&::before {
+			display: flex;
+			width: toRem(24);
+			height: toRem(24);
+			align-items: center;
+			font-size: toRem(24);
+			justify-content: center;
+		}
+		&--active {
+			color: $whiteColor;
+			background-color: $grenColor;
+		}
+		@media (max-width: $mobile) {
+			padding: toRem(10) toRem(20);
+		}
+		@media (max-width: $mobileSmall) {
+			gap: toRem(5);
+			flex-direction: column;
+			justify-content: center;
+			border-radius: toRem(10);
+		}
+	}
+
+	&__tip {
+		line-height: normal;
+		font-size: toRem(16);
+		span {
+			font-weight: 800;
+		}
+	}
+
+	&__send {
+		display: flex;
+		min-height: toRem(50);
+		margin: toRem(0) auto;
+		padding: toRem(0) toRem(70);
+		@media (max-width: $mobile) {
+			min-height: toRem(45);
+			padding: toRem(0) toRem(50);
+		}
+	}
+}
+// ========================================================================================================================================================
+// Props Window Close & Open
+.props {
+	max-width: toRem(865);
+	padding: toRem(30) toRem(40) toRem(50) toRem(40);
+	@media (max-width: $mobile) {
+		padding: toRem(25) toRem(20) toRem(35) toRem(20);
+	}
+	&__body {
+		display: grid;
+		@include adaptiveValue("gap", 30, 15);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 60, 35);
+		}
+	}
+
+	&__item {
+		display: flex;
+		gap: toRem(10);
+		align-items: center;
+		@media (max-width: em(630)) {
+			align-items: start;
+			flex-direction: column;
+		}
+	}
+
+	&__name {
+		line-height: normal;
+		min-width: toRem(160);
+		@include adaptiveValue("font-size", 16, 14);
+	}
+
+	&__label {
+		width: 100%;
+		display: flex;
+		gap: toRem(10);
+		align-items: center;
+		@media (max-width: $mobileSmall) {
+			flex-direction: column;
+		}
+	}
+
+	&__select {
+		width: 100%;
+		max-width: toRem(210);
+		@media (max-width: $mobile) {
+			font-size: toRem(16);
+		}
+		@media (max-width: $mobileSmall) {
+			max-width: 100%;
+		}
+	}
+
+	&__input {
+		width: 100%;
+	}
+}
+// ========================================================================================================================================================

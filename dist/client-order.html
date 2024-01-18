@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240117230126">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240118214919">
 	<link rel="shortcut icon" href="img/icons/head-logo.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,16 +21,24 @@
 				<a href="" class="header__logo"><img src="img/icons/logo.svg" alt="logo"></a>
 				<div class="header__menu menu">
 					<nav class="menu__body">
-						<ul class="menu__links-mob">
-							<a href="" class="menu__link">Мои заказы</a>
-							<a href="" class="menu__link">Чат</a>
-						</ul>
-						<div class="menu__date _icon-today" id="currentDate"></div>
+						<div class="menu__date date _icon-today" id="currentDate"></div>
 						<div class="menu__filter">
-							<button type="button" class="menu__var">Найти транспорт</button>
-							<button type="button" class="menu__var menu__var--active">Найти груз</button>
+							<a href="" class="menu__var _icon-bus">Найти транспорт</a>
+							<a href="" class="menu__var menu__var--active _icon-box">Найти груз</a>
 						</div>
-						<button type="button" class="menu__button button button--green">Создать заявку</button>
+						<div class="menu__profile">
+							<h4 class="menu__title">Профиль</h4>
+							<ul class="menu__list">
+								<li class="menu__item"><a href="" class="menu__link _icon-mail">Чат</a></li>
+								<li class="menu__item"><a href="" class="menu__link _icon-assignment">Мои заказы</a></li>
+								<li class="menu__item"><a href="" class="menu__link _icon-favorite">Избранное</a></li>
+								<li class="menu__item"><a href="" class="menu__link _icon-account-box">Профиль</a></li>
+								<li class="menu__item"><a href="" class="menu__link _icon-account-balance">Моя организация</a></li>
+								<li class="menu__item"><a href="" class="menu__link _icon-people-alt">Сотрудники</a></li>
+								<li class="menu__item"><a href="" class="menu__link _icon-wallet">Платежи</a></li>
+							</ul>
+						</div>
+						<a href="" class="menu__button button button--green">Создать заявку</a>
 					</nav>
 				</div>
 				<div class="header__profile">
@@ -256,14 +264,14 @@
 							</div>
 						</div>
 						<div class="review__navigation navigation-review">
-							<button type="button" class="navigation-articles__button navigation-articles__button--prev _icon-arrow-nav"><span>Назад</span></button>
+							<a href="" class="navigation-articles__button navigation-articles__button--prev _icon-arrow-nav"><span>Назад</span></a>
 							<ul class="navigation-articles__list">
 								<li class="navigation-articles__item"><a href="" class="navigation-articles__link">1</a></li>
 								<li class="navigation-articles__item"><a href="" class="navigation-articles__link">2</a></li>
 								<li class="navigation-articles__item"><a href="" class="navigation-articles__link navigation-articles__link--active">3</a></li>
 								<li class="navigation-articles__item"><a href="" class="navigation-articles__link">4</a></li>
 							</ul>
-							<button type="button" class="navigation-articles__button navigation-articles__button--next _icon-arrow-nav"><span>Вперед</span></button>
+							<a href="" class="navigation-articles__button navigation-articles__button--next _icon-arrow-nav"><span>Вперед</span></a>
 						</div>
 					</div>
 				</div>
@@ -322,7 +330,7 @@
 		</footer>
 		<!-- Footer -->
 	</div>
-	<script src="js/app.min.js?_v=20240117230126"></script>
+	<script src="js/app.min.js?_v=20240118214919"></script>
 </body>
 
 </html>

@@ -277,6 +277,9 @@
 			&:not(:last-child) {
 				border-bottom: 1px solid $grayColor;
 			}
+			@media (max-width: $mobile) {
+				font-size: toRem(15);
+			}
 		}
 	}
 	&_cond-min {

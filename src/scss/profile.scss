@@ -1,0 +1,136 @@
+// ========================================================================================================================================================
+// Pay
+.pay {
+	@include adaptiveValue("padding-top", 45, 35);
+	&__container {
+	}
+
+	&__user {
+	}
+
+	&__tarif {
+	}
+
+	&__items {
+	}
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+}
+.user {
+	padding: toRem(20);
+	border-radius: toRem(25);
+	background-color: rgba(232, 232, 234, 0.5);
+	@media (max-width: em(1240.98)) {
+		display: none;
+	}
+	&__main {
+		&:not(:last-child) {
+			margin-bottom: toRem(50);
+		}
+	}
+
+	&__image {
+		overflow: hidden;
+		border-radius: toRem(50);
+		img {
+			max-width: 100%;
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+
+	&__info {
+		display: grid;
+		gap: toRem(5);
+	}
+
+	&__name {
+		display: flex;
+		gap: toRem(5);
+		font-weight: 800;
+		align-items: center;
+		line-height: normal;
+		font-size: toRem(22);
+		justify-content: start;
+		flex-direction: row-reverse;
+		&::before {
+			color: #657bd8;
+			font-size: toRem(20);
+		}
+	}
+
+	&__location {
+		font-weight: 500;
+		line-height: normal;
+		color: $darkGrayColor;
+	}
+
+	&__rate {
+		display: flex;
+		align-items: center;
+		line-height: normal;
+		justify-content: space-between;
+		span {
+			font-weight: 800;
+		}
+	}
+
+	&__stat {
+		display: flex;
+		gap: toRem(7);
+		align-items: center;
+	}
+
+	&__navigation {
+		display: grid;
+		gap: toRem(20);
+	}
+
+	&__list {
+		display: grid;
+		gap: toRem(5);
+	}
+
+	&__item {
+	}
+
+	&__link {
+		display: flex;
+		gap: toRem(10);
+		font-weight: 800;
+		color: $grayColor;
+		align-items: center;
+		line-height: normal;
+		font-size: toRem(20);
+		border-radius: toRem(10);
+		background-color: #e8e8ea;
+		padding: toRem(12) toRem(15);
+		transition:
+			background-color 0.3s ease 0s,
+			color 0.3s ease 0s;
+		&::before {
+			display: flex;
+			width: toRem(24);
+			height: toRem(24);
+			align-items: center;
+			font-size: toRem(24);
+			justify-content: center;
+		}
+		&--active {
+			color: $whiteColor;
+			background-color: $grenColor;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: #e8e8ea;
+				background-color: $grayColor;
+			}
+		}
+	}
+}
+// ========================================================================================================================================================

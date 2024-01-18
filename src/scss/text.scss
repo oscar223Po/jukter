@@ -1,0 +1,156 @@
+// ========================================================================================================================================================
+// Heading
+.heading {
+	@include adaptiveValue("padding-top", 58, 35);
+	&__container {
+	}
+
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 75, 35);
+		}
+	}
+
+	&__body {
+		display: grid;
+		@include adaptiveValue("gap", 60, 40);
+	}
+
+	&__block {
+	}
+
+	&__subtitle-max {
+		font-size: toRem(24);
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+
+	&__subtitle-black {
+		font-weight: 800;
+		line-height: normal;
+		font-size: toRem(20);
+		padding-top: toRem(10);
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+
+	&__subtitle-min {
+		font-size: toRem(20);
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+
+	&__text {
+		line-height: normal;
+		@include adaptiveValue("font-size", 18, 14);
+		a {
+			font-weight: 800;
+			color: $blueColor;
+			text-decoration: underline;
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+		h5 {
+			font-weight: 800;
+		}
+		p {
+			&:not(:last-child) {
+				margin-bottom: toRem(20);
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+
+		&--nomargin {
+			p {
+				&:not(:last-child) {
+					margin-bottom: toRem(0);
+				}
+			}
+		}
+
+		&--paragraph {
+			position: relative;
+			padding: toRem(0) toRem(20);
+			span {
+				font-weight: 800;
+				color: $blueColor;
+				position: absolute;
+				font-size: toRem(44);
+				&:first-child {
+					left: toRem(0);
+					top: toRem(-40);
+				}
+				&:last-child {
+					right: toRem(0);
+					bottom: toRem(-40);
+				}
+			}
+		}
+	}
+
+	&__list {
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+		&--ul {
+			padding-left: toRem(15);
+			.heading__item {
+				position: relative;
+				&::before {
+					content: "";
+					top: toRem(10);
+					width: toRem(4);
+					height: toRem(4);
+					left: toRem(-14);
+					position: absolute;
+					border-radius: 50%;
+					background-color: $mainColor;
+				}
+			}
+		}
+		&--ol {
+			padding-left: toRem(20);
+			.heading__item {
+				&::before {
+					display: none;
+				}
+			}
+		}
+		&--padding {
+			padding-left: toRem(60);
+			@media (max-width: $mobile) {
+				padding-left: toRem(15);
+			}
+		}
+	}
+
+	&__item {
+		line-height: normal;
+		max-width: toRem(840);
+		@include adaptiveValue("font-size", 18, 14);
+		&--max {
+			max-width: 100%;
+		}
+		span {
+			font-weight: 800;
+			color: $blueColor;
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+
+	&__chekboxes {
+		display: grid;
+		gap: toRem(10);
+	}
+}
+// ========================================================================================================================================================

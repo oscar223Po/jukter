@@ -364,6 +364,9 @@
 	&__textarea {
 		height: toRem(150);
 		padding: toRem(14) toRem(20);
+		@media (max-width: $mobile) {
+			height: toRem(150);
+		}
 	}
 
 	&__button {
