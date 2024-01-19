@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Jukter (Профиль - платежи) - ProfilePayPage</title>
+	<title>Jukter (Профиль - платежи стандарт) - ProfileStandartPage</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -51,9 +51,9 @@
 		</header>
 		<!-- $=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-> -->
 		<main class="page">
-			<!-- [Pay] -->
-			<section class="pay profile-padding">
-				<div class="pay__container grid-rofile">
+			<!-- [Method] -->
+			<section class="method profile-padding">
+				<div class="method__container grid-rofile">
 					<div class="user">
 						<div class="user__main">
 							<div class="user__image"><picture><source srcset="img/profile.webp" type="image/webp"><img src="img/profile.jpg" alt="Image"></picture></div>
@@ -80,50 +80,40 @@
 							</ul>
 						</div>
 					</div>
-					<div class="pay__tarif">
-						<h4 class="pay__title title-sm">Платежи</h4>
-						<div class="pay__items customs">
-							<div class="customs__item customs__item--white">
-								<div class="customs__body">
-									<h3 class="customs__title">Júkter</h3>
-									<div class="customs__list">
-										<div class="customs__list-item">1 пользователь</div>
-										<div class="customs__list-item">Все грузы</div>
-										<div class="customs__list-item">Все машины</div>
-										<div class="customs__list-item">Безлимитные уведомления</div>
-										<div class="customs__list-item customs__list-item--span">Доступ в Jukter <span>(Подходит для физ. лиц)</span></div>
-									</div>
-								</div>
-								<div class="customs__cost _icon-cart-mini">5.000 ₸</div>
-								<button data-popup="#verif" type="button" class="customs__button _icon-cart">Купить</button>
+					<div class="method__body">
+						<h3 class="method__title title-sm">Платежи</h3>
+						<div class="method__banner banner-method">
+							<div class="banner-method__main">
+								<h5 class="banner-method__name">Júkter</h5>
+								<div class="banner-method__date">Активно до: <span>26.02.2023</span></div>
 							</div>
-							<div class="customs__item customs__item--grad">
-								<div class="customs__body">
-									<h3 class="customs__title">Júkter Plus</h3>
-									<div class="customs__list">
-										<div class="customs__list-item">3 пользователь</div>
-										<div class="customs__list-item">Все грузы</div>
-										<div class="customs__list-item">Все машины</div>
-										<div class="customs__list-item">Безлимитные уведомления</div>
-										<div class="customs__list-item">Доступ в Jukter Plus <span>(Подходит для физ. лиц)</span></div>
-									</div>
-								</div>
-								<div class="customs__cost _icon-cart-mini">7.500 ₸</div>
-								<button data-popup="#verif-next" type="button" class="customs__button _icon-cart">Купить</button>
+							<div class="banner-method__buttons">
+								<a href="" class="banner-method__button banner-method__button--blue">Изменить подписку</a>
+								<a href="" class="banner-method__button banner-method__button--red">Отменить подписку</a>
 							</div>
-							<div class="customs__item customs__item--grad">
-								<div class="customs__body">
-									<h3 class="customs__title">Júkter Max</h3>
-									<div class="customs__list">
-										<div class="customs__list-item">5 пользователь</div>
-										<div class="customs__list-item">Все грузы</div>
-										<div class="customs__list-item">Все машины</div>
-										<div class="customs__list-item">Безлимитные уведомления</div>
-										<div class="customs__list-item">Доступ в Jukter Max <span>(Подходит для физ. лиц)</span></div>
-									</div>
+						</div>
+						<ul class="method__list heading__list heading__list--ul">
+							<li class="heading__item">Добавление неограниченного количества грузов и транспорта</li>
+							<li class="heading__item">Доступ к детальной информации про грузы и транспорт</li>
+							<li class="heading__item">1 пользователь</li>
+							<li class="heading__item">Безлимитные уведомления</li>
+						</ul>
+						<div class="method__info info-method">
+							<div class="info-method__item">
+								<h4 class="info-method__title title-sm">Информация о подписке</h4>
+								<div class="info-method__body">
+									<div class="info-method__body-item">Цена подписки:<span>5.000₸ или 1000₽</span></div>
+									<div class="info-method__body-item">Активен до:<span>24.02.2023</span></div>
 								</div>
-								<div class="customs__cost _icon-cart-mini">10.000 ₸</div>
-								<button data-popup="#payment" type="button" class="customs__button _icon-cart">Купить</button>
+							</div>
+							<div class="info-method__item">
+								<h4 class="info-method__title title-sm">Информация о подписке</h4>
+								<div class="info-method__body">
+									<div class="info-method__body-visa">
+										<h5>VISA</h5><span>**** 8739</span>
+									</div>
+									<a href="" class="info-method__body-change">Изменить способ оплаты</a>
+								</div>
 							</div>
 						</div>
 					</div>

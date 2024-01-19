@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Jukter (Профиль - платежи) - ProfilePayPage</title>
+	<title>Jukter (Профиль - заказы) - ProfileOrderArhivePage</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -51,9 +51,9 @@
 		</header>
 		<!-- $=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-> -->
 		<main class="page">
-			<!-- [Pay] -->
-			<section class="pay profile-padding">
-				<div class="pay__container grid-rofile">
+			<!-- [Offer] -->
+			<section class="offer profile-padding">
+				<div class="offer__container grid-rofile">
 					<div class="user">
 						<div class="user__main">
 							<div class="user__image"><picture><source srcset="img/profile.webp" type="image/webp"><img src="img/profile.jpg" alt="Image"></picture></div>
@@ -66,64 +66,190 @@
 						</div>
 						<div class="user__navigation">
 							<ul class="user__list">
-								<li class="user__item"><a href="" class="user__link _icon-assignment">Мои заказы</a></li>
+								<li class="user__item"><a href="" class="user__link user__link--active _icon-assignment">Мои заказы</a></li>
 								<li class="user__item"><a href="" class="user__link _icon-favorite">Избранное</a></li>
 							</ul>
 							<ul class="user__list">
 								<li class="user__item"><a href="" class="user__link _icon-account-box">Профиль</a></li>
 								<li class="user__item"><a href="" class="user__link _icon-account-balance">Моя организация</a></li>
 								<li class="user__item"><a href="" class="user__link _icon-people-alt">Сотрудники</a></li>
-								<li class="user__item"><a href="" class="user__link user__link--active _icon-wallet">Платежи</a></li>
+								<li class="user__item"><a href="" class="user__link _icon-wallet">Платежи</a></li>
 							</ul>
 							<ul class="user__list">
 								<li class="user__item"><a href="" class="user__link _icon-exit-app">Выйти</a></li>
 							</ul>
 						</div>
 					</div>
-					<div class="pay__tarif">
-						<h4 class="pay__title title-sm">Платежи</h4>
-						<div class="pay__items customs">
-							<div class="customs__item customs__item--white">
-								<div class="customs__body">
-									<h3 class="customs__title">Júkter</h3>
-									<div class="customs__list">
-										<div class="customs__list-item">1 пользователь</div>
-										<div class="customs__list-item">Все грузы</div>
-										<div class="customs__list-item">Все машины</div>
-										<div class="customs__list-item">Безлимитные уведомления</div>
-										<div class="customs__list-item customs__list-item--span">Доступ в Jukter <span>(Подходит для физ. лиц)</span></div>
+					<div class="offer__body">
+						<div class="offer__top top-profile">
+							<h3 class="top-profile__title title-sm">Заказы</h3>
+							<a href="" class="top-profile__button button button--green">Добавить заказ</a>
+						</div>
+						<ul class="offer__list list-type">
+							<li class="list-type__item"><a href="" class="list-type__link">Активные</a></li>
+							<li class="list-type__item"><a href="" class="list-type__link list-type__link--active">Архив</a></li>
+						</ul>
+						<div class="offer__main main-offer">
+							<div class="main-offer__top top-main-offer top-main-offer--archive">
+								<div class="top-main-offer__main">
+									<div class="top-main-offer__all">Всего заказов: 4</div>
+									<div class="top-main-offer__infos">
+										<div class="top-main-offer__info"><span>Грузы: 4</span></div>
+										<div class="top-main-offer__info">Транспорт: 0</div>
 									</div>
 								</div>
-								<div class="customs__cost _icon-cart-mini">5.000 ₸</div>
-								<button data-popup="#verif" type="button" class="customs__button _icon-cart">Купить</button>
+								<div class="top-main-offer__actions">
+									<div class="top-main-offer__buttons offer-buttons-disable">
+										<button type="button" class="top-main-offer__button top-main-offer__button--green _icon-unlock">Активировать</button>
+										<button type="button" class="top-main-offer__button top-main-offer__button--red _icon-delete">Удалить</button>
+									</div>
+									<div class="top-main-offer__checkbox checkbox-opt">
+										<input id="stock_1" data-error="Error" class="checkbox-opt__input checkbox-function" type="checkbox" value="1" name="form[]">
+										<label for="stock_1" class="checkbox-opt__label checkbox-opt__label--reverse"><span class="checkbox-opt__text">Отметить все</span></label>
+									</div>
+								</div>
 							</div>
-							<div class="customs__item customs__item--grad">
-								<div class="customs__body">
-									<h3 class="customs__title">Júkter Plus</h3>
-									<div class="customs__list">
-										<div class="customs__list-item">3 пользователь</div>
-										<div class="customs__list-item">Все грузы</div>
-										<div class="customs__list-item">Все машины</div>
-										<div class="customs__list-item">Безлимитные уведомления</div>
-										<div class="customs__list-item">Доступ в Jukter Plus <span>(Подходит для физ. лиц)</span></div>
+							<div class="main-offer__items">
+								<div class="main-offer__item stock">
+									<div class="stock__main main-stock">
+										<div class="main-stock__item">
+											<div class="item-articles__desktop">
+												<div class="item-articles__top"><img src="img/icons/rus.svg" alt="Icon"><img src="img/icons/kaz.svg" alt="Icon"></div>
+												<div class="item-articles__way">
+													<div class="item-articles__town">Пермь <span>(RU)</span></div>
+													<span class="item-articles__line"></span>
+													<div class="item-articles__long">2921 км</div>
+													<span class="item-articles__arrow _icon-arrow-big"></span>
+													<div class="item-articles__town">Талдыкорган <span>(KZ)</span></div>
+												</div>
+												<div class="item-articles__list">
+													<div class="item-articles__li _icon-today">21.09.23</div>
+													<div class="item-articles__li _icon-bus">тент</div>
+													<div class="item-articles__li _icon-scales">3.2 т</div>
+													<div class="item-articles__li _icon-up-down">10 м3</div>
+												</div>
+											</div>
+											<div class="item-articles__mobile mobile-item-articles">
+												<div class="mobile-item-articles__columns">
+													<div class="mobile-item-articles__column">
+														<div class="mobile-item-articles__ways">
+															<div class="mobile-item-articles__town"><img src="img/icons/rus.svg" alt="Icon">Пермь <span>(RU)</span></div>
+															<div class="mobile-item-articles__town"><img src="img/icons/kaz.svg" alt="Icon">Талдыкорган <span>(KZ)</span></div>
+														</div>
+														<div class="mobile-item-articles__long">2921 км</div>
+														<div class="main-stock__title-mob main-stock__title-mob-01"></div>
+													</div>
+													<div class="mobile-item-articles__list">
+														<div class="item-articles__li _icon-today">21.09.23</div>
+														<div class="item-articles__li _icon-bus">тент</div>
+														<div class="item-articles__li _icon-scales">3.2 т</div>
+														<div class="item-articles__li _icon-up-down">10 м3</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div data-da=".main-stock__title-mob-01, 767.98" class="main-more-order__name">Металопрокат</div>
+										<div class="main-stock__bottom">
+											<div class="main-stock__info">Статус<span class="span span--green">Активная</span></div>
+											<div class="main-stock__info main-stock__info--disable"></div>
+											<div class="main-stock__info">Повторено<span>26.02.2023 12:30</span></div>
+											<div class="main-stock__info">Размещано<span>26.02.2023 12:30</span></div>
+											<div class="main-stock__info">Повторов<span>2</span></div>
+											<div class="main-stock__info">Просмотров<span class="_icon-eye">2 (+1)</span></div>
+										</div>
+									</div>
+									<div class="stock__result result-more-order">
+										<div class="result-more-order__body">
+											<div class="result-more-order__cost">
+												<span>700 000 тнг</span>
+												<div class="result-more-order__checkbox checkbox-opt">
+													<input id="stock_2" data-error="Error" class="checkbox-opt__input checkbox-function" type="checkbox" value="1" name="form[]">
+													<label for="stock_2" class="checkbox-opt__label checkbox-opt__label--white"></label>
+												</div>
+											</div>
+											<div class="result-more-order__long">404.3 тнг/км</div>
+											<div class="result-more-order__type">Расчет: <span>При выгрузке</span></div>
+										</div>
+										<div class="result-more-order__buttons">
+											<button type="button" class="result-more-order__button result-more-order__button--green _icon-docs"></button>
+											<button type="button" class="result-more-order__button result-more-order__button--green _icon-restart"></button>
+											<button type="button" class="result-more-order__button result-more-order__button--green _icon-edit"></button>
+											<button type="button" class="result-more-order__button result-more-order__button--green _icon-message"></button>
+											<button type="button" class="result-more-order__button result-more-order__button--green _icon-file-drive"></button>
+											<button type="button" class="result-more-order__button result-more-order__button--green _icon-bus"></button>
+										</div>
 									</div>
 								</div>
-								<div class="customs__cost _icon-cart-mini">7.500 ₸</div>
-								<button data-popup="#verif-next" type="button" class="customs__button _icon-cart">Купить</button>
-							</div>
-							<div class="customs__item customs__item--grad">
-								<div class="customs__body">
-									<h3 class="customs__title">Júkter Max</h3>
-									<div class="customs__list">
-										<div class="customs__list-item">5 пользователь</div>
-										<div class="customs__list-item">Все грузы</div>
-										<div class="customs__list-item">Все машины</div>
-										<div class="customs__list-item">Безлимитные уведомления</div>
-										<div class="customs__list-item">Доступ в Jukter Max <span>(Подходит для физ. лиц)</span></div>
+								<div class="main-offer__item stock">
+									<div class="stock__main main-stock">
+										<div class="main-stock__item">
+											<div class="item-articles__desktop">
+												<div class="item-articles__top"><img src="img/icons/rus.svg" alt="Icon"><img src="img/icons/kaz.svg" alt="Icon"></div>
+												<div class="item-articles__way">
+													<div class="item-articles__town">Пермь <span>(RU)</span></div>
+													<span class="item-articles__line"></span>
+													<div class="item-articles__long">2921 км</div>
+													<span class="item-articles__arrow _icon-arrow-big"></span>
+													<div class="item-articles__town">Талдыкорган <span>(KZ)</span></div>
+												</div>
+												<div class="item-articles__list">
+													<div class="item-articles__li _icon-today">21.09.23</div>
+													<div class="item-articles__li _icon-bus">тент</div>
+													<div class="item-articles__li _icon-scales">3.2 т</div>
+													<div class="item-articles__li _icon-up-down">10 м3</div>
+												</div>
+											</div>
+											<div class="item-articles__mobile mobile-item-articles">
+												<div class="mobile-item-articles__columns">
+													<div class="mobile-item-articles__column">
+														<div class="mobile-item-articles__ways">
+															<div class="mobile-item-articles__town"><img src="img/icons/rus.svg" alt="Icon">Пермь <span>(RU)</span></div>
+															<div class="mobile-item-articles__town"><img src="img/icons/kaz.svg" alt="Icon">Талдыкорган <span>(KZ)</span></div>
+														</div>
+														<div class="mobile-item-articles__long">2921 км</div>
+														<div class="main-stock__title-mob main-stock__title-mob-02"></div>
+													</div>
+													<div class="mobile-item-articles__list">
+														<div class="item-articles__li _icon-today">21.09.23</div>
+														<div class="item-articles__li _icon-bus">тент</div>
+														<div class="item-articles__li _icon-scales">3.2 т</div>
+														<div class="item-articles__li _icon-up-down">10 м3</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div data-da=".main-stock__title-mob-02, 767.98" class="main-more-order__name">Металопрокат</div>
+										<div class="main-stock__bottom">
+											<div class="main-stock__info">Статус<span class="span span--green">Активная</span></div>
+											<div class="main-stock__info main-stock__info--disable"></div>
+											<div class="main-stock__info">Повторено<span>26.02.2023 12:30</span></div>
+											<div class="main-stock__info">Размещано<span>26.02.2023 12:30</span></div>
+											<div class="main-stock__info">Повторов<span>2</span></div>
+											<div class="main-stock__info">Просмотров<span class="_icon-eye">2 (+1)</span></div>
+										</div>
+									</div>
+									<div class="stock__result result-more-order">
+										<div class="result-more-order__body">
+											<div class="result-more-order__cost">
+												<span>700 000 тнг</span>
+												<div class="result-more-order__checkbox checkbox-opt">
+													<input id="stock_3" data-error="Error" class="checkbox-opt__input checkbox-function" type="checkbox" value="1" name="form[]">
+													<label for="stock_3" class="checkbox-opt__label checkbox-opt__label--white"></label>
+												</div>
+											</div>
+											<div class="result-more-order__long">404.3 тнг/км</div>
+											<div class="result-more-order__type">Расчет: <span>При выгрузке</span></div>
+										</div>
+										<div class="result-more-order__buttons">
+											<button type="button" class="result-more-order__button result-more-order__button--green _icon-docs"></button>
+											<button type="button" class="result-more-order__button result-more-order__button--green _icon-restart"></button>
+											<button type="button" class="result-more-order__button result-more-order__button--green _icon-edit"></button>
+											<button type="button" class="result-more-order__button result-more-order__button--green _icon-message"></button>
+											<button type="button" class="result-more-order__button result-more-order__button--green _icon-file-drive"></button>
+											<button type="button" class="result-more-order__button result-more-order__button--green _icon-bus"></button>
+										</div>
 									</div>
 								</div>
-								<div class="customs__cost _icon-cart-mini">10.000 ₸</div>
-								<button data-popup="#payment" type="button" class="customs__button _icon-cart">Купить</button>
 							</div>
 						</div>
 					</div>

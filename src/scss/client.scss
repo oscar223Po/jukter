@@ -500,14 +500,20 @@
 		padding: toRem(15) toRem(10);
 	}
 	&__body {
+		width: 100%;
 		display: grid;
 		gap: toRem(10);
 	}
 
 	&__cost {
+		display: flex;
 		font-weight: 800;
-		line-height: normal;
+		align-items: center;
+		justify-content: space-between;
 		@include adaptiveValue("font-size", 24, 18);
+		span {
+			line-height: normal;
+		}
 	}
 
 	&__long {
@@ -518,6 +524,16 @@
 		font-size: toRem(16);
 		span {
 			font-weight: 800;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		gap: toRem(8);
+		flex-wrap: wrap;
+		align-items: center;
+		@media (max-width: $mobileSmall) {
+			gap: toRem(6);
 		}
 	}
 
@@ -539,6 +555,15 @@
 				color: $whiteColor;
 				background-color: $redColor;
 			}
+		}
+		&--green {
+			color: $grenColor;
+			font-size: toRem(24);
+		}
+		@media (max-width: $mobileSmall) {
+			width: toRem(40);
+			height: toRem(40);
+			font-size: toRem(20);
 		}
 	}
 }

@@ -91,6 +91,18 @@
 			left: 0px;
 			top: 4px;
 		}
+		&--white {
+			&::before {
+				border: 1px solid $whiteColor;
+			}
+		}
+		&--reverse {
+			flex-direction: row-reverse;
+			&::after {
+				right: 0;
+				margin: toRem(0) toRem(0) toRem(0) auto;
+			}
+		}
 		@media (max-width: $mobile) {
 			&::before {
 				margin-top: toRem(2.5);

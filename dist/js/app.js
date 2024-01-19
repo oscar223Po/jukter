@@ -1374,6 +1374,15 @@
                 button.classList.add("payment__button--active");
             }));
         }));
+        var mainCheckbox = document.getElementById("stock_1");
+        var archiveButtons = document.querySelector(".top-main-offer__buttons");
+        if (mainCheckbox !== null) mainCheckbox.addEventListener("change", (() => {
+            var checkboxes = document.querySelectorAll(".checkbox-function");
+            for (let i = 0; i < checkboxes.length; i++) checkboxes[i].checked = mainCheckbox.checked;
+        }));
+        if (archiveButtons !== null) mainCheckbox.addEventListener("change", (() => {
+            archiveButtons.classList.toggle("offer-buttons-disable");
+        }));
     }));
     window["FLS"] = false;
     isWebp();

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Jukter (Профиль - платежи максимальный) - ProfileMaxPage"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<!-- [Method] -->
+			<section class="method profile-padding">
+				<div class="method__container grid-rofile">
+					<div class="user">
+						<div class="user__main">
+							<div class="user__image"><img src="@img/profile.jpg" alt="Image"></div>
+							<div class="user__info">
+								<h4 class="user__name _icon-verified">Компания</h4>
+								<div class="user__location">Россия, Москва</div>
+								<div class="user__rate">Рейтинг <div class="user__stat"><span>5.0</span><img src="@img/icons/rate.svg" alt="Icon"></div></div>
+							</div>
+						</div>
+						<div class="user__navigation">
+							<ul class="user__list">
+								<li class="user__item"><a href="" class="user__link _icon-assignment">Мои заказы</a></li>
+								<li class="user__item"><a href="" class="user__link _icon-favorite">Избранное</a></li>
+							</ul>
+							<ul class="user__list">
+								<li class="user__item"><a href="" class="user__link _icon-account-box">Профиль</a></li>
+								<li class="user__item"><a href="" class="user__link _icon-account-balance">Моя организация</a></li>
+								<li class="user__item"><a href="" class="user__link _icon-people-alt">Сотрудники</a></li>
+								<li class="user__item"><a href="" class="user__link user__link--active _icon-wallet">Платежи</a></li>
+							</ul>
+							<ul class="user__list">
+								<li class="user__item"><a href="" class="user__link _icon-exit-app">Выйти</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="method__body">
+						<h3 class="method__title title-sm">Платежи</h3>
+						<div class="method__banner banner-method">
+							<div class="banner-method__main">
+								<h5 class="banner-method__name">Júkter Max</h5>
+								<div class="banner-method__date">Активно до: <span>26.02.2023</span></div>
+							</div>
+							<div class="banner-method__buttons">
+								<a href="" class="banner-method__button banner-method__button--blue">Изменить подписку</a>
+								<a href="" class="banner-method__button banner-method__button--red">Отменить подписку</a>
+							</div>
+						</div>
+						<ul class="method__list heading__list heading__list--ul">
+							<li class="heading__item">Добавление неограниченного количества грузов и транспорта</li>
+							<li class="heading__item">Доступ к детальной информации про грузы и транспорт</li>
+							<li class="heading__item">1 пользователь</li>
+							<li class="heading__item">Безлимитные уведомления</li>
+						</ul>
+						<div class="method__info info-method">
+							<div class="info-method__item">
+								<h4 class="info-method__title title-sm">Информация о подписке</h4>
+								<div class="info-method__body">
+									<div class="info-method__body-item">Цена подписки:<span>5.000₸ или 1000₽</span></div>
+									<div class="info-method__body-item">Активен до:<span>24.02.2023</span></div>
+								</div>
+							</div>
+							<div class="info-method__item">
+								<h4 class="info-method__title title-sm">Информация о подписке</h4>
+								<div class="info-method__body">
+									<div class="info-method__body-visa"><h5>VISA</h5><span>**** 8739</span></div>
+									<div class="info-method__body-changes">
+										<a href="" class="info-method__body-change">Изменить способ оплаты</a>
+										<a href="" class="info-method__body-change">Запросить счёт</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+		@@include('html/_popup.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
