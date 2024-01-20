@@ -615,9 +615,11 @@ summary::-webkit-details-marker {
 	}
 
 	&__image {
+		width: 100%;
 		overflow: hidden;
 		border-radius: toRem(50);
 		img {
+			width: 100%;
 			max-width: 100%;
 		}
 		&:not(:last-child) {
@@ -771,6 +773,131 @@ summary::-webkit-details-marker {
 
 	&__button {
 		padding: toRem(0) toRem(28);
+	}
+
+	&__types {
+		display: flex;
+		gap: toRem(10);
+		align-items: center;
+		@media (max-width: $mobile) {
+			width: 100%;
+		}
+	}
+
+	&__type {
+		display: flex;
+		font-weight: 800;
+		height: toRem(48);
+		line-height: normal;
+		align-items: center;
+		justify-content: center;
+		border-radius: toRem(50);
+		transition:
+			background-color 0.3s ease 0s,
+			color 0.3s ease 0s;
+		background-color: rgba(232, 232, 234, 0.5);
+		@include adaptiveValue("font-size", 20, 16);
+		&--active {
+			color: $whiteColor;
+			background-color: $grenColor;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $whiteColor;
+				background-color: $blueColor;
+			}
+		}
+		@media (min-width: $mobile) {
+			min-width: toRem(210);
+		}
+		@media (max-width: $mobile) {
+			width: 100%;
+			height: toRem(40);
+		}
+	}
+}
+// ========================================================================================================================================================
+// Styles For Button Pin
+.button-pin {
+	display: flex;
+	width: toRem(44);
+	color: $blueColor;
+	height: toRem(44);
+	border-radius: 50%;
+	align-items: center;
+	font-size: toRem(20);
+	justify-content: center;
+	border: toRem(1) solid $blueColor;
+	transition:
+		background-color 0.3s ease 0s,
+		color 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			color: $whiteColor;
+			background-color: $blueColor;
+		}
+	}
+}
+// ========================================================================================================================================================
+// Styles For Button Circle
+.button-circle {
+	display: flex;
+	border-radius: 50%;
+	align-items: center;
+	min-width: toRem(48);
+	font-size: toRem(20);
+	min-height: toRem(48);
+	justify-content: center;
+	transition:
+		background-color 0.3s ease 0s,
+		color 0.3s ease 0s;
+	&--red {
+		color: $redColor;
+		background-color: $whiteColor;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $whiteColor;
+				background-color: $redColor;
+			}
+		}
+	}
+	&--green {
+		color: $grenColor;
+		font-size: toRem(24);
+		background-color: $whiteColor;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $whiteColor;
+				background-color: $grenColor;
+			}
+		}
+	}
+	&--gray {
+		color: $redColor;
+		font-size: toRem(24);
+		background-color: rgba(#e8e8ea, 0.5);
+		@media (any-hover: hover) {
+			&:hover {
+				color: $whiteColor;
+				background-color: $redColor;
+			}
+		}
+	}
+	&--gray-g {
+		color: $grayColor;
+		font-size: toRem(24);
+		background-color: rgba(#e8e8ea, 0.5);
+		@media (any-hover: hover) {
+			&:hover {
+				color: $whiteColor;
+				background-color: $redColor;
+			}
+		}
+	}
+	@media (max-width: $mobileSmall) {
+		font-size: toRem(19);
+		min-width: toRem(39);
+		min-height: toRem(39);
 	}
 }
 // ========================================================================================================================================================

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Jukter (Моя организация пользователь) - ProfileUserPage"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<!-- [Organization] -->
+			<section class="organization profile-padding">
+				<div class="organization__container grid-rofile">
+					<div class="user">
+						<div class="user__main">
+							<div class="user__image"><img src="@img/profile-none.jpg" alt="Image"></div>
+							<div class="user__info">
+								<h4 class="user__name _icon-verified">Максим Антонов</h4>
+								<div class="user__location">Россия, Москва</div>
+								<div class="user__rate">Рейтинг <div class="user__stat"><span>5.0</span><img src="@img/icons/rate.svg" alt="Icon"></div></div>
+							</div>
+						</div>
+						<div class="user__navigation">
+							<ul class="user__list">
+								<li class="user__item"><a href="" class="user__link _icon-assignment">Мои заказы</a></li>
+								<li class="user__item"><a href="" class="user__link _icon-favorite">Избранное</a></li>
+							</ul>
+							<ul class="user__list">
+								<li class="user__item"><a href="" class="user__link _icon-account-box">Профиль</a></li>
+								<li class="user__item"><a href="" class="user__link user__link--active _icon-account-balance">Моя организация</a></li>
+								<li class="user__item"><a href="" class="user__link _icon-people-alt">Сотрудники</a></li>
+								<li class="user__item"><a href="" class="user__link _icon-wallet">Платежи</a></li>
+							</ul>
+							<ul class="user__list">
+								<li class="user__item"><a href="" class="user__link _icon-exit-app">Выйти</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="organization__body">
+						<h4 class="organization__title title-sm">Моя организация</h4>
+						<div class="organization__list">
+							<div class="main-info__item">
+								<h5>Компания:</h5><span class="_icon-verified">Максим Антонов</span>
+							</div>
+							<div class="main-info__item">
+								<h5>Компанию интересует:</h5>
+								<div class="main-info__item-buttons">
+									<a href="" class="main-info__item-button button button--gray">Международные грузы</a>
+									<a href="" class="main-info__item-button button button--gray">Транспорт по Казахстану</a>
+								</div>
+							</div>
+							<div class="main-info__item">
+								<h5>Местоположение:</h5><span>Россия, Москва</span>
+							</div>
+							<div class="main-info__item">
+								<h5>Верифицировано:</h5><span>20.12.2023 (435 дней)</span>
+							</div>
+							<div class="main-info__item">
+								<h5>Регистрация на сайте:</h5><span>20.12.2023 (435 дней)</span>
+							</div>
+						</div>
+						<div class="organization__staty staty-organization">
+							<div class="staty-organization__item staty-organization__item--yellow"><h5>Отзывы:</h5><span>123</span></div>
+							<div class="staty-organization__item staty-organization__item--green"><h5>Добавлено в партнеры:</h5><span>9</span></div>
+							<div class="staty-organization__item staty-organization__item--black"><h5>Черный список:</h5><span>6</span></div>
+						</div>
+						<div class="organization__info info-organization">
+							<div class="info-organization__top">
+								<h4 class="info-organization__title">Контактная информация</h4>
+								<p class="info-organization__text">Контактная информация вашей организации или бизнеса. Она доступна другим пользователям.</p>
+							</div>
+							<div class="info-organization__items">
+								<div class="info-organization__item">
+									<div class="info-organization__left">Телефон</div>
+									<div class="info-organization__right">+7 (924) 234-23-34</div>
+								</div>
+								<div class="info-organization__item">
+									<div class="info-organization__left">Email</div>
+									<div class="info-organization__right">nvksm@gmail.com</div>
+								</div>
+								<div class="info-organization__item">
+									<div class="info-organization__left"><a href="">Добавить телефон +</a></div>
+									<div class="info-organization__right"></div>
+								</div>
+								<div class="info-organization__item">
+									<div class="info-organization__left"><a href="">Добавить WhatsApp +</a></div>
+									<div class="info-organization__right"></div>
+								</div>
+								<div class="info-organization__item">
+									<div class="info-organization__left"><a href="">Добавить Telegram +</a></div>
+									<div class="info-organization__right"></div>
+								</div>
+								<div class="info-organization__item">
+									<div class="info-organization__left">Website</div>
+									<form action="#" class="info-organization__form">
+										<input value="nvksm@gmai" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" class="info-organization__input">
+										<button type="button" class="info-organization__button">Сохранить</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

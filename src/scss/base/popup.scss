@@ -54,12 +54,14 @@ body::after {
 	width: 100%;
 	border-radius: toRem(25);
 	background-color: $whiteColor;
+	padding: toRem(30) toRem(40) toRem(50) toRem(40);
 	box-shadow: toRem(0) toRem(0) toRem(25) toRem(0) rgba(173, 173, 173, 0.5);
 	.lock & {
 		visibility: visible;
 	}
 	@media (max-width: $mobile) {
 		border-radius: toRem(15);
+		padding: toRem(25) toRem(20) toRem(35) toRem(20);
 	}
 }
 //========================================================================================================================================================
@@ -247,10 +249,6 @@ body::after {
 // Verification Window Close & Open
 .verif {
 	max-width: toRem(820);
-	padding: toRem(30) toRem(40) toRem(50) toRem(40);
-	@media (max-width: $mobile) {
-		padding: toRem(25) toRem(20) toRem(35) toRem(20);
-	}
 	&__top {
 	}
 
@@ -377,24 +375,6 @@ body::after {
 	}
 
 	&__button {
-		display: flex;
-		width: toRem(44);
-		color: $blueColor;
-		height: toRem(44);
-		border-radius: 50%;
-		align-items: center;
-		font-size: toRem(20);
-		justify-content: center;
-		border: toRem(1) solid $blueColor;
-		transition:
-			background-color 0.3s ease 0s,
-			color 0.3s ease 0s;
-		@media (any-hover: hover) {
-			&:hover {
-				color: $whiteColor;
-				background-color: $blueColor;
-			}
-		}
 		&--active {
 			color: $grenColor;
 			font-size: toRem(24);
@@ -412,10 +392,6 @@ body::after {
 // Payment Window Close & Open
 .payment {
 	max-width: toRem(640);
-	padding: toRem(30) toRem(40) toRem(50) toRem(40);
-	@media (max-width: $mobile) {
-		padding: toRem(25) toRem(20) toRem(35) toRem(20);
-	}
 	&__top {
 	}
 
@@ -494,10 +470,6 @@ body::after {
 // Props Window Close & Open
 .props {
 	max-width: toRem(865);
-	padding: toRem(30) toRem(40) toRem(50) toRem(40);
-	@media (max-width: $mobile) {
-		padding: toRem(25) toRem(20) toRem(35) toRem(20);
-	}
 	&__body {
 		display: grid;
 		@include adaptiveValue("gap", 30, 15);
@@ -544,6 +516,88 @@ body::after {
 	}
 
 	&__input {
+		width: 100%;
+	}
+}
+// ========================================================================================================================================================
+// Go Window Close & Open
+.go {
+	max-width: toRem(745);
+	&__top {
+	}
+
+	&__body {
+		display: grid;
+		gap: toRem(30);
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+		@media (max-width: $mobile) {
+			gap: toRem(20);
+			&:not(:last-child) {
+				margin-bottom: toRem(20);
+			}
+		}
+	}
+
+	&__label {
+		.main-contact__textarea {
+			height: toRem(200);
+		}
+	}
+
+	&__date {
+		display: grid;
+		gap: toRem(5);
+		span {
+			line-height: normal;
+			@include adaptiveValue("font-size", 18, 16);
+		}
+	}
+
+	&__span {
+		display: flex;
+		line-height: normal;
+		@include adaptiveValue("font-size", 18, 16);
+		&:not(:last-child) {
+			margin-bottom: toRem(5);
+		}
+	}
+
+	&__textarea {
+	}
+
+	&__pin {
+	}
+
+	&__send {
+		display: flex;
+		margin: toRem(0) auto;
+		padding: toRem(0) toRem(34);
+	}
+}
+// ========================================================================================================================================================
+// Add Window Close & Open
+.add {
+	max-width: toRem(470);
+	&__top {
+	}
+
+	&__body {
+		display: grid;
+		gap: toRem(15);
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+
+	&__label {
+	}
+
+	&__input {
+	}
+
+	&__button {
 		width: 100%;
 	}
 }

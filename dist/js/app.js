@@ -1383,6 +1383,17 @@
         if (archiveButtons !== null) mainCheckbox.addEventListener("change", (() => {
             archiveButtons.classList.toggle("offer-buttons-disable");
         }));
+        var passwordInput = document.getElementById("passwordInput");
+        var eyeIcon = document.querySelector(".eye-form");
+        if (passwordInput !== null) eyeIcon.addEventListener("click", (function() {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                eyeIcon.classList.add("eye-form--active");
+            } else {
+                passwordInput.type = "password";
+                eyeIcon.classList.remove("eye-form--active");
+            }
+        }));
     }));
     window["FLS"] = false;
     isWebp();

@@ -311,6 +311,9 @@
 		font-weight: 800;
 		line-height: normal;
 		@include adaptiveValue("font-size", 20, 16);
+		@media (max-width: $mobile) {
+			display: none;
+		}
 	}
 
 	&__company {
@@ -418,7 +421,10 @@
 	}
 
 	&__title-mob {
+		font-weight: 800;
+		line-height: normal;
 		margin-top: toRem(30);
+		@include adaptiveValue("font-size", 20, 16);
 		@media (min-width: $mobile) {
 			display: none;
 		}
@@ -490,6 +496,9 @@
 	padding: toRem(25) toRem(20);
 	background-color: $blueColor;
 	justify-content: space-between;
+	&--green {
+		background-color: $grayColor;
+	}
 	@media (max-width: $mobile) {
 		align-items: center;
 		flex-direction: row;
@@ -532,39 +541,25 @@
 		gap: toRem(8);
 		flex-wrap: wrap;
 		align-items: center;
+		&--nowrap {
+			width: 100%;
+			flex-wrap: nowrap;
+		}
 		@media (max-width: $mobileSmall) {
 			gap: toRem(6);
 		}
 	}
 
-	&__button {
+	&__link {
+		width: 100%;
 		display: flex;
-		width: toRem(48);
-		color: $redColor;
 		height: toRem(48);
-		border-radius: 50%;
-		align-items: center;
-		font-size: toRem(20);
-		justify-content: center;
-		background-color: $whiteColor;
-		transition:
-			background-color 0.3s ease 0s,
-			color 0.3s ease 0s;
-		@media (any-hover: hover) {
-			&:hover {
-				color: $whiteColor;
-				background-color: $redColor;
-			}
-		}
-		&--green {
-			color: $grenColor;
-			font-size: toRem(24);
-		}
 		@media (max-width: $mobileSmall) {
-			width: toRem(40);
-			height: toRem(40);
-			font-size: toRem(20);
+			height: toRem(39);
 		}
+	}
+
+	&__button {
 	}
 }
 // ========================================================================================================================================================

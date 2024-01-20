@@ -118,42 +118,22 @@
 	}
 
 	&__button {
-		display: flex;
-		font-weight: 800;
-		line-height: normal;
-		justify-content: center;
-		border-radius: toRem(50);
 		padding: toRem(10) toRem(37);
-		background-color: $whiteColor;
-		transition:
-			background-color 0.3s ease 0s,
-			color 0.3s ease 0s;
-		@include adaptiveValue("font-size", 20, 16);
+		&--blue {
+			color: $blueColor;
+		}
+		&--red {
+			color: $redColor;
+		}
+		&--green {
+			color: $grenColor;
+		}
 		@media (max-width: em(1240.98)) {
 			padding: toRem(10) toRem(25);
 		}
 		@media (max-width: em(920)) {
 			width: 100%;
 			padding: toRem(10) toRem(0);
-		}
-		&--blue {
-			color: $blueColor;
-			@media (any-hover: hover) {
-				&:hover {
-					color: $whiteColor;
-					background-color: $grenColor;
-				}
-			}
-		}
-
-		&--red {
-			color: $redColor;
-			@media (any-hover: hover) {
-				&:hover {
-					color: $whiteColor;
-					background-color: $redColor;
-				}
-			}
 		}
 	}
 }
@@ -437,7 +417,10 @@
 	}
 
 	&__title-mob {
+		font-weight: 800;
+		line-height: normal;
 		margin-top: toRem(30);
+		@include adaptiveValue("font-size", 20, 16);
 		@media (min-width: $mobile) {
 			display: none;
 		}
@@ -715,6 +698,670 @@
 	&__link {
 		&--active {
 		}
+	}
+}
+// ========================================================================================================================================================
+// Favorite
+.favorite {
+	&__container {
+	}
+
+	&__body {
+	}
+
+	&__top {
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+		@media (max-width: $mobile) {
+			gap: toRem(30);
+			flex-direction: column;
+		}
+	}
+
+	&__items {
+		display: grid;
+		gap: toRem(10);
+	}
+}
+// ========================================================================================================================================================
+// Company
+.company {
+	display: grid;
+	gap: toRem(10);
+	&__item {
+		display: flex;
+		position: relative;
+		align-items: center;
+		border-radius: toRem(10);
+		padding: toRem(15) toRem(25);
+		background-color: $whiteColor;
+		justify-content: space-between;
+		box-shadow: toRem(0) toRem(0) toRem(20) toRem(0) rgba(0, 0, 0, 0.1);
+		@media (max-width: $mobile) {
+			padding: toRem(15);
+		}
+		@media (max-width: em(370)) {
+			padding: toRem(10);
+			.result-more-order__button {
+				top: toRem(10);
+				right: toRem(10);
+				position: absolute;
+			}
+		}
+	}
+
+	&__info {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 50, 20, 2, $containerWidth, 767.98);
+	}
+
+	&__profile {
+		display: flex;
+		gap: toRem(20);
+		align-items: center;
+		@media (max-width: $mobile) {
+			gap: toRem(10);
+		}
+		.main-more-order__icon {
+			max-width: toRem(84);
+			@media (max-width: $mobile) {
+				border-radius: 50%;
+				max-width: toRem(70);
+			}
+			@media (max-width: $mobileSmall) {
+				max-width: toRem(50);
+			}
+		}
+		.main-profile__location {
+			@media (min-width: $mobile) {
+				display: none;
+			}
+		}
+		.main-profile__name {
+			font-weight: 800;
+			line-height: normal;
+			@include adaptiveValue("font-size", 22, 16, 0, $containerWidth, 767.98);
+		}
+		.main-profile__rate {
+			color: $grayColor;
+			span {
+				color: $mainColor;
+				margin-left: toRem(15);
+			}
+		}
+	}
+
+	&__location {
+		line-height: normal;
+		color: $darkGrayColor;
+		@include adaptiveValue("font-size", 18, 16);
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+}
+// ========================================================================================================================================================
+// Manage
+.manage {
+	&__container {
+	}
+
+	&__body {
+		height: 100%;
+		padding: toRem(30);
+		max-width: toRem(510);
+		border-radius: toRem(25);
+		background-color: rgba(232, 232, 234, 0.5);
+		@media (max-width: em(1240.98)) {
+			max-width: 100%;
+		}
+		@media (max-width: $mobile) {
+			padding: toRem(0);
+			border-radius: toRem(0);
+			background-color: transparent;
+		}
+	}
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: toRem(35);
+		}
+	}
+
+	&__info {
+		display: grid;
+		gap: toRem(5);
+		line-height: normal;
+		color: $darkGrayColor;
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+
+	&__subtitle {
+		font-weight: 800;
+	}
+
+	&__id {
+		font-size: toRem(16);
+	}
+
+	&__date {
+		font-size: toRem(16);
+	}
+
+	&__form {
+	}
+}
+.form-manage {
+	display: grid;
+	gap: toRem(20);
+	&__item {
+	}
+
+	&__span {
+		display: flex;
+		line-height: normal;
+		color: $darkGrayColor;
+		@include adaptiveValue("font-size", 18, 14);
+		&:not(:last-child) {
+			margin-bottom: toRem(5);
+		}
+	}
+
+	&__content {
+		display: flex;
+		gap: toRem(15);
+		align-items: center;
+		@media (max-width: $mobileSmall) {
+			gap: toRem(10);
+		}
+	}
+
+	&__label {
+		flex: 1 1 100%;
+		position: relative;
+	}
+
+	&__opt {
+		top: 0;
+		bottom: 0;
+		display: flex;
+		margin: auto 0;
+		right: toRem(20);
+		width: toRem(24);
+		color: $grenColor;
+		height: toRem(24);
+		position: absolute;
+		align-items: center;
+		font-size: toRem(24);
+		justify-content: center;
+		&.eye-form {
+			transition: color 0.3s ease 0s;
+			&--active {
+				&::before {
+					content: "\e921";
+				}
+			}
+			@media (any-hover: hover) {
+				&:hover {
+					color: $mainColor;
+				}
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			right: toRem(15);
+			width: toRem(20);
+			height: toRem(20);
+			font-size: toRem(20);
+		}
+	}
+
+	&__input {
+		width: 100%;
+		outline: none;
+		font-weight: 800;
+		height: toRem(45);
+		color: $darkGrayColor;
+		padding-left: toRem(20);
+		border-radius: toRem(25);
+		padding-right: toRem(20);
+		background-color: transparent;
+		border: toRem(1) solid $grayColor;
+		&--pad {
+			padding-left: toRem(20);
+			padding-right: toRem(50);
+		}
+		@media (max-width: $mobileSmall) {
+			height: toRem(38);
+			font-size: toRem(16);
+			padding-left: toRem(15);
+			padding-right: toRem(15);
+			&--pad {
+				padding-left: toRem(15);
+				padding-right: toRem(40);
+			}
+		}
+	}
+
+	&__button {
+		display: flex;
+		width: toRem(24);
+		height: toRem(24);
+		color: $grayColor;
+		align-items: center;
+		font-size: toRem(24);
+		justify-content: center;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $redColor;
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			width: toRem(20);
+			height: toRem(20);
+			font-size: toRem(20);
+		}
+	}
+}
+// ========================================================================================================================================================
+// Organization
+.organization {
+	&__body {
+	}
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+
+	&__banner {
+	}
+
+	&__list {
+		display: grid;
+		gap: toRem(15);
+		margin-top: toRem(30);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 25);
+		}
+	}
+
+	&__staty {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 35);
+		}
+	}
+
+	&__info {
+	}
+}
+.banner-organization {
+	display: flex;
+	position: relative;
+	padding: toRem(20);
+	align-items: center;
+	border-radius: toRem(10);
+	justify-content: space-between;
+	border: toRem(1) solid $grenColor;
+	&::before {
+		content: "";
+		width: 100%;
+		top: toRem(0);
+		bottom: toRem(0);
+		right: toRem(157);
+		height: toRem(100);
+		position: absolute;
+		margin: auto toRem(0);
+	}
+	@media (max-width: $mobile) {
+		gap: toRem(20);
+		align-items: start;
+		flex-direction: column-reverse;
+		&::before {
+			top: toRem(20);
+			margin: toRem(0);
+		}
+	}
+	@media (max-width: $mobileSmall) {
+		padding: toRem(15);
+		&::before {
+			top: toRem(15);
+			right: toRem(130);
+		}
+	}
+	&--blue {
+		background: linear-gradient(270deg, #44588f 22.12%, #2a3c6b 86.81%);
+		&::before {
+			background: url("@img/bg/organization-stars-blue.svg") center right / contain no-repeat;
+		}
+		@media (max-width: $mobile) {
+			&::before {
+				background: url("@img/bg/organization-stars-mb.svg") center right / contain no-repeat;
+			}
+		}
+	}
+
+	&--green {
+		background: linear-gradient(270deg, #0ca789 22.12%, #0e9077 86.81%);
+		&::before {
+			background: url("@img/bg/organization-stars-green.svg") center right / contain no-repeat;
+		}
+		@media (max-width: $mobile) {
+			&::before {
+				background: url("@img/bg/organization-stars-mb.svg") center right / contain no-repeat;
+			}
+		}
+	}
+
+	&__content {
+		color: $whiteColor;
+		@media (max-width: $mobile) {
+			width: 100%;
+		}
+	}
+
+	&__title {
+		font-weight: 800;
+		line-height: normal;
+		@include adaptiveValue("font-size", 18, 16);
+		&:not(:last-child) {
+			margin-bottom: toRem(5);
+		}
+	}
+
+	&__text {
+		line-height: normal;
+		@include adaptiveValue("font-size", 16, 14);
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+
+	&__button {
+		position: relative;
+		padding: toRem(0) toRem(25);
+		@media (max-width: $mobile) {
+			width: 100%;
+			padding: toRem(0);
+		}
+	}
+
+	&__icon {
+		display: flex;
+		width: toRem(105);
+		color: $whiteColor;
+		height: toRem(105);
+		align-items: center;
+		font-size: toRem(105);
+		margin-right: toRem(20);
+		justify-content: center;
+		margin: toRem(0) toRem(0) toRem(0) auto;
+		&--done {
+			transform: rotate(-30deg);
+		}
+	}
+}
+.staty-organization {
+	display: flex;
+	flex-wrap: wrap;
+	padding: toRem(20) toRem(0);
+	border-top: toRem(1) solid #e8e8ea;
+	border-bottom: toRem(1) solid #e8e8ea;
+	@include adaptiveValue("gap", 50, 15, 0, $containerWidth, 479.98);
+	&__item {
+		display: flex;
+		gap: toRem(5);
+		align-items: center;
+		h5 {
+			@include adaptiveValue("font-size", 18, 14);
+		}
+		span {
+			display: flex;
+			font-weight: 800;
+			height: toRem(42);
+			color: $whiteColor;
+			align-items: center;
+			min-width: toRem(42);
+			font-size: toRem(20);
+			justify-content: center;
+			border-radius: toRem(50);
+			padding: toRem(12) toRem(15);
+		}
+		@media (max-width: $mobileSmall) {
+			span {
+				height: toRem(34);
+				font-size: toRem(16);
+				min-width: toRem(34);
+				padding: toRem(8) toRem(12);
+			}
+		}
+		&--yellow {
+			span {
+				color: $darkGrayColor;
+				background-color: $yellowColor;
+			}
+		}
+
+		&--green {
+			span {
+				color: $whiteColor;
+				background-color: $grenColor;
+			}
+		}
+
+		&--black {
+			span {
+				background-color: $darkGrayColor;
+			}
+		}
+	}
+}
+.info-organization {
+	&__top {
+		&:not(:last-child) {
+			margin-bottom: toRem(25);
+		}
+	}
+
+	&__title {
+		font-weight: 800;
+		line-height: normal;
+		@include adaptiveValue("font-size", 18, 16);
+		&:not(:last-child) {
+			margin-bottom: toRem(5);
+		}
+	}
+
+	&__text {
+		line-height: normal;
+		@include adaptiveValue("font-size", 16, 14);
+	}
+
+	&__items {
+		display: grid;
+		gap: toRem(15);
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		@media (max-width: $mobileSmall) {
+			gap: toRem(5);
+			align-items: start;
+			flex-direction: column;
+		}
+	}
+
+	&__left {
+		width: toRem(235);
+		line-height: normal;
+		@include adaptiveValue("font-size", 18, 16);
+		a {
+			color: $darkGrayColor;
+			text-decoration-line: underline;
+			@include adaptiveValue("font-size", 16, 14);
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+		@media (max-width: $mobile) {
+			width: toRem(180);
+		}
+	}
+
+	&__right {
+		font-weight: 600;
+		line-height: normal;
+		color: $darkGrayColor;
+		@include adaptiveValue("font-size", 20, 16);
+	}
+
+	&__form {
+		display: flex;
+		gap: toRem(15);
+		align-items: center;
+		@media (max-width: $mobile) {
+			align-items: start;
+			flex-direction: column;
+		}
+	}
+
+	&__input {
+		font-weight: 600;
+		height: toRem(35);
+		text-align: center;
+		color: $darkGrayColor;
+		border-radius: toRem(25);
+		padding: toRem(0) toRem(15);
+		border: toRem(1) solid $mainColor;
+	}
+
+	&__button {
+		font-weight: 800;
+		height: toRem(35);
+		color: $whiteColor;
+		line-height: normal;
+		font-size: toRem(16);
+		border-radius: toRem(25);
+		padding: toRem(0) toRem(25);
+		background-color: $grenColor;
+		transition: background-color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $blueColor;
+			}
+		}
+	}
+}
+// ========================================================================================================================================================
+// Employe
+.employe {
+	&__body {
+	}
+
+	&__top {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 30);
+		}
+		@media (max-width: $mobile) {
+			gap: toRem(30);
+			flex-direction: column;
+		}
+	}
+
+	&__items {
+		display: grid;
+		gap: toRem(10);
+		@media (min-width: em(590.98)) {
+			grid-template-columns: repeat(auto-fit, minmax(toRem(530), 1fr));
+		}
+	}
+
+	&__item {
+	}
+}
+.item-employe {
+	display: flex;
+	align-items: center;
+	border-radius: toRem(10);
+	padding: toRem(20) toRem(30);
+	background-color: $whiteColor;
+	justify-content: space-between;
+	box-shadow: toRem(0) toRem(0) toRem(20) toRem(0) rgba(0, 0, 0, 0.1);
+	@media (max-width: em(590.98)) {
+		gap: toRem(20);
+		padding: toRem(15);
+		align-items: start;
+		flex-direction: column;
+	}
+	&__main {
+		display: flex;
+		gap: toRem(20);
+		align-items: center;
+		@media (max-width: em(590.98)) {
+			gap: toRem(10);
+		}
+	}
+
+	&__icon {
+		overflow: hidden;
+		border-radius: 50%;
+		max-width: toRem(70);
+		img {
+			max-width: 100%;
+		}
+		@media (max-width: em(590.98)) {
+			max-width: toRem(50);
+		}
+	}
+
+	&__info {
+	}
+
+	&__top {
+		display: flex;
+		gap: toRem(10);
+		align-items: center;
+		h4 {
+			font-weight: 600;
+			line-height: normal;
+			color: $darkGrayColor;
+			@include adaptiveValue("font-size", 18, 16);
+		}
+		span {
+			font-weight: 700;
+			color: $whiteColor;
+			line-height: normal;
+			border-radius: toRem(10);
+			padding: toRem(5) toRem(10);
+			background-color: $grenColor;
+			@include adaptiveValue("font-size", 16, 14);
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(5);
+		}
+	}
+
+	&__id {
+		line-height: normal;
+		color: $darkGrayColor;
+		@include adaptiveValue("font-size", 16, 14);
+	}
+
+	&__buttons {
+		display: flex;
+		gap: toRem(10);
+		align-items: center;
+	}
+
+	&__button {
 	}
 }
 // ========================================================================================================================================================

@@ -89,7 +89,16 @@
 			min-width: toRem(220);
 		}
 		span {
+			display: flex;
+			gap: toRem(5);
 			font-weight: 600;
+			align-items: center;
+			justify-content: start;
+			flex-direction: row-reverse;
+			&::before {
+				color: #657bd8;
+				font-size: toRem(20);
+			}
 		}
 		@media (max-width: $tablet) {
 			gap: toRem(15);

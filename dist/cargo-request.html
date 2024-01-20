@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240119222612">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240120205944">
 	<link rel="shortcut icon" href="img/icons/head-logo.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -718,11 +718,11 @@
 						</div>
 						<div class="verif-next__item">
 							<span>Приказ о назначении генерального директора</span>
-							<button type="button" class="verif-next__button _icon-pin"></button>
+							<button type="button" class="verif-next__button button-pin _icon-pin"></button>
 						</div>
 						<div class="verif-next__item">
 							<span>Справка о регистрации юридического лица</span>
-							<button type="button" class="verif-next__button _icon-pin"></button>
+							<button type="button" class="verif-next__button button-pin _icon-pin"></button>
 						</div>
 					</div>
 					<div class="verif-next__body">
@@ -823,10 +823,65 @@
 			</div>
 		</div>
 		<!-- //======================================================================================================================================================== -->
+		<div id="go" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content go">
+					<div class="go__top top-popup">
+						<div class="top-popup__empty"></div>
+						<h4 class="top-popup__title title-sm">Тикет #444</h4>
+						<button data-close type="button" class="top-popup__cancel _icon-close"></button>
+					</div>
+					<form action="#" class="go__body">
+						<div class="go__date">
+							<span>Дата</span>
+							<div class="verif__date date _icon-today" id="currentDate"></div>
+						</div>
+						<div class="item-request-first__select">
+							<span class="item-request__span">Тема</span>
+							<select name="form[]" data-class-modif="req-selected">
+								<option value="1">Техническая проблема</option>
+								<option value="2">Техническая проблема</option>
+								<option value="3">Техническая проблема</option>
+							</select>
+						</div>
+						<div class="go__label">
+							<span class="go__span">Текст обращения</span>
+							<textarea autocomplete="off" name="form[]" placeholder="Введите сообщение" data-error="Error" class="main-contact__textarea input"></textarea>
+						</div>
+						<button type="button" class="go__pin button-pin _icon-pin"></button>
+					</form>
+					<button type="button" class="go__send button button--green">Отправить заявку</button>
+				</div>
+			</div>
+		</div>
+		<!-- //======================================================================================================================================================== -->
+		<div id="add" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content add">
+					<div class="add__top top-popup">
+						<div class="top-popup__empty"></div>
+						<h4 class="top-popup__title title-sm">Добавить сотрудника</h4>
+						<button data-close type="button" class="top-popup__cancel _icon-close"></button>
+					</div>
+					<form action="#" class="add__body">
+						<label for="#" class="add__label">
+							<span class="item-request__span">Логин сотрудника</span>
+							<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите Email" class="add__input input">
+						</label>
+						<label for="#" class="add__label">
+							<span class="item-request__span">Пароль сотрудника</span>
+							<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите пароль" class="add__input input">
+						</label>
+					</form>
+					<button type="button" class="add__button button button--green button--green-big">Добавить сотрудника</button>
+				</div>
+			</div>
+		</div>
+		<!-- //======================================================================================================================================================== -->
 		<!-- <button data-close type="button" class="popup__close">Закрити</button> -->
 
 	</div>
-	<script src="js/app.min.js?_v=20240119222612"></script>
+	<script src="js/app.min.js?_v=20240120205944"></script>
 </body>
 
 </html>

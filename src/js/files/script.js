@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			button.classList.add('payment__button--active');
 		});
 	});
-	// ================[ JavaScript Section ]================
+	// ================[ JavaScript Section Chekbox All Items ]================
 	var mainCheckbox = document.getElementById('stock_1');
 	var archiveButtons = document.querySelector(".top-main-offer__buttons")
 	if (mainCheckbox !== null) {
@@ -117,6 +117,20 @@ document.addEventListener("DOMContentLoaded", function () {
 		mainCheckbox.addEventListener("change", () => {
 			archiveButtons.classList.toggle("offer-buttons-disable")
 		})
+	}
+	// ================[ JavaScript Section For Password Input ]================
+	var passwordInput = document.getElementById('passwordInput');
+	var eyeIcon = document.querySelector('.eye-form');
+	if (passwordInput !== null) {
+		eyeIcon.addEventListener('click', function () {
+			if (passwordInput.type === 'password') {
+				passwordInput.type = 'text';
+				eyeIcon.classList.add("eye-form--active")
+			} else {
+				passwordInput.type = 'password';
+				eyeIcon.classList.remove("eye-form--active")
+			}
+		});
 	}
 });
 //--------------------------------------------------------------

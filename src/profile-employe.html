@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Jukter (Профиль - мои сотрудники) - ProfileEmployePage"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<!-- [Employe] -->
+			<section class="employe profile-padding">
+				<div class="employe__container grid-rofile">
+					<div class="user">
+						<div class="user__main">
+							<div class="user__image"><img src="@img/profile-none.jpg" alt="Image"></div>
+							<div class="user__info">
+								<h4 class="user__name _icon-verified">Компания</h4>
+								<div class="user__location">Россия, Москва</div>
+								<div class="user__rate">Рейтинг <div class="user__stat"><span>5.0</span><img src="@img/icons/rate.svg" alt="Icon"></div></div>
+							</div>
+						</div>
+						<div class="user__navigation">
+							<ul class="user__list">
+								<li class="user__item"><a href="" class="user__link _icon-assignment">Мои заказы</a></li>
+								<li class="user__item"><a href="" class="user__link _icon-favorite">Избранное</a></li>
+							</ul>
+							<ul class="user__list">
+								<li class="user__item"><a href="" class="user__link _icon-account-box">Профиль</a></li>
+								<li class="user__item"><a href="" class="user__link _icon-account-balance">Моя организация</a></li>
+								<li class="user__item"><a href="" class="user__link user__link--active _icon-people-alt">Сотрудники</a></li>
+								<li class="user__item"><a href="" class="user__link _icon-wallet">Платежи</a></li>
+							</ul>
+							<ul class="user__list">
+								<li class="user__item"><a href="" class="user__link _icon-exit-app">Выйти</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="employe__body">
+						<div class="employe__top top-profile">
+							<h3 class="top-profile__title title-sm">Сотрудники</h3>
+							<button data-popup="#add" type="button" class="top-profile__button button button--green">Добавить сотрудика</button>
+						</div>
+						<div class="employe__items">
+							<div class="employe__item item-employe">
+								<div class="item-employe__main">
+									<div class="item-employe__icon"><img src="@img/profile.jpg" alt="Image"></div>
+									<div class="item-employe__info">
+										<div class="item-employe__top"><h4>Максим</h4><span>Сотрудник</span></div>
+										<div class="item-employe__id">ID 1236236236123</div>
+									</div>
+								</div>
+								<div class="item-employe__buttons">
+									<button type="button" class="item-employe__button button-circle button-circle--gray-g _icon-assignment"></button>
+									<button type="button" class="item-employe__button button-circle button-circle--gray-g _icon-edit"></button>
+									<button type="button" class="item-employe__button button-circle button-circle--gray _icon-delete"></button>
+								</div>
+							</div>
+							<div class="employe__item item-employe">
+								<div class="item-employe__main">
+									<div class="item-employe__icon"><img src="@img/profile.jpg" alt="Image"></div>
+									<div class="item-employe__info">
+										<div class="item-employe__top"><h4>Максим</h4><span>Сотрудник</span></div>
+										<div class="item-employe__id">ID 1236236236123</div>
+									</div>
+								</div>
+								<div class="item-employe__buttons">
+									<button type="button" class="item-employe__button button-circle button-circle--gray-g _icon-assignment"></button>
+									<button type="button" class="item-employe__button button-circle button-circle--gray-g _icon-edit"></button>
+									<button type="button" class="item-employe__button button-circle button-circle--gray _icon-delete"></button>
+								</div>
+							</div>
+							<div class="employe__item item-employe">
+								<div class="item-employe__main">
+									<div class="item-employe__icon"><img src="@img/profile.jpg" alt="Image"></div>
+									<div class="item-employe__info">
+										<div class="item-employe__top"><h4>Максим</h4><span>Сотрудник</span></div>
+										<div class="item-employe__id">ID 1236236236123</div>
+									</div>
+								</div>
+								<div class="item-employe__buttons">
+									<button type="button" class="item-employe__button button-circle button-circle--gray-g _icon-assignment"></button>
+									<button type="button" class="item-employe__button button-circle button-circle--gray-g _icon-edit"></button>
+									<button type="button" class="item-employe__button button-circle button-circle--gray _icon-delete"></button>
+								</div>
+							</div>
+							<div class="employe__item item-employe">
+								<div class="item-employe__main">
+									<div class="item-employe__icon"><img src="@img/profile.jpg" alt="Image"></div>
+									<div class="item-employe__info">
+										<div class="item-employe__top"><h4>Максим</h4><span>Сотрудник</span></div>
+										<div class="item-employe__id">ID 1236236236123</div>
+									</div>
+								</div>
+								<div class="item-employe__buttons">
+									<button type="button" class="item-employe__button button-circle button-circle--gray-g _icon-assignment"></button>
+									<button type="button" class="item-employe__button button-circle button-circle--gray-g _icon-edit"></button>
+									<button type="button" class="item-employe__button button-circle button-circle--gray _icon-delete"></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+		@@include('html/_popup.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
