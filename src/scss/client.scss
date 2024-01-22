@@ -785,26 +785,4 @@
 		@include adaptiveValue("font-size", 16, 14);
 	}
 }
-.navigation-review {
-	display: flex;
-	gap: toRem(14);
-	align-items: center;
-	@media (max-width: $mobile) {
-		justify-content: center;
-	}
-	.navigation-articles__button {
-		color: $grenColor;
-		@media (any-hover: hover) {
-			&:hover {
-				color: $whiteColor;
-			}
-		}
-	}
-	.navigation-articles__link {
-		color: $mainColor;
-		&--active {
-			color: $whiteColor;
-		}
-	}
-}
 // ========================================================================================================================================================

@@ -92,7 +92,8 @@
     };
     let bodyLockStatus = true;
     let bodyLockToggle = (delay = 500) => {
-        if (document.documentElement.classList.contains("lock")) bodyUnlock(delay); else bodyLock(delay);
+        const mediaQuery = window.matchMedia("(max-width: 1240.98px)");
+        if (mediaQuery.matches) if (document.documentElement.classList.contains("lock")) bodyUnlock(delay); else bodyLock(delay);
     };
     let bodyUnlock = (delay = 500) => {
         let body = document.querySelector("body");
@@ -1394,6 +1395,22 @@
                 eyeIcon.classList.remove("eye-form--active");
             }
         }));
+        var conductBlock = document.querySelector(".conduct");
+        var messageItems = document.querySelectorAll(".messages-chat__item");
+        var backButton = document.querySelector(".conduct__back");
+        if (backButton !== null) {
+            messageItems.forEach((function(item) {
+                item.addEventListener("click", (function(event) {
+                    event.preventDefault();
+                    bodyLockToggle();
+                    conductBlock.classList.add("conduct-active");
+                }));
+            }));
+            backButton.addEventListener("click", (function() {
+                bodyUnlock();
+                conductBlock.classList.remove("conduct-active");
+            }));
+        }
     }));
     window["FLS"] = false;
     isWebp();

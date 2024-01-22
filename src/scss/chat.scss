@@ -1,0 +1,556 @@
+// ========================================================================================================================================================
+// Chat
+.chat {
+	@include adaptiveValue("padding-top", 58, 35);
+	&__container {
+		display: grid;
+		gap: toRem(18);
+		align-items: start;
+		grid-template-columns: toRem(530) auto;
+		@media (max-width: em(1360)) {
+			grid-template-columns: toRem(450) auto;
+		}
+		@media (max-width: em(1240.98)) {
+			grid-template-columns: auto;
+		}
+	}
+
+	&__messages {
+	}
+
+	&__conduct {
+	}
+}
+.messages-chat {
+	border-radius: toRem(0) toRem(0) toRem(10) toRem(10);
+	&__top {
+		display: flex;
+		align-items: center;
+		padding-bottom: toRem(20);
+		justify-content: space-between;
+		border-bottom: toRem(1) solid $liteGrayColor;
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+
+	&__back {
+		gap: toRem(15);
+		font-weight: 800;
+		align-items: center;
+		line-height: normal;
+		display: inline-flex;
+		color: $darkGrayColor;
+		border-radius: toRem(50);
+		padding: toRem(10) toRem(25);
+		background-color: rgba(232, 232, 234, 0.5);
+		transition:
+			background-color 0.3s ease 0s,
+			color 0.3s ease 0s;
+		&::before {
+			margin-top: toRem(1);
+			font-size: toRem(17);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $whiteColor;
+				background-color: $blueColor;
+			}
+		}
+		@media (max-width: $mobile) {
+			display: flex;
+			width: toRem(40);
+			padding: toRem(0);
+			height: toRem(40);
+			align-items: center;
+			justify-content: center;
+			span {
+				display: none;
+			}
+			&::before {
+				font-size: toRem(14);
+			}
+		}
+	}
+
+	&__title {
+		font-weight: 800;
+		line-height: normal;
+		color: $darkGrayColor;
+		@include adaptiveValue("font-size", 34, 24);
+	}
+
+	&__items {
+		display: grid;
+		gap: toRem(5);
+	}
+
+	&__support {
+	}
+
+	&__navigation {
+		margin-top: toRem(20);
+		@media (min-width: em(1240.98)) {
+			display: none;
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: start;
+		flex-direction: column;
+		border-radius: toRem(10);
+		padding: toRem(10) toRem(20);
+		transition: opacity 0.3s ease 0s;
+		background-color: rgba(232, 232, 234, 0.5);
+		&.active-chat {
+			background-color: $blueColor;
+			.messages-chat__name,
+			.messages-chat__time,
+			.messages-chat__text {
+				color: $whiteColor;
+			}
+			.messages-chat__town {
+				background-color: $grenColor;
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.87;
+			}
+		}
+		@media (max-width: $mobile) {
+			padding: toRem(10);
+		}
+	}
+
+	&__info {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&:not(:last-child) {
+			margin-bottom: toRem(5);
+		}
+	}
+
+	&__name {
+		font-weight: 700;
+		line-height: normal;
+		color: $darkGrayColor;
+		@include adaptiveValue("font-size", 20, 18);
+	}
+
+	&__time {
+		color: #707a8a;
+		font-weight: 600;
+		line-height: normal;
+		@include adaptiveValue("font-size", 16, 14);
+	}
+
+	&__town {
+		font-weight: 700;
+		color: $whiteColor;
+		line-height: normal;
+		border-radius: toRem(10);
+		padding: toRem(5) toRem(10);
+		background-color: $blueColor;
+		@include adaptiveValue("font-size", 16, 14);
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+
+	&__text {
+		font-weight: 600;
+		line-height: normal;
+		@include adaptiveValue("font-size", 18, 16);
+	}
+}
+// Conduct
+.conduct {
+	display: grid;
+	overflow: hidden;
+	row-gap: toRem(50);
+	border-radius: toRem(10);
+	grid-template-rows: 1fr auto;
+	border: toRem(1) solid $blueColor;
+	background-color: rgba(232, 232, 234, 0.5);
+	@media (max-width: em(1240.98)) {
+		left: 100%;
+		z-index: 5;
+		width: 100%;
+		height: 100%;
+		border: none;
+		top: toRem(0);
+		overflow: auto;
+		position: fixed;
+		row-gap: toRem(0);
+		border-radius: toRem(0);
+		transition: left 0.3s ease 0s;
+		background-color: $whiteColor;
+		&.conduct-active {
+			left: 0;
+		}
+	}
+	&__body {
+	}
+
+	&__top {
+		display: grid;
+		align-items: center;
+		min-height: toRem(57);
+		border-radius: toRem(4);
+		padding: toRem(10) toRem(30);
+		background-color: $blueColor;
+		grid-template-columns: toRem(255) auto toRem(255);
+		@media (max-width: em(1360)) {
+			padding: toRem(10) toRem(20);
+		}
+		@media (max-width: em(1240.98)) {
+			width: 100%;
+			position: fixed;
+			min-height: toRem(64);
+			border-radius: toRem(0);
+			padding: toRem(10) toRem(10);
+			grid-template-columns: toRem(25) auto toRem(25);
+		}
+	}
+
+	&__back {
+		display: flex;
+		width: toRem(40);
+		text-align: left;
+		height: toRem(40);
+		color: $whiteColor;
+		align-items: center;
+		font-size: toRem(16);
+		justify-content: center;
+		@media (min-width: em(1240.98)) {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	&__name {
+		display: flex;
+		gap: toRem(15);
+		font-weight: 800;
+		color: $whiteColor;
+		line-height: normal;
+		align-items: center;
+		justify-content: center;
+		@include adaptiveValue("font-size", 16, 14);
+		&::before {
+			display: flex;
+			width: toRem(28);
+			height: toRem(28);
+			border-radius: 50%;
+			align-items: center;
+			justify-content: center;
+			background-color: rgba(232, 232, 234, 0.5);
+		}
+	}
+
+	&__town {
+		font-weight: 700;
+		color: $whiteColor;
+		line-height: normal;
+		border-radius: toRem(10);
+		padding: toRem(5) toRem(10);
+		background-color: rgba(232, 232, 234, 0.5);
+		@include adaptiveValue("font-size", 16, 14);
+		@media (max-width: em(1240.98)) {
+			display: none;
+		}
+	}
+
+	&__manager {
+		color: $whiteColor;
+		font-size: toRem(24);
+		margin: toRem(0) toRem(0) toRem(0) auto;
+		@media (min-width: em(1240.98)) {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	&__main {
+	}
+
+	&__action {
+	}
+}
+.main-conduct {
+	display: grid;
+	gap: toRem(22);
+	padding: toRem(24) toRem(26) toRem(0) toRem(26);
+	@media (max-width: em(1240.98)) {
+		padding: toRem(90) toRem(15) toRem(120) toRem(15);
+	}
+	@media (max-width: $mobile) {
+		padding: toRem(90) toRem(15) toRem(90) toRem(15);
+	}
+	&__message {
+		display: flex;
+		gap: toRem(10);
+		align-items: end;
+		&::before {
+			display: flex;
+			width: toRem(28);
+			height: toRem(28);
+			border-radius: 50%;
+			align-items: center;
+			justify-content: center;
+			background-color: $liteGrayColor;
+		}
+		span {
+			width: 100%;
+			display: flex;
+			font-weight: 600;
+			line-height: normal;
+			align-items: center;
+			min-height: toRem(45);
+			border-radius: toRem(4);
+			padding: toRem(10) toRem(17);
+			@include adaptiveValue("font-size", 18, 14);
+			img {
+				width: 100%;
+			}
+		}
+		&--left {
+			span {
+				color: $darkGrayColor;
+				background-color: $liteGrayColor;
+			}
+		}
+
+		&--right {
+			flex-direction: row-reverse;
+			span {
+				color: $whiteColor;
+				background-color: $blueColor;
+			}
+		}
+	}
+
+	&__messages {
+		width: 100%;
+		display: grid;
+		gap: toRem(10);
+		max-width: toRem(305);
+		@media (max-width: $mobile) {
+			max-width: toRem(200);
+		}
+	}
+}
+.action-conduct {
+	display: grid;
+	gap: toRem(15);
+	align-items: center;
+	min-height: toRem(70);
+	padding: toRem(0) toRem(26);
+	grid-template-columns: toRem(44) auto toRem(44);
+	@media (max-width: em(1240.98)) {
+		bottom: 0;
+		width: 100%;
+		position: fixed;
+		padding: toRem(0) toRem(15);
+		background-color: $whiteColor;
+		box-shadow: rgba(0, 0, 0, 0.24) toRem(0) toRem(3) toRem(8);
+	}
+	@media (max-width: $mobile) {
+		gap: toRem(10);
+		min-height: toRem(60);
+		grid-template-columns: toRem(38) auto toRem(38);
+	}
+	&__pin {
+		@media (max-width: $mobile) {
+			width: toRem(38);
+			height: toRem(38);
+		}
+	}
+
+	&__input {
+		min-height: toRem(50);
+		font-family: "Mulish";
+		border-radius: toRem(25);
+		padding: toRem(10) toRem(20);
+		background-color: $liteGrayColor;
+		@include adaptiveValue("font-size", 16, 14);
+		&::placeholder {
+			transition: opacity 0.3s ease 0s;
+		}
+		&:focus {
+			&::placeholder {
+				opacity: 0;
+			}
+		}
+		@media (max-width: $mobile) {
+			min-height: toRem(42);
+		}
+	}
+
+	&__button {
+		display: flex;
+		height: toRem(44);
+		color: $whiteColor;
+		border-radius: 50%;
+		align-items: center;
+		font-size: toRem(24);
+		justify-content: center;
+		background-color: $grenColor;
+		transition: opacity 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.85;
+			}
+		}
+		@media (max-width: $mobile) {
+			width: toRem(38);
+			height: toRem(38);
+		}
+	}
+}
+// Support
+.support {
+	border-radius: toRem(10);
+	background: rgba(232, 232, 234, 0.5);
+	padding: toRem(10) toRem(20) toRem(130) toRem(20);
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+
+	&__title {
+		font-weight: 700;
+		line-height: normal;
+		color: $darkGrayColor;
+		@include adaptiveValue("font-size", 20, 16);
+	}
+
+	&__time {
+		color: #707a8a;
+		font-weight: 600;
+		line-height: normal;
+		@include adaptiveValue("font-size", 16, 14);
+	}
+
+	&__content {
+		display: grid;
+		gap: toRem(30);
+	}
+
+	&__item {
+		padding-right: toRem(20);
+	}
+
+	&__span {
+		display: flex;
+		line-height: 125%;
+		padding-left: toRem(5);
+		@include adaptiveValue("font-size", 16, 14);
+		&:not(:last-child) {
+			margin-bottom: toRem(5);
+		}
+	}
+
+	&__text {
+		font-weight: 600;
+		color: $blueColor;
+		line-height: normal;
+		padding-left: toRem(5);
+		padding-bottom: toRem(10);
+		border-bottom: toRem(1) solid $blueColor;
+		@include adaptiveValue("font-size", 18, 16);
+	}
+
+	&__files {
+	}
+}
+// ========================================================================================================================================================
+// Ticket
+.ticket {
+	@include adaptiveValue("padding-top", 58, 35);
+	@include adaptiveValue("padding-bottom", 100, 40);
+	&__container {
+	}
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+
+	&__items {
+		display: grid;
+		gap: toRem(10);
+	}
+
+	&__item {
+	}
+}
+.item-ticket {
+	border-radius: toRem(10);
+	padding: toRem(15) toRem(25);
+	background-color: $whiteColor;
+	box-shadow: toRem(0) toRem(0) toRem(20) toRem(0) rgba(0, 0, 0, 0.1);
+	@media (max-width: $mobile) {
+		padding: toRem(15);
+	}
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+
+	&__name {
+		font-weight: 700;
+		line-height: normal;
+		color: $darkGrayColor;
+		@include adaptiveValue("font-size", 20, 16);
+	}
+
+	&__date {
+		color: #707a8a;
+		font-weight: 600;
+		line-height: normal;
+		@include adaptiveValue("font-size", 16, 14);
+	}
+
+	&__bottom {
+		display: grid;
+		grid-template-columns: 15.060241% 15.060241% 48.192771%;
+		@include adaptiveValue("gap", 35, 15, 0, $containerWidth, 1240.98);
+		@media (max-width: $tablet) {
+			grid-template-columns: auto;
+		}
+	}
+
+	&__article {
+	}
+
+	&__span {
+		display: flex;
+		line-height: 125%;
+		@include adaptiveValue("font-size", 16, 14);
+		&:not(:last-child) {
+			margin-bottom: toRem(5);
+		}
+	}
+
+	&__text {
+		font-weight: 600;
+		color: $blueColor;
+		line-height: normal;
+		@include adaptiveValue("font-size", 16, 14);
+	}
+}
+// ========================================================================================================================================================

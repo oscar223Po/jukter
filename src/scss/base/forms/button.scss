@@ -13,7 +13,7 @@
 		background-color 0.3s ease 0s,
 		color 0.3s ease 0s,
 		border 0.3s ease 0s;
-	@include adaptiveValue("font-size", 20, 15);
+	@include adaptiveValue("font-size", 20, 16);
 	&::before {
 		display: flex;
 		width: toRem(24);
@@ -61,8 +61,9 @@
 		font-weight: 800;
 		color: $whiteColor;
 		line-height: normal;
+		min-height: toRem(48);
 		border-radius: toRem(50);
-		padding: toRem(10) toRem(25);
+		padding: toRem(5) toRem(25);
 		background-color: $blueColor;
 		transition: background-color 0.15s ease 0s;
 		@media (any-hover: hover) {
@@ -72,15 +73,16 @@
 		}
 		@media (max-width: $mobileSmall) {
 			font-size: toRem(15);
+			min-height: toRem(40);
 			border-radius: toRem(25);
-			padding: toRem(7) toRem(20);
+			padding: toRem(5) toRem(20);
 		}
 	}
 	&--gray {
 		font-weight: 500;
-		height: toRem(43);
 		color: $grenColor;
 		line-height: normal;
+		min-height: toRem(43);
 		border-radius: toRem(50);
 		padding: toRem(0) toRem(25);
 		border: toRem(1) solid $grenColor;

@@ -64,6 +64,10 @@ summary::-webkit-details-marker {
 	line-height: normal;
 	font-family: "Raleway";
 	@include adaptiveValue("font-size", 42, 22);
+	&--mr {
+		font-family: "Manrope";
+		@include adaptiveValue("font-size", 48, 24);
+	}
 }
 // ========================================================================================================================================================
 // Arrow Back
@@ -139,6 +143,10 @@ summary::-webkit-details-marker {
 	}
 
 	&__navigation {
+		margin-top: toRem(40);
+		@media (max-width: $mobile) {
+			margin-top: toRem(25);
+		}
 	}
 }
 .item-articles {
@@ -391,97 +399,6 @@ summary::-webkit-details-marker {
 	&__button {
 		width: 100%;
 		height: toRem(40);
-	}
-}
-.navigation-articles {
-	display: flex;
-	gap: toRem(14);
-	align-items: center;
-	margin-top: toRem(40);
-	justify-content: center;
-	@media (max-width: $mobile) {
-		gap: toRem(20);
-		margin-top: toRem(25);
-	}
-	&__button {
-		display: flex;
-		gap: toRem(10);
-		font-weight: 800;
-		color: $whiteColor;
-		line-height: normal;
-		align-items: center;
-		font-size: toRem(16);
-		border-radius: toRem(50);
-		padding: toRem(7) toRem(15);
-		border: toRem(1) solid $grenColor;
-		transition: background-color 0.2s ease 0s;
-		&::before {
-			font-size: toRem(13);
-			transform: translateY(toRem(1));
-		}
-		&--prev {
-		}
-		&--next {
-			flex-direction: row-reverse;
-			&::before {
-				transform: rotate(-180deg);
-			}
-		}
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: $grenColor;
-			}
-		}
-		@media (max-width: $mobile) {
-			width: toRem(40);
-			height: toRem(40);
-			color: $mainColor;
-			span {
-				display: none;
-			}
-			&--prev {
-				padding-left: toRem(13);
-			}
-			&--next {
-				padding-right: toRem(13);
-			}
-		}
-	}
-
-	&__list {
-		display: flex;
-		gap: toRem(10);
-		align-items: center;
-		@media (max-width: $mobile) {
-			gap: toRem(5);
-		}
-	}
-
-	&__item {
-	}
-
-	&__link {
-		display: flex;
-		width: toRem(31);
-		font-weight: 800;
-		height: toRem(31);
-		color: $whiteColor;
-		border-radius: 50%;
-		align-items: center;
-		font-size: toRem(16);
-		justify-content: center;
-		&--active {
-			background-color: $grenColor;
-		}
-		@media (max-width: $mobile) {
-			width: toRem(27);
-			height: toRem(27);
-			color: $mainColor;
-			font-size: toRem(14);
-			&--active {
-				color: $whiteColor;
-			}
-		}
 	}
 }
 // ========================================================================================================================================================
@@ -825,21 +742,31 @@ summary::-webkit-details-marker {
 	height: toRem(44);
 	border-radius: 50%;
 	align-items: center;
-	font-size: toRem(20);
 	justify-content: center;
 	border: toRem(1) solid $blueColor;
 	transition:
 		background-color 0.3s ease 0s,
 		color 0.3s ease 0s;
+	@include adaptiveValue("font-size", 20, 16);
 	@media (any-hover: hover) {
 		&:hover {
 			color: $whiteColor;
 			background-color: $blueColor;
 		}
 	}
+	&--green {
+		color: $grenColor;
+		border: toRem(1) solid $grenColor;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $grenColor;
+				background-color: transparent;
+			}
+		}
+	}
 }
 // ========================================================================================================================================================
-// Styles For Button Circle
+// Styles For Button Circle & File
 .button-circle {
 	display: flex;
 	border-radius: 50%;
@@ -898,6 +825,158 @@ summary::-webkit-details-marker {
 		font-size: toRem(19);
 		min-width: toRem(39);
 		min-height: toRem(39);
+	}
+}
+// ========================================================================================================================================================
+// Styles For Files
+.files {
+	display: flex;
+	gap: toRem(10);
+	align-items: center;
+	&__file {
+		display: flex;
+		width: toRem(44);
+		height: toRem(44);
+		border-radius: 50%;
+		position: relative;
+		align-items: center;
+		font-size: toRem(18);
+		justify-content: center;
+		color: rgba(0, 0, 0, 0.5);
+		background-color: #e8e8ea;
+	}
+
+	&__close {
+		top: toRem(-3);
+		right: toRem(-5);
+		width: toRem(18);
+		height: toRem(18);
+		border-radius: 50%;
+		position: absolute;
+		color: $whiteColor;
+		background-color: $blueColor;
+		transition: background-color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $redColor;
+			}
+		}
+	}
+
+	&__name {
+		line-height: 125%;
+		font-size: toRem(16);
+	}
+}
+// ========================================================================================================================================================
+// Styles For Navigation
+.navigation {
+	display: flex;
+	gap: toRem(14);
+	align-items: center;
+	&--center {
+		justify-content: center;
+	}
+	@media (max-width: $mobile) {
+		gap: toRem(20);
+		justify-content: center;
+	}
+	&--green {
+		.navigation__button {
+			color: $grenColor;
+			@media (any-hover: hover) {
+				&:hover {
+					color: $whiteColor;
+				}
+			}
+		}
+		.navigation__link {
+			color: $mainColor;
+			&--active {
+				color: $whiteColor;
+			}
+		}
+	}
+	&__button {
+		display: flex;
+		gap: toRem(10);
+		font-weight: 800;
+		color: $whiteColor;
+		line-height: normal;
+		align-items: center;
+		font-size: toRem(16);
+		border-radius: toRem(50);
+		padding: toRem(7) toRem(15);
+		border: toRem(1) solid $grenColor;
+		transition: background-color 0.2s ease 0s;
+		&::before {
+			font-size: toRem(13);
+			transform: translateY(toRem(1));
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $grenColor;
+			}
+		}
+		@media (max-width: $mobile) {
+			width: toRem(40);
+			height: toRem(40);
+			color: $mainColor;
+			span {
+				display: none;
+			}
+			&--prev {
+				padding-left: toRem(13);
+			}
+			&--next {
+				padding-right: toRem(13);
+			}
+		}
+		&--prev {
+		}
+
+		&--next {
+			flex-direction: row-reverse;
+			&::before {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		gap: toRem(10);
+		align-items: center;
+		@media (max-width: $mobile) {
+			gap: toRem(5);
+		}
+	}
+
+	&__item {
+	}
+
+	&__link {
+		display: flex;
+		width: toRem(31);
+		font-weight: 800;
+		height: toRem(31);
+		color: $whiteColor;
+		border-radius: 50%;
+		align-items: center;
+		font-size: toRem(16);
+		justify-content: center;
+		&--active {
+			background-color: $grenColor;
+		}
+		@media (max-width: $mobile) {
+			width: toRem(27);
+			height: toRem(27);
+			color: $mainColor;
+			font-size: toRem(14);
+			&--active {
+				color: $whiteColor;
+			}
+		}
 	}
 }
 // ========================================================================================================================================================

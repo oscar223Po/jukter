@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Jukter (Контакты) - SystemContactPage</title>
+	<title>Jukter (Чат с поддержкой) - ChatSupportPage</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -51,53 +51,75 @@
 		</header>
 		<!-- $=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-> -->
 		<main class="page">
-			<!-- [Back] -->
-			<div class="back">
-				<div class="back__container"><a href="" class="back__button _icon-arrow-back">Назад</a></div>
-			</div>
-			<!-- [Contact] -->
-			<section class="contact">
-				<div class="contact__container">
-					<h3 class="contact__title title">Контакты</h3>
-					<div class="contact__body">
-						<div class="contact__main main-contact">
-							<h4 class="main-contact__title title-blue">Технические вопросы и помощь в работе с сайтом</h4>
-							<form action="#" class="main-contact__form">
-								<div class="main-contact__inner">
-									<label for="#" class="main-contact__label">
-										<span class="item-request__span">ФИО</span>
-										<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите имя" class="main-contact__input input-actions input input--big">
-									</label>
-									<label for="#" class="main-contact__label">
-										<span class="item-request__span">Телефон</span>
-										<input data-required="tel" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите номер телефона" class="main-contact__input input-actions input input--big">
-									</label>
-									<label for="#" class="main-contact__label">
-										<span class="item-request__span">Email</span>
-										<input data-required="email" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите Email" class="main-contact__input input-actions input input--big">
-									</label>
-									<label for="#" class="main-contact__label">
-										<span class="item-request__span">Вопрос</span>
-										<textarea autocomplete="off" name="form[]" placeholder="Введите сообщение" data-error="Error" class="main-contact__textarea input"></textarea>
-									</label>
-								</div>
-								<button type="submit" class="main-contact__button button button--green">Задать вопрос</button>
-							</form>
+			<!-- [Chat] -->
+			<section class="chat">
+				<div class="chat__container">
+					<div class="chat__messages messages-chat">
+						<div class="messages-chat__top">
+							<a href="" class="messages-chat__back _icon-arrow-back"><span>Назад</span></a>
+							<h4 class="messages-chat__title">Чат</h4>
 						</div>
-						<div class="contact__option option-contact">
-							<div class="option-contact__top">
-								<p>А так же все вопросы по работе Júkter Вы можете задать в месcенджерах</p>
-								<div class="option-contact__socials">
-									<a href="" class="option-contact__social option-contact__social--wh _icon-social-wh"></a>
-									<a href="" class="option-contact__social option-contact__social--tg _icon-social-tg"></a>
+						<div class="messages-chat__support support">
+							<div class="support__top">
+								<h4 class="support__title">Тикет #444</h4>
+								<div class="support__time"><span>15:52</span></div>
+							</div>
+							<div class="support__content">
+								<div class="support__item">
+									<span class="support__span">Дата</span>
+									<div class="support__text">15 ноября 2023</div>
+								</div>
+								<div class="support__item">
+									<span class="support__span">Тема</span>
+									<div class="support__text">Оплата</div>
+								</div>
+								<div class="support__item">
+									<span class="support__span">Сообщение</span>
+									<div class="support__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nu</div>
+								</div>
+								<div class="support__item">
+									<span class="support__span">Сообщение</span>
+									<div class="support__files files">
+										<div class="files__file file-drive _icon-file-drive"></div>
+										<div class="files__name"><span>123.pdf</span></div>
+									</div>
 								</div>
 							</div>
-							<div class="option-contact__main">
-								<div class="option-contact__item">Телефон:<a href="tel:+77007600600">+ 7 7007 600 600</a></div>
-								<div class="option-contact__item">Email:<a href="mailto:jukter@jukter.kz">jukter@jukter.kz</a></div>
-								<div class="option-contact__item">Время работы:<span>пн-пт с 9:00 до 18:00, по времени г. Астана</span></div>
+						</div>
+					</div>
+					<div class="chat__conduct conduct">
+						<div class="conduct__body">
+							<div class="conduct__top">
+								<button type="button" class="conduct__back _icon-arrow-back"></button>
+								<div class="conduct__name _icon-y-world">Чат с менеджером</div>
+								<button type="button" class="conduct__manager _icon-assignment"></button>
+							</div>
+							<div class="conduct__main main-conduct">
+								<div class="main-conduct__message main-conduct__message--left _icon-account-box">
+									<div class="main-conduct__messages"><span>Привет</span></div>
+								</div>
+								<div class="main-conduct__message main-conduct__message--right _icon-account-box">
+									<div class="main-conduct__messages"><span>Здравствуйте! Чем могу помочь?</span></div>
+								</div>
+								<div class="main-conduct__message main-conduct__message--left _icon-account-box">
+									<div class="main-conduct__messages"><span>Привет</span><span>Привет</span></div>
+								</div>
+								<div class="main-conduct__message main-conduct__message--right _icon-account-box">
+									<div class="main-conduct__messages"><span>Ок!</span></div>
+								</div>
+								<div class="main-conduct__message main-conduct__message--left _icon-account-box">
+									<div class="main-conduct__messages"><span><img src="img/hero/hero-image.svg" alt="Image"></span></div>
+								</div>
+								<div class="main-conduct__message main-conduct__message--right _icon-account-box">
+									<div class="main-conduct__messages"><span>Ок!</span></div>
+								</div>
 							</div>
 						</div>
+						<form action="#" class="conduct__action action-conduct">
+							<button type="button" class="action-conduct__pin button-pin _icon-pin"></button>
+							<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите сообщение" class="action-conduct__input">
+							<button type="button" class="action-conduct__button _icon-done"></button>
+						</form>
 					</div>
 				</div>
 			</section>

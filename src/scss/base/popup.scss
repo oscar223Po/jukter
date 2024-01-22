@@ -334,44 +334,6 @@ body::after {
 	}
 
 	&__files {
-		display: flex;
-		gap: toRem(10);
-		align-items: center;
-	}
-
-	&__file {
-		display: flex;
-		width: toRem(44);
-		height: toRem(44);
-		border-radius: 50%;
-		position: relative;
-		align-items: center;
-		font-size: toRem(18);
-		justify-content: center;
-		color: rgba(0, 0, 0, 0.5);
-		background-color: #e8e8ea;
-	}
-
-	&__close {
-		top: toRem(-3);
-		right: toRem(-5);
-		width: toRem(18);
-		height: toRem(18);
-		border-radius: 50%;
-		position: absolute;
-		color: $whiteColor;
-		background-color: $blueColor;
-		transition: background-color 0.3s ease 0s;
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: $redColor;
-			}
-		}
-	}
-
-	&__name {
-		line-height: 125%;
-		font-size: toRem(16);
 	}
 
 	&__button {

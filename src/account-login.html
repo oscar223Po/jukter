@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Jukter (Аккаунт - вход) - AccountLoginPage"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<!-- [Account] -->
+			<section class="account">
+				<div class="account__container">
+					<h3 class="account__title title title--mr">Вход</h3>
+					<div class="account__body">
+						<form action="#" class="account__form form-account">
+							<label for="#" class="form-account__label">
+								<span class="item-request__span">Логин</span>
+								<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите логин" class="item-request-four__input input-actions input input--big">
+							</label>
+							<div class="form-account__item">
+								<span class="item-request__span">Пароль</span>
+								<label for="#" class="form-account__label">
+									<input autocomplete="off" type="password" name="form[]" data-error="Error" placeholder="Введите пароль" class="form-account__input form-account__input--password input-actions input input--big" id="passwordInput">
+									<button type="button" class="form-account__opt eye-form _icon-eye-close"></button>
+								</label>
+							</div>
+							<button type="button" class="form-account__button button button--green">Войти</button>
+						</form>
+						<div class="account__bottom">
+							<a href="" class="account__create">Создать аккаунт</a>
+							<a href="" class="account__forgot">Забыли пароль?</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

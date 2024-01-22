@@ -1,6 +1,6 @@
 // ~~~~~~~~[ JavaScript Files Connecting ]~~~~~~~
 // Підключення функціоналу "Чертоги Фрілансера"
-import { isMobile } from "./functions.js";
+import { bodyLockToggle, bodyUnlock, isMobile } from "./functions.js";
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js";
 // ================[ JavaScript Section Active Link Var Header ]================
@@ -130,6 +130,25 @@ document.addEventListener("DOMContentLoaded", function () {
 				passwordInput.type = 'password';
 				eyeIcon.classList.remove("eye-form--active")
 			}
+		});
+	}
+	// ================[ JavaScript Section ]================
+	var conductBlock = document.querySelector('.conduct');
+	var messageItems = document.querySelectorAll('.messages-chat__item');
+	var backButton = document.querySelector('.conduct__back');
+	if (backButton !== null) {
+		messageItems.forEach(function (item) {
+			item.addEventListener('click', function (event) {
+				event.preventDefault();
+				bodyLockToggle();
+				conductBlock.classList.add('conduct-active');
+			});
+		});
+		// Обработчик события для кнопки "Назад"
+		backButton.addEventListener('click', function () {
+			// Удаление активного класса у блока conduct
+			bodyUnlock();
+			conductBlock.classList.remove('conduct-active');
 		});
 	}
 });
