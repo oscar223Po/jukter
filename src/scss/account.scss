@@ -6,10 +6,20 @@
 	&__container {
 	}
 
-	&__title {
+	&__top {
+		text-align: center;
 		&:not(:last-child) {
 			margin-bottom: toRem(40);
 		}
+	}
+
+	&__title {
+	}
+
+	&__subtitle {
+		line-height: normal;
+		margin-top: toRem(15);
+		@include adaptiveValue("font-size", 18, 16);
 	}
 
 	&__body {
@@ -18,6 +28,10 @@
 		border-radius: toRem(10);
 		border: toRem(1) solid $blueColor;
 		padding: toRem(25) toRem(30) toRem(45) toRem(30);
+		&--without {
+			border: toRem(1) solid transparent;
+			padding: toRem(0) toRem(30) toRem(45) toRem(30);
+		}
 		@media (max-width: $mobile) {
 			padding: toRem(15);
 		}
@@ -59,6 +73,17 @@
 			}
 		}
 	}
+
+	&__code {
+		transition: color 0.3s ease 0s;
+		@include adaptiveValue("font-size", 18, 16);
+		@media (any-hover: hover) {
+			&:hover {
+				color: $blueColor;
+				text-decoration: underline;
+			}
+		}
+	}
 }
 .form-account {
 	&__label {
@@ -74,6 +99,7 @@
 	}
 
 	&__input {
+		outline: none;
 		&--password {
 			padding-left: toRem(20);
 			padding-right: toRem(65);
@@ -102,12 +128,28 @@
 			}
 			@media (any-hover: hover) {
 				&:hover {
-					color: $mainColor;
+					color: $grayColor;
 				}
 			}
 		}
 		@media (max-width: $mobile) {
 			right: toRem(15);
+		}
+	}
+
+	&__checkbox {
+		margin-top: toRem(15);
+		.checkbox-opt__text {
+			@include adaptiveValue("font-size", 16, 14);
+			a {
+				color: $blueColor;
+				text-decoration: underline;
+				@media (any-hover: hover) {
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
 		}
 	}
 

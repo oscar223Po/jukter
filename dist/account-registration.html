@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Jukter (Контакты) - SystemContactPage</title>
+	<title>Jukter (Аккаунт - регистрация) - AccountRegistrationPage</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -19,85 +19,62 @@
 		<header class="header">
 			<div class="header__container">
 				<a href="" class="header__logo"><img src="img/icons/logo.svg" alt="logo"></a>
-				<div class="header__menu menu">
+				<div class="header__menu menu menu--account">
 					<nav class="menu__body">
 						<div class="menu__date date _icon-today" id="currentDate"></div>
 						<div class="menu__filter">
 							<a href="" class="menu__var _icon-bus">Найти транспорт</a>
 							<a href="" class="menu__var menu__var--active _icon-box">Найти груз</a>
 						</div>
-						<div class="menu__profile">
-							<h4 class="menu__title">Профиль</h4>
-							<ul class="menu__list">
-								<li class="menu__item"><a href="" class="menu__link _icon-mail">Чат</a></li>
-								<li class="menu__item"><a href="" class="menu__link _icon-assignment">Мои заказы</a></li>
-								<li class="menu__item"><a href="" class="menu__link _icon-favorite">Избранное</a></li>
-								<li class="menu__item"><a href="" class="menu__link _icon-account-box">Профиль</a></li>
-								<li class="menu__item"><a href="" class="menu__link _icon-account-balance">Моя организация</a></li>
-								<li class="menu__item"><a href="" class="menu__link _icon-people-alt">Сотрудники</a></li>
-								<li class="menu__item"><a href="" class="menu__link _icon-wallet">Платежи</a></li>
-							</ul>
+						<a href="" class="menu__button menu__button--account button button--green">Создать заявку</a>
+						<div class="menu__account">
+							<a href="" class="menu__account-btn button button--green">Войти</a>
+							<a href="" class="menu__account-btn button button--blue _icon-regist-circle">Регистрация</a>
 						</div>
-						<a href="" class="menu__button button button--green">Создать заявку</a>
 					</nav>
-				</div>
-				<div class="header__profile">
-					<a href="" class="header__link">Мои заказы</a>
-					<a href="" class="header__link">Чат</a>
-					<a href="" class="header__avatar"><img src="img/avatar.svg" alt="Image"></a>
 				</div>
 				<button type="button" class="menu__icon icon-menu"><span></span></button>
 			</div>
 		</header>
 		<!-- $=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-> -->
 		<main class="page">
-			<!-- [Back] -->
-			<div class="back">
-				<div class="back__container"><a href="" class="back__button _icon-arrow-back">Назад</a></div>
-			</div>
-			<!-- [Contact] -->
-			<section class="contact">
-				<div class="contact__container">
-					<h3 class="contact__title title">Контакты</h3>
-					<div class="contact__body">
-						<div class="contact__main main-contact">
-							<h4 class="main-contact__title title-blue">Технические вопросы и помощь в работе с сайтом</h4>
-							<form action="#" class="main-contact__form">
-								<div class="main-contact__inner">
-									<label for="#" class="main-contact__label">
-										<span class="item-request__span">ФИО</span>
-										<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите имя" class="main-contact__input input-actions input input--big">
-									</label>
-									<label for="#" class="main-contact__label">
-										<span class="item-request__span">Телефон</span>
-										<input data-required="tel" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите номер телефона" class="main-contact__input input-actions input input--big">
-									</label>
-									<label for="#" class="main-contact__label">
-										<span class="item-request__span">Email</span>
-										<input data-required="email" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите Email" class="main-contact__input input-actions input input--big">
-									</label>
-									<label for="#" class="main-contact__label">
-										<span class="item-request__span">Вопрос</span>
-										<textarea autocomplete="off" name="form[]" placeholder="Введите сообщение" data-error="Error" class="main-contact__textarea input"></textarea>
-									</label>
-								</div>
-								<button type="submit" class="main-contact__button button button--green">Задать вопрос</button>
-							</form>
-						</div>
-						<div class="contact__option option-contact">
-							<div class="option-contact__top">
-								<p>А так же все вопросы по работе Júkter Вы можете задать в месcенджерах</p>
-								<div class="option-contact__socials">
-									<a href="" class="option-contact__social option-contact__social--wh _icon-social-wh"></a>
-									<a href="" class="option-contact__social option-contact__social--tg _icon-social-tg"></a>
-								</div>
+			<!-- [Account] -->
+			<section class="account">
+				<div class="account__container">
+					<div class="account__top">
+						<h3 class="account__title title title--mr">Регистрация</h3>
+					</div>
+					<div class="account__body">
+						<form action="#" class="account__form form-account">
+							<label for="#" class="form-account__label">
+								<span class="item-request__span">Имя</span>
+								<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите имя" class="item-request-four__input input-actions input input--big">
+							</label>
+							<label for="#" class="form-account__label">
+								<span class="item-request__span">Фамилия</span>
+								<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите фамилию" class="item-request-four__input input-actions input input--big">
+							</label>
+							<label for="#" class="form-account__label">
+								<span class="item-request__span">Телефон</span>
+								<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите телефон" class="item-request-four__input input-actions input input--big">
+							</label>
+							<label for="#" class="form-account__label">
+								<span class="item-request__span">Логин</span>
+								<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите Email" class="item-request-four__input input-actions input input--big">
+							</label>
+							<div class="form-account__item">
+								<span class="item-request__span">Пароль</span>
+								<label for="#" class="form-account__label">
+									<input autocomplete="off" type="password" name="form[]" data-error="Error" placeholder="Введите пароль" class="form-account__input form-account__input--password input-actions password-input input input--big">
+									<button type="button" class="form-account__opt eye-form _icon-eye-close"></button>
+								</label>
 							</div>
-							<div class="option-contact__main">
-								<div class="option-contact__item">Телефон:<a href="tel:+77007600600">+ 7 7007 600 600</a></div>
-								<div class="option-contact__item">Email:<a href="mailto:jukter@jukter.kz">jukter@jukter.kz</a></div>
-								<div class="option-contact__item">Время работы:<span>пн-пт с 9:00 до 18:00, по времени г. Астана</span></div>
+							<div class="form-account__checkbox checkbox-opt">
+								<input id="c_1" data-error="Error" class="checkbox-opt__input" type="checkbox" value="1" name="form[]">
+								<label for="c_1" class="checkbox-opt__label"><span class="checkbox-opt__text">Я соглашаюсь с <a href="">политикой Cookie</a>, <a href="">политикой конфиденциальности</a>, <a href="">условиями пользования</a></span></label>
 							</div>
-						</div>
+							<button type="button" class="form-account__button button button--green">Продолжить</button>
+						</form>
 					</div>
 				</div>
 			</section>

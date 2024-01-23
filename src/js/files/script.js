@@ -119,19 +119,21 @@ document.addEventListener("DOMContentLoaded", function () {
 		})
 	}
 	// ================[ JavaScript Section For Password Input ]================
-	var passwordInput = document.getElementById('passwordInput');
-	var eyeIcon = document.querySelector('.eye-form');
-	if (passwordInput !== null) {
-		eyeIcon.addEventListener('click', function () {
+	var passwordInputs = document.querySelectorAll('.password-input');
+	var eyeIcons = document.querySelectorAll('.eye-form');
+
+	// Добавляем обработчик событий для каждого элемента
+	passwordInputs.forEach(function (passwordInput, index) {
+		eyeIcons[index].addEventListener('click', function () {
 			if (passwordInput.type === 'password') {
 				passwordInput.type = 'text';
-				eyeIcon.classList.add("eye-form--active")
+				eyeIcons[index].classList.add("eye-form--active");
 			} else {
 				passwordInput.type = 'password';
-				eyeIcon.classList.remove("eye-form--active")
+				eyeIcons[index].classList.remove("eye-form--active");
 			}
 		});
-	}
+	});
 	// ================[ JavaScript Section ]================
 	var conductBlock = document.querySelector('.conduct');
 	var messageItems = document.querySelectorAll('.messages-chat__item');

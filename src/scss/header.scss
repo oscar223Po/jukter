@@ -77,6 +77,21 @@
 	flex: 1 1 auto;
 	@include adaptiveValue("padding-left", 90, 30, 2, $containerWidth, 1500.98);
 	@include adaptiveValue("padding-right", 40, 20, 2, $containerWidth, 1500.98);
+	&--account {
+		padding-right: toRem(0);
+		.menu__body {
+			justify-content: space-between;
+			@media (max-width: em(1500.98)) {
+				column-gap: toRem(20);
+				padding-left: toRem(30);
+			}
+			@media (max-width: em(1240.98)) {
+				column-gap: toRem(25);
+				justify-content: start;
+				padding-left: toRem(15);
+			}
+		}
+	}
 	&__body {
 		display: flex;
 		align-items: center;
@@ -240,11 +255,64 @@
 		font-weight: 400;
 		min-height: toRem(53);
 		padding: toRem(10) toRem(30);
+		&--account {
+			@media (min-width: em(1240.98)) {
+				display: none;
+			}
+		}
 		@media (max-width: em(1240.98)) {
 			font-weight: 800;
 		}
 		@media (max-width: $mobileSmall) {
 			min-height: toRem(45);
+		}
+	}
+
+	&__account {
+		display: flex;
+		gap: toRem(10);
+		align-items: center;
+		justify-content: flex-end;
+		@media (max-width: em(1240.98)) {
+			padding: toRem(15);
+			margin-top: toRem(50);
+			border-radius: toRem(10);
+			background-color: rgba(232, 232, 234, 0.5);
+		}
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+			gap: toRem(7);
+			padding: toRem(10);
+		}
+	}
+
+	&__account-btn {
+		font-weight: 400;
+		min-height: toRem(53);
+		&:first-child {
+			padding: toRem(0) toRem(40);
+		}
+		&:last-child {
+			padding: toRem(0) toRem(30);
+		}
+		@media (max-width: em(1500.98)) {
+			&:first-child {
+				padding: toRem(0) toRem(30);
+			}
+			&:last-child {
+				padding: toRem(0) toRem(20);
+			}
+		}
+		@media (max-width: em(1240.98)) {
+			font-weight: 800;
+		}
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+			padding: toRem(0);
+			min-height: toRem(45);
+			&.button--green {
+				padding: toRem(0);
+			}
 		}
 	}
 

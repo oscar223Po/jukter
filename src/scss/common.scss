@@ -66,6 +66,7 @@ summary::-webkit-details-marker {
 	@include adaptiveValue("font-size", 42, 22);
 	&--mr {
 		font-family: "Manrope";
+		text-transform: uppercase;
 		@include adaptiveValue("font-size", 48, 24);
 	}
 }

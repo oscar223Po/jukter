@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Jukter (Аккаунт - новый пароль) - AccountNewPage"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header-account.htm',{})
+		<main class="page">
+			<!-- [Account] -->
+			<section class="account">
+				<div class="account__container">
+					<div class="account__top">
+						<h3 class="account__title title title--mr">Введите новый пароль</h3>
+					</div>
+					<div class="account__body account__body--without">
+						<form action="#" class="account__form form-account">
+							<div class="form-account__item form-account__label">
+								<span class="item-request__span">Новый пароль</span>
+								<label for="#" class="form-account__label">
+									<input autocomplete="off" type="password" name="form[]" data-error="Error" placeholder="Введите пароль" class="form-account__input form-account__input--password input-actions password-input input input--big">
+									<button type="button" class="form-account__opt eye-form _icon-eye-close"></button>
+								</label>
+							</div>
+							<div class="form-account__item">
+								<span class="item-request__span">Подтвердите новый пароль</span>
+								<label for="#" class="form-account__label">
+									<input autocomplete="off" type="password" name="form[]" data-error="Error" placeholder="Введите пароль" class="form-account__input form-account__input--password input-actions password-input input password-input input--big">
+									<button type="button" class="form-account__opt eye-form _icon-eye-close"></button>
+								</label>
+							</div>
+							<button type="button" class="form-account__button button button--green">Подтвердить</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

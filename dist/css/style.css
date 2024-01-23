@@ -1782,6 +1782,7 @@ summary::-webkit-details-marker {
 
 .title--mr {
   font-family: "Manrope";
+  text-transform: uppercase;
 }
 
 .back__container {
@@ -2787,6 +2788,16 @@ summary::-webkit-details-marker {
           flex: 1 1 auto;
 }
 
+.menu--account {
+  padding-right: 0rem;
+}
+
+.menu--account .menu__body {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .menu__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2859,6 +2870,32 @@ summary::-webkit-details-marker {
   padding: 0.625rem 1.875rem;
 }
 
+.menu__account {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.625rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.menu__account-btn {
+  font-weight: 400;
+  min-height: 3.3125rem;
+}
+
+.menu__account-btn:first-child {
+  padding: 0rem 2.5rem;
+}
+
+.menu__account-btn:last-child {
+  padding: 0rem 1.875rem;
+}
+
 .menu__icon {
   display: none;
 }
@@ -2868,6 +2905,10 @@ summary::-webkit-details-marker {
 }
 
 .footer__background {
+  position: relative;
+}
+
+.footer__background-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2879,7 +2920,7 @@ summary::-webkit-details-marker {
           justify-content: center;
 }
 
-.footer__background::before {
+.footer__background-main::before {
   content: "";
   width: 100%;
   left: 0rem;
@@ -2889,10 +2930,46 @@ summary::-webkit-details-marker {
   background-color: #2a3c6b;
 }
 
-.footer__background img {
+.footer__background-main img {
   width: 120rem;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.footer__background-decor {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0rem;
+  left: 6.25rem;
+  bottom: 5rem;
+  position: absolute;
+  margin: 0rem auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__background-bus {
+  -webkit-transform: translate(230%, 0);
+      -ms-transform: translate(230%, 0);
+          transform: translate(230%, 0);
+  -webkit-transition: -webkit-transform 2.3s 0s;
+  transition: -webkit-transform 2.3s 0s;
+  transition: transform 2.3s 0s;
+  transition: transform 2.3s 0s, -webkit-transform 2.3s 0s;
+}
+
+._watcher-view .footer__background-bus {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.footer__background-bus {
+  top: 0;
+  position: absolute;
 }
 
 .footer__main {
@@ -6706,8 +6783,17 @@ summary::-webkit-details-marker {
           align-items: center;
 }
 
-.account__title:not(:last-child) {
+.account__top {
+  text-align: center;
+}
+
+.account__top:not(:last-child) {
   margin-bottom: 2.5rem;
+}
+
+.account__subtitle {
+  line-height: normal;
+  margin-top: 0.9375rem;
 }
 
 .account__body {
@@ -6716,6 +6802,11 @@ summary::-webkit-details-marker {
   border-radius: 0.625rem;
   border: 0.0625rem solid #2a3c6b;
   padding: 1.5625rem 1.875rem 2.8125rem 1.875rem;
+}
+
+.account__body--without {
+  border: 0.0625rem solid transparent;
+  padding: 0rem 1.875rem 2.8125rem 1.875rem;
 }
 
 .account__form:not(:last-child) {
@@ -6748,6 +6839,11 @@ summary::-webkit-details-marker {
   text-decoration-line: underline;
 }
 
+.account__code {
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
 .form-account__label {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6761,6 +6857,10 @@ summary::-webkit-details-marker {
 
 .form-account__label:not(:last-child) {
   margin-bottom: 0.9375rem;
+}
+
+.form-account__input {
+  outline: none;
 }
 
 .form-account__input--password {
@@ -6787,6 +6887,15 @@ summary::-webkit-details-marker {
 
 .form-account__opt.eye-form--active::before {
   content: "\e921";
+}
+
+.form-account__checkbox {
+  margin-top: 0.9375rem;
+}
+
+.form-account__checkbox .checkbox-opt__text a {
+  color: #2a3c6b;
+  text-decoration: underline;
 }
 
 .form-account__button {
@@ -6934,6 +7043,10 @@ summary::-webkit-details-marker {
   }
 
   .menu__profile {
+    display: none;
+  }
+
+  .menu__button--account {
     display: none;
   }
 
@@ -7798,12 +7911,24 @@ summary::-webkit-details-marker {
     padding-bottom: 5rem;
   }
 
+  .account__subtitle {
+    font-size: 1.125rem;
+  }
+
   .account__create {
     font-size: 1.125rem;
   }
 
   .account__forgot {
     font-size: 1.125rem;
+  }
+
+  .account__code {
+    font-size: 1.125rem;
+  }
+
+  .form-account__checkbox .checkbox-opt__text {
+    font-size: 1rem;
   }
 }
 
@@ -8579,12 +8704,24 @@ summary::-webkit-details-marker {
     padding-bottom: 2.8125rem;
   }
 
+  .account__subtitle {
+    font-size: 1rem;
+  }
+
   .account__create {
     font-size: 1rem;
   }
 
   .account__forgot {
     font-size: 1rem;
+  }
+
+  .account__code {
+    font-size: 1rem;
+  }
+
+  .form-account__checkbox .checkbox-opt__text {
+    font-size: 0.875rem;
   }
 }
 
@@ -8610,6 +8747,13 @@ summary::-webkit-details-marker {
     display: none;
   }
 
+  .menu--account .menu__body {
+    -webkit-column-gap: 1.25rem;
+       -moz-column-gap: 1.25rem;
+            column-gap: 1.25rem;
+    padding-left: 1.875rem;
+  }
+
   .menu__body {
     -webkit-column-gap: 2.1875rem;
        -moz-column-gap: 2.1875rem;
@@ -8617,6 +8761,14 @@ summary::-webkit-details-marker {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  .menu__account-btn:first-child {
+    padding: 0rem 1.875rem;
+  }
+
+  .menu__account-btn:last-child {
+    padding: 0rem 1.25rem;
   }
 }
 
@@ -8672,6 +8824,16 @@ summary::-webkit-details-marker {
 
   .header__profile {
     margin-right: 0.9375rem;
+  }
+
+  .menu--account .menu__body {
+    -webkit-column-gap: 1.5625rem;
+       -moz-column-gap: 1.5625rem;
+            column-gap: 1.5625rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    padding-left: 0.9375rem;
   }
 
   .menu__body {
@@ -8767,6 +8929,17 @@ summary::-webkit-details-marker {
   }
 
   .menu__button {
+    font-weight: 800;
+  }
+
+  .menu__account {
+    padding: 0.9375rem;
+    margin-top: 3.125rem;
+    border-radius: 0.625rem;
+    background-color: rgba(232, 232, 234, 0.5);
+  }
+
+  .menu__account-btn {
     font-weight: 800;
   }
 
@@ -9451,16 +9624,25 @@ summary::-webkit-details-marker {
     height: 0.9375rem;
   }
 
-  .footer__background {
+  .footer__background-main {
     margin-left: -15.625rem;
   }
 
-  .footer__background img {
+  .footer__background-main img {
     width: 82.5rem;
   }
 
-  .footer__background::before {
+  .footer__background-main::before {
     height: 1.25rem;
+  }
+
+  .footer__background-decor {
+    left: -4.375rem;
+    bottom: 3.3125rem;
+  }
+
+  .footer__background-bus img {
+    width: 10rem;
   }
 
   .footer__lists {
@@ -10453,6 +10635,26 @@ summary::-webkit-details-marker {
 
   .menu__button {
     min-height: 2.8125rem;
+  }
+
+  .menu__account {
+    width: 100%;
+    gap: 0.4375rem;
+    padding: 0.625rem;
+  }
+
+  .menu__account-btn {
+    width: 100%;
+    padding: 0rem;
+    min-height: 2.8125rem;
+  }
+
+  .menu__account-btn.button--green {
+    padding: 0rem;
+  }
+
+  .footer__background-main {
+    margin-left: -21.875rem;
   }
 
   .footer__item {
@@ -12839,6 +13041,18 @@ summary::-webkit-details-marker {
 }
 
 @supports (font-size: clamp( 1rem , 0.9708029197rem  +  0.1459854015vw , 1.125rem )) {
+    .account__subtitle {
+      font-size: clamp( 1rem , 0.9708029197rem  +  0.1459854015vw , 1.125rem );
+    }
+}
+
+@supports not (font-size: clamp( 1rem , 0.9708029197rem  +  0.1459854015vw , 1.125rem )) {
+    .account__subtitle {
+      font-size: calc(1rem + 0.125 * (100vw - 20rem) / 85.625);
+    }
+}
+
+@supports (font-size: clamp( 1rem , 0.9708029197rem  +  0.1459854015vw , 1.125rem )) {
     .account__create {
       font-size: clamp( 1rem , 0.9708029197rem  +  0.1459854015vw , 1.125rem );
     }
@@ -12859,6 +13073,30 @@ summary::-webkit-details-marker {
 @supports not (font-size: clamp( 1rem , 0.9708029197rem  +  0.1459854015vw , 1.125rem )) {
     .account__forgot {
       font-size: calc(1rem + 0.125 * (100vw - 20rem) / 85.625);
+    }
+}
+
+@supports (font-size: clamp( 1rem , 0.9708029197rem  +  0.1459854015vw , 1.125rem )) {
+    .account__code {
+      font-size: clamp( 1rem , 0.9708029197rem  +  0.1459854015vw , 1.125rem );
+    }
+}
+
+@supports not (font-size: clamp( 1rem , 0.9708029197rem  +  0.1459854015vw , 1.125rem )) {
+    .account__code {
+      font-size: calc(1rem + 0.125 * (100vw - 20rem) / 85.625);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.8458029197rem  +  0.1459854015vw , 1rem )) {
+    .form-account__checkbox .checkbox-opt__text {
+      font-size: clamp( 0.875rem , 0.8458029197rem  +  0.1459854015vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.8458029197rem  +  0.1459854015vw , 1rem )) {
+    .form-account__checkbox .checkbox-opt__text {
+      font-size: calc(0.875rem + 0.125 * (100vw - 20rem) / 85.625);
     }
 }
 }
@@ -13616,7 +13854,16 @@ summary::-webkit-details-marker {
     text-decoration: none;
   }
 
+  .account__code:hover {
+    color: #2a3c6b;
+    text-decoration: underline;
+  }
+
   .form-account__opt.eye-form:hover {
-    color: #000000;
+    color: #adadad;
+  }
+
+  .form-account__checkbox .checkbox-opt__text a:hover {
+    text-decoration: none;
   }
 }

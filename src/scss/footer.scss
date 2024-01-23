@@ -3,6 +3,10 @@
 .footer {
 	@include adaptiveValue("margin-top", 40, 80);
 	&__background {
+		position: relative;
+	}
+
+	&__background-main {
 		display: flex;
 		object-fit: cover;
 		position: relative;
@@ -29,6 +33,45 @@
 				height: toRem(20);
 			}
 		}
+		@media (max-width: $mobileSmall) {
+			margin-left: toRem(-350);
+		}
+	}
+
+	&__background-decor {
+		width: 100%;
+		display: flex;
+		right: toRem(0);
+		left: toRem(100);
+		bottom: toRem(80);
+		position: absolute;
+		margin: toRem(0) auto;
+		justify-content: center;
+		@media (max-width: $mobile) {
+			left: toRem(-70);
+			bottom: toRem(53);
+		}
+	}
+
+	&__background-bus {
+		transform: translate(230%, 0);
+		transition: transform 2.3s 0s;
+		._watcher-view & {
+			transform: translate(0, 0);
+		}
+		@media (max-width: $mobile) {
+			img {
+				width: toRem(160);
+			}
+		}
+	}
+
+	&__background-bus {
+		top: 0;
+		position: absolute;
+	}
+
+	&__background-bus-img {
 	}
 
 	&__main {

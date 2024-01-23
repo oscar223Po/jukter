@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240122234148">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240123141427">
 	<link rel="shortcut icon" href="img/icons/head-logo.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,32 +19,19 @@
 		<header class="header">
 			<div class="header__container">
 				<a href="" class="header__logo"><img src="img/icons/logo.svg" alt="logo"></a>
-				<div class="header__menu menu">
+				<div class="header__menu menu menu--account">
 					<nav class="menu__body">
 						<div class="menu__date date _icon-today" id="currentDate"></div>
 						<div class="menu__filter">
 							<a href="" class="menu__var _icon-bus">Найти транспорт</a>
 							<a href="" class="menu__var menu__var--active _icon-box">Найти груз</a>
 						</div>
-						<div class="menu__profile">
-							<h4 class="menu__title">Профиль</h4>
-							<ul class="menu__list">
-								<li class="menu__item"><a href="" class="menu__link _icon-mail">Чат</a></li>
-								<li class="menu__item"><a href="" class="menu__link _icon-assignment">Мои заказы</a></li>
-								<li class="menu__item"><a href="" class="menu__link _icon-favorite">Избранное</a></li>
-								<li class="menu__item"><a href="" class="menu__link _icon-account-box">Профиль</a></li>
-								<li class="menu__item"><a href="" class="menu__link _icon-account-balance">Моя организация</a></li>
-								<li class="menu__item"><a href="" class="menu__link _icon-people-alt">Сотрудники</a></li>
-								<li class="menu__item"><a href="" class="menu__link _icon-wallet">Платежи</a></li>
-							</ul>
+						<a href="" class="menu__button menu__button--account button button--green">Создать заявку</a>
+						<div class="menu__account">
+							<a href="" class="menu__account-btn button button--green">Войти</a>
+							<a href="" class="menu__account-btn button button--blue _icon-regist-circle">Регистрация</a>
 						</div>
-						<a href="" class="menu__button button button--green">Создать заявку</a>
 					</nav>
-				</div>
-				<div class="header__profile">
-					<a href="" class="header__link">Мои заказы</a>
-					<a href="" class="header__link">Чат</a>
-					<a href="" class="header__avatar"><img src="img/avatar.svg" alt="Image"></a>
 				</div>
 				<button type="button" class="menu__icon icon-menu"><span></span></button>
 			</div>
@@ -54,17 +41,19 @@
 			<!-- [Account] -->
 			<section class="account">
 				<div class="account__container">
-					<h3 class="account__title title title--mr">Вход</h3>
+					<div class="account__top">
+						<h3 class="account__title title title--mr">Вход</h3>
+					</div>
 					<div class="account__body">
 						<form action="#" class="account__form form-account">
 							<label for="#" class="form-account__label">
 								<span class="item-request__span">Логин</span>
-								<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите логин" class="item-request-four__input input-actions input input--big">
+								<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Введите Email" class="item-request-four__input input-actions input input--big">
 							</label>
 							<div class="form-account__item">
 								<span class="item-request__span">Пароль</span>
 								<label for="#" class="form-account__label">
-									<input autocomplete="off" type="password" name="form[]" data-error="Error" placeholder="Введите пароль" class="form-account__input form-account__input--password input-actions input input--big" id="passwordInput">
+									<input autocomplete="off" type="password" name="form[]" data-error="Error" placeholder="Введите пароль" class="form-account__input form-account__input--password input-actions password-input input input--big">
 									<button type="button" class="form-account__opt eye-form _icon-eye-close"></button>
 								</label>
 							</div>
@@ -80,7 +69,14 @@
 		</main>
 		<!-- $=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-> -->
 		<footer class="footer">
-			<div class="footer__background"><img src="img/footer/bg.svg" alt="Bg"></div>
+			<div data-watch data-watch-once class="footer__background">
+				<div class="footer__background-main"><img src="img/footer/bg.svg" alt="Bg"></div>
+				<div class="footer__background-decor">
+					<div class="footer__background-bus">
+						<div class="footer__background-bus-img"><img src="img/footer/bg-bus.svg" alt="Bus"></div>
+					</div>
+				</div>
+			</div>
 			<div class="footer__main">
 				<div class="footer__container">
 					<div class="footer__top">
@@ -131,7 +127,7 @@
 		</footer>
 		<!-- Footer -->
 	</div>
-	<script src="js/app.min.js?_v=20240122234148"></script>
+	<script src="js/app.min.js?_v=20240123141427"></script>
 </body>
 
 </html>

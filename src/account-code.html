@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Jukter (Аккаунт - регистрация подтверждение Email) - AccountCodePage"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header-account.htm',{})
+		<main class="page">
+			<!-- [Account] -->
+			<section class="account">
+				<div class="account__container">
+					<div class="account__top">
+						<h3 class="account__title title title--mr">Код подтверждения</h3>
+						<h5 class="account__subtitle">Введите код из письма для входа</h5>
+					</div>
+					<div class="account__body">
+						<form action="#" class="account__form form-account">
+							<label for="#" class="form-account__label">
+								<span class="item-request__span">Код из письма</span>
+								<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Код" class="item-request-four__input input-actions input input--big">
+							</label>
+							<button type="button" class="form-account__button button button--green">Зарегистрироваться</button>
+						</form>
+						<div class="account__bottom">
+							<a href="" class="account__code">Не пришел код?</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
