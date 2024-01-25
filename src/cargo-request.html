@@ -42,14 +42,13 @@
 									</select>
 									<button type="button" class="item-request__add">Добавить 2-ой пункт погрузки</button>
 								</div>
-								<div class="item-request-first__select">
-									<span class="item-request__span">Дата</span>
-									<select name="form[]" data-class-modif="req-date">
-										<option value="1" selected>02.02.2024</option>
-										<option value="2">02.03.2024</option>
-										<option value="3">02.04.2024</option>
-									</select>
-								</div>
+								<form action="" class="item-request-first__datepicker datepicker">
+									<span class="datepicker__span">Дата</span>
+									<label for="#" class="datepicker__label">
+										<div class="datepicker__icon _icon-today"></div>
+										<input type="text" name="form[]" value="02.02.2024" class="datepicker__input _icon-account-balance" id="datepicker">
+									</label>
+								</form>
 							</div>
 						</div>
 						<div class="request__item item-request item-request-second">

@@ -3,6 +3,8 @@
 import { bodyLockToggle, bodyUnlock, isMobile } from "./functions.js";
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js";
+import flatpickr from 'flatpickr';
+import 'flatpickr/dist/flatpickr.min.css';
 // ================[ JavaScript Section Active Link Var Header ]================
 document.addEventListener("DOMContentLoaded", function () {
 	// ================[ JavaScript Section Current Date For Header ]================
@@ -134,10 +136,16 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 		});
 	});
-	// ================[ JavaScript Section ]================
+	// ================[ JavaScript Section For Conduct Window ]================
 	var conductBlock = document.querySelector('.conduct');
 	var messageItems = document.querySelectorAll('.messages-chat__item');
 	var backButton = document.querySelector('.conduct__back');
+	// Support
+	var supportButton = document.querySelector('.messages-chat__title--button');
+	// Reson
+	var resonBlock = document.querySelector('.reson');
+	var resonButton = document.querySelector('.conduct__manager');
+
 	if (backButton !== null) {
 		messageItems.forEach(function (item) {
 			item.addEventListener('click', function (event) {
@@ -153,5 +161,32 @@ document.addEventListener("DOMContentLoaded", function () {
 			conductBlock.classList.remove('conduct-active');
 		});
 	}
+	if (supportButton !== null) {
+		supportButton.addEventListener("click", () => {
+			bodyLockToggle();
+			conductBlock.classList.add('conduct-active');
+		})
+		backButton.addEventListener('click', function () {
+			// Удаление активного класса у блока conduct
+			bodyUnlock();
+			conductBlock.classList.remove('conduct-active');
+		});
+	}
+	if (supportButton !== null) {
+		resonButton.addEventListener("click", () => {
+			resonBlock.classList.toggle("reson-active");
+			resonButton.classList.toggle("conduct__manager--active");
+		})
+		backButton.addEventListener('click', function () {
+			// Удаление активного класса у блока conduct
+			bodyUnlock();
+			resonBlock.classList.remove("reson-active");
+			resonButton.classList.remove("conduct__manager--active");
+		});
+	}
 });
+// ================[ JavaScript Section DataPicker ]================
+flatpickr('#datepicker', {
+	dateFormat: 'Y-m-d',
+ });
 //--------------------------------------------------------------

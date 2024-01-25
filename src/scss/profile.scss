@@ -34,11 +34,6 @@
 	}
 
 	&__list {
-		.heading__item {
-			&:not(:last-child) {
-				margin-bottom: toRem(7);
-			}
-		}
 	}
 
 	&__info {

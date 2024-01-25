@@ -23,7 +23,7 @@
 	border-radius: toRem(25);
 	padding: toRem(25) toRem(27);
 	background-color: rgba(232, 232, 234, 0.5);
-	grid-template-columns: repeat(auto-fit, minmax(toRem(350), 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(toRem(310), 1fr));
 	@media (max-width: $mobile) {
 		padding: toRem(0);
 		grid-template-columns: auto;

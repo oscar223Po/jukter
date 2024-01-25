@@ -136,7 +136,8 @@ summary::-webkit-details-marker {
 		display: grid;
 		gap: toRem(10);
 		@media (min-width: $mobile) {
-			grid-template-columns: repeat(auto-fit, minmax(toRem(520), 1fr));
+			// grid-template-columns: repeat(auto-fit, minmax(toRem(520), 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(toRem(400), 1fr));
 		}
 	}
 
@@ -182,6 +183,8 @@ summary::-webkit-details-marker {
 
 	&__way {
 		display: flex;
+		gap: toRem(5);
+		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
 		&:not(:last-child) {
@@ -276,6 +279,8 @@ summary::-webkit-details-marker {
 
 	&__final {
 		display: flex;
+		gap: toRem(10);
+		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
 		&:not(:last-child) {
@@ -289,6 +294,7 @@ summary::-webkit-details-marker {
 
 	&__cost {
 		text-align: right;
+		margin: toRem(0) toRem(0) toRem(0) auto;
 		h5 {
 			font-weight: 800;
 			text-align: right;
@@ -977,6 +983,66 @@ summary::-webkit-details-marker {
 			&--active {
 				color: $whiteColor;
 			}
+		}
+	}
+}
+// ========================================================================================================================================================
+// Styles For Datepicker
+.datepicker {
+	&__span {
+		display: flex;
+		line-height: normal;
+		span {
+			opacity: 0;
+			visibility: hidden;
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(5);
+		}
+		@media (max-width: $mobile) {
+			font-size: toRem(14);
+		}
+	}
+
+	&__label {
+		display: flex;
+		position: relative;
+	}
+
+	&__icon {
+		top: 0;
+		bottom: 0;
+		display: flex;
+		left: toRem(15);
+		width: toRem(24);
+		height: toRem(24);
+		color: $grenColor;
+		position: absolute;
+		align-items: center;
+		font-size: toRem(24);
+		margin: auto toRem(0);
+		justify-content: center;
+		@media (max-width: $mobile) {
+			left: toRem(12);
+			width: toRem(20);
+			height: toRem(20);
+			font-size: toRem(20);
+		}
+	}
+
+	&__input {
+		font-weight: 800;
+		width: toRem(250);
+		color: $whiteColor;
+		font-size: toRem(21);
+		min-height: toRem(45);
+		border-radius: toRem(25);
+		background-color: $blueColor;
+		padding: toRem(0) toRem(20) toRem(0) toRem(50);
+		@media (max-width: $mobile) {
+			font-size: toRem(16);
+			min-height: toRem(38);
+			padding: toRem(0) toRem(20) toRem(0) toRem(40);
 		}
 	}
 }

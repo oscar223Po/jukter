@@ -22,7 +22,12 @@
 	&__subtitle-max {
 		font-size: toRem(24);
 		&:not(:last-child) {
-			margin-bottom: toRem(10);
+			margin-bottom: toRem(15);
+		}
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: toRem(10);
+			}
 		}
 	}
 
@@ -39,27 +44,31 @@
 	&__subtitle-min {
 		font-size: toRem(20);
 		&:not(:last-child) {
-			margin-bottom: toRem(10);
+			margin-bottom: toRem(15);
 		}
 	}
 
 	&__text {
-		line-height: normal;
-		@include adaptiveValue("font-size", 18, 14);
-		a {
-			font-weight: 800;
-			color: $blueColor;
-			text-decoration: underline;
-			@media (any-hover: hover) {
-				&:hover {
-					text-decoration: none;
+		p {
+			line-height: normal;
+			@include adaptiveValue("font-size", 18, 14);
+			span {
+				font-weight: 800;
+				color: $blueColor;
+			}
+			h5 {
+				font-weight: 800;
+			}
+			a {
+				font-weight: 800;
+				color: $blueColor;
+				text-decoration: underline;
+				@media (any-hover: hover) {
+					&:hover {
+						text-decoration: none;
+					}
 				}
 			}
-		}
-		h5 {
-			font-weight: 800;
-		}
-		p {
 			&:not(:last-child) {
 				margin-bottom: toRem(20);
 			}
@@ -67,7 +76,6 @@
 		&:not(:last-child) {
 			margin-bottom: toRem(20);
 		}
-
 		&--nomargin {
 			p {
 				&:not(:last-child) {
@@ -97,54 +105,61 @@
 	}
 
 	&__list {
+		line-height: normal;
+		max-width: toRem(840);
 		&:not(:last-child) {
 			margin-bottom: toRem(20);
 		}
+		ul,
+		ol {
+			li {
+				@include adaptiveValue("font-size", 18, 14);
+				span {
+					font-weight: 800;
+					color: $blueColor;
+				}
+				&:not(:last-child) {
+					margin-bottom: toRem(15);
+				}
+			}
+		}
+
 		&--ul {
 			padding-left: toRem(15);
-			.heading__item {
-				position: relative;
-				&::before {
-					content: "";
-					top: toRem(10);
-					width: toRem(4);
-					height: toRem(4);
-					left: toRem(-14);
-					position: absolute;
-					border-radius: 50%;
-					background-color: $mainColor;
+			ul {
+				li {
+					position: relative;
+					&::before {
+						content: "";
+						top: toRem(10);
+						width: toRem(4);
+						height: toRem(4);
+						left: toRem(-14);
+						position: absolute;
+						border-radius: 50%;
+						background-color: $mainColor;
+					}
 				}
 			}
 		}
+
 		&--ol {
-			padding-left: toRem(20);
-			.heading__item {
-				&::before {
-					display: none;
+			ol {
+				li {
+					margin-left: toRem(20);
 				}
 			}
 		}
+
+		&--max {
+			max-width: 100%;
+		}
+
 		&--padding {
 			padding-left: toRem(60);
 			@media (max-width: $mobile) {
 				padding-left: toRem(15);
 			}
-		}
-	}
-
-	&__item {
-		line-height: normal;
-		max-width: toRem(840);
-		@include adaptiveValue("font-size", 18, 14);
-		&--max {
-			max-width: 100%;
-		}
-		span {
-			font-weight: 800;
-			color: $blueColor;
-		}
-		&:not(:last-child) {
-			margin-bottom: toRem(20);
 		}
 	}
 
