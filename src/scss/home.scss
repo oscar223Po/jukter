@@ -135,6 +135,29 @@
 		flex: auto;
 		display: flex;
 		position: relative;
+		&.datepicker-form-hero {
+			.datepicker__icon {
+				left: toRem(25);
+				top: toRem(1.5);
+				color: $whiteColor;
+			}
+			.datepicker__input {
+				width: 100%;
+				font-weight: 400;
+				padding-left: toRem(60);
+				border-radius: toRem(50);
+				background-color: transparent;
+				border: toRem(1) solid $whiteColor;
+				@include adaptiveValue("font-size", 20, 15);
+				@media (max-width: $mobile) {
+					min-height: toRem(65);
+					padding-left: toRem(55);
+				}
+				@media (max-width: em(600)) {
+					min-height: toRem(50);
+				}
+			}
+		}
 		span {
 			left: 0;
 			opacity: 0;

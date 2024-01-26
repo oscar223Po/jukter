@@ -85,31 +85,10 @@
 		}
 
 		&--paragraph {
-			position: relative;
-			padding: toRem(0) toRem(20);
-			span {
-				font-weight: 800;
-				color: $blueColor;
-				position: absolute;
-				font-size: toRem(44);
-				&:first-child {
-					left: toRem(0);
-					top: toRem(-40);
-				}
-				&:last-child {
-					right: toRem(0);
-					bottom: toRem(-40);
-				}
-			}
 		}
 	}
 
 	&__list {
-		line-height: normal;
-		max-width: toRem(840);
-		&:not(:last-child) {
-			margin-bottom: toRem(20);
-		}
 		ul,
 		ol {
 			li {
@@ -166,6 +145,173 @@
 	&__chekboxes {
 		display: grid;
 		gap: toRem(10);
+	}
+}
+// ========================================================================================================================================================
+.text-block {
+	display: grid;
+	margin: toRem(0) auto;
+	max-width: toRem(1690);
+	padding: toRem(0) toRem(15);
+	@include adaptiveValue("gap", 60, 35);
+	@include adaptiveValue("padding-top", 58, 40);
+	h1 {
+		font-weight: 800;
+		text-align: center;
+		line-height: normal;
+		font-family: "Raleway";
+		@include adaptiveValue("font-size", 42, 22);
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+	ul,
+	ol {
+		li {
+			line-height: normal;
+			margin-left: toRem(20);
+			@include adaptiveValue("font-size", 18, 14);
+			span {
+				font-weight: 800;
+				color: $blueColor;
+			}
+			&:not(:last-child) {
+				margin-bottom: toRem(15);
+			}
+		}
+	}
+	ul {
+		li {
+			position: relative;
+			&::before {
+				content: "";
+				top: toRem(10);
+				width: toRem(4);
+				height: toRem(4);
+				left: toRem(-14);
+				position: absolute;
+				border-radius: 50%;
+				background-color: $mainColor;
+			}
+		}
+	}
+}
+.text {
+	h2 {
+		font-weight: 800;
+		color: $blueColor;
+		line-height: normal;
+		@include adaptiveValue("font-size", 24, 16);
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+	h3 {
+		font-weight: 800;
+		color: $blueColor;
+		line-height: normal;
+		@include adaptiveValue("font-size", 22, 16);
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+	p {
+		line-height: normal;
+		@include adaptiveValue("font-size", 18, 14);
+		span {
+			font-weight: 800;
+			color: $blueColor;
+		}
+		h5 {
+			font-weight: 800;
+		}
+		a {
+			font-weight: 800;
+			color: $blueColor;
+			text-decoration: underline;
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+}
+.ul-min {
+	max-width: toRem(840);
+	&:not(:last-child) {
+		margin-bottom: toRem(20);
+	}
+}
+.ol-min {
+	max-width: toRem(840);
+	&:not(:last-child) {
+		margin-bottom: toRem(20);
+	}
+}
+.ul-max {
+	&:not(:last-child) {
+		margin-bottom: toRem(20);
+	}
+}
+.blockquote {
+	position: relative;
+	margin: toRem(20) toRem(0);
+	padding: toRem(0) toRem(20);
+	span {
+		font-weight: 800;
+		color: $blueColor;
+		position: absolute;
+		font-size: toRem(44);
+		&:first-child {
+			left: toRem(0);
+			top: toRem(-40);
+		}
+		&:last-child {
+			right: toRem(0);
+			bottom: toRem(-40);
+		}
+	}
+	p {
+		line-height: normal;
+		@include adaptiveValue("font-size", 18, 14);
+		span {
+			font-weight: 800;
+			color: $blueColor;
+		}
+		h5 {
+			font-weight: 800;
+		}
+		a {
+			font-weight: 800;
+			color: $blueColor;
+			text-decoration: underline;
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+}
+.text-chekboxes {
+	display: grid;
+	gap: toRem(10);
+}
+.ol-min-padding {
+	max-width: toRem(840);
+	margin-left: toRem(40);
+	@media (max-width: $mobile) {
+		margin-left: toRem(20);
+	}
+	&:not(:last-child) {
+		margin-bottom: toRem(20);
 	}
 }
 // ========================================================================================================================================================

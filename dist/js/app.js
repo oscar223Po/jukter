@@ -1,7 +1,7 @@
 (() => {
-    "use strict";
     var __webpack_modules__ = {
         895: () => {
+            "use strict";
             if (typeof Object.assign !== "function") Object.assign = function(target) {
                 var args = [];
                 for (var _i = 1; _i < arguments.length; _i++) args[_i - 1] = arguments[_i];
@@ -17,6 +17,44 @@
                 }
                 return target;
             };
+        },
+        809: function(__unused_webpack_module, exports) {
+            (function(global, factory) {
+                true ? factory(exports) : 0;
+            })(0, (function(exports) {
+                "use strict";
+                var fp = typeof window !== "undefined" && window.flatpickr !== void 0 ? window.flatpickr : {
+                    l10ns: {}
+                };
+                var Russian = {
+                    weekdays: {
+                        shorthand: [ "Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб" ],
+                        longhand: [ "Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота" ]
+                    },
+                    months: {
+                        shorthand: [ "Янв", "Фев", "Март", "Апр", "Май", "Июнь", "Июль", "Авг", "Сен", "Окт", "Ноя", "Дек" ],
+                        longhand: [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ]
+                    },
+                    firstDayOfWeek: 1,
+                    ordinal: function() {
+                        return "";
+                    },
+                    rangeSeparator: " — ",
+                    weekAbbreviation: "Нед.",
+                    scrollTitle: "Прокрутите для увеличения",
+                    toggleTitle: "Нажмите для переключения",
+                    amPM: [ "ДП", "ПП" ],
+                    yearAriaLabel: "Год",
+                    time_24hr: true
+                };
+                fp.l10ns.ru = Russian;
+                var ru = fp.l10ns;
+                exports.Russian = Russian;
+                exports.default = ru;
+                Object.defineProperty(exports, "__esModule", {
+                    value: true
+                });
+            }));
         }
     };
     var __webpack_module_cache__ = {};
@@ -26,10 +64,11 @@
         var module = __webpack_module_cache__[moduleId] = {
             exports: {}
         };
-        __webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+        __webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
         return module.exports;
     }
     (() => {
+        "use strict";
         const modules_flsModules = {};
         function isWebp() {
             function testWebP(callback) {
@@ -3299,6 +3338,7 @@
         };
         if (typeof window !== "undefined") window.flatpickr = flatpickr;
         const esm = flatpickr;
+        __webpack_require__(809);
         document.addEventListener("DOMContentLoaded", (function() {
             function updateCurrentDate() {
                 const currentDateElements = document.querySelectorAll("#currentDate");
@@ -3426,7 +3466,8 @@
             }
         }));
         esm("#datepicker", {
-            dateFormat: "Y-m-d"
+            dateFormat: "d.m.Y",
+            locale: "ru"
         });
         window["FLS"] = false;
         isWebp();

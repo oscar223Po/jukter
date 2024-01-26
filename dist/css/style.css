@@ -3251,6 +3251,21 @@ summary::-webkit-details-marker {
   position: relative;
 }
 
+.form-hero__label.datepicker-form-hero .datepicker__icon {
+  left: 1.5625rem;
+  top: 0.09375rem;
+  color: #ffffff;
+}
+
+.form-hero__label.datepicker-form-hero .datepicker__input {
+  width: 100%;
+  font-weight: 400;
+  padding-left: 3.75rem;
+  border-radius: 3.125rem;
+  background-color: transparent;
+  border: 0.0625rem solid #ffffff;
+}
+
 .form-hero__label span {
   left: 0;
   opacity: 0;
@@ -4502,37 +4517,6 @@ summary::-webkit-details-marker {
   margin-bottom: 0rem;
 }
 
-.heading__text--paragraph {
-  position: relative;
-  padding: 0rem 1.25rem;
-}
-
-.heading__text--paragraph span {
-  font-weight: 800;
-  color: #2a3c6b;
-  position: absolute;
-  font-size: 2.75rem;
-}
-
-.heading__text--paragraph span:first-child {
-  left: 0rem;
-  top: -2.5rem;
-}
-
-.heading__text--paragraph span:last-child {
-  right: 0rem;
-  bottom: -2.5rem;
-}
-
-.heading__list {
-  line-height: normal;
-  max-width: 52.5rem;
-}
-
-.heading__list:not(:last-child) {
-  margin-bottom: 1.25rem;
-}
-
 .heading__list ul li span,
 .heading__list ol li span {
   font-weight: 800;
@@ -4579,6 +4563,181 @@ summary::-webkit-details-marker {
   display: -ms-grid;
   display: grid;
   gap: 0.625rem;
+}
+
+.text-block {
+  display: -ms-grid;
+  display: grid;
+  margin: 0rem auto;
+  max-width: 105.625rem;
+  padding: 0rem 0.9375rem;
+}
+
+.text-block h1 {
+  font-weight: 800;
+  text-align: center;
+  line-height: normal;
+  font-family: "Raleway";
+}
+
+.text-block h1:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+
+.text-block ul li,
+.text-block ol li {
+  line-height: normal;
+  margin-left: 1.25rem;
+}
+
+.text-block ul li span,
+.text-block ol li span {
+  font-weight: 800;
+  color: #2a3c6b;
+}
+
+.text-block ul li:not(:last-child),
+.text-block ol li:not(:last-child) {
+  margin-bottom: 0.9375rem;
+}
+
+.text-block ul li {
+  position: relative;
+}
+
+.text-block ul li::before {
+  content: "";
+  top: 0.625rem;
+  width: 0.25rem;
+  height: 0.25rem;
+  left: -0.875rem;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #000000;
+}
+
+.text h2 {
+  font-weight: 800;
+  color: #2a3c6b;
+  line-height: normal;
+}
+
+.text h2:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+
+.text h3 {
+  font-weight: 800;
+  color: #2a3c6b;
+  line-height: normal;
+}
+
+.text h3:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+
+.text p {
+  line-height: normal;
+}
+
+.text p span {
+  font-weight: 800;
+  color: #2a3c6b;
+}
+
+.text p h5 {
+  font-weight: 800;
+}
+
+.text p a {
+  font-weight: 800;
+  color: #2a3c6b;
+  text-decoration: underline;
+}
+
+.text p:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.ul-min {
+  max-width: 52.5rem;
+}
+
+.ul-min:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.ol-min {
+  max-width: 52.5rem;
+}
+
+.ol-min:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.ul-max:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.blockquote {
+  position: relative;
+  margin: 1.25rem 0rem;
+  padding: 0rem 1.25rem;
+}
+
+.blockquote span {
+  font-weight: 800;
+  color: #2a3c6b;
+  position: absolute;
+  font-size: 2.75rem;
+}
+
+.blockquote span:first-child {
+  left: 0rem;
+  top: -2.5rem;
+}
+
+.blockquote span:last-child {
+  right: 0rem;
+  bottom: -2.5rem;
+}
+
+.blockquote p {
+  line-height: normal;
+}
+
+.blockquote p span {
+  font-weight: 800;
+  color: #2a3c6b;
+}
+
+.blockquote p h5 {
+  font-weight: 800;
+}
+
+.blockquote p a {
+  font-weight: 800;
+  color: #2a3c6b;
+  text-decoration: underline;
+}
+
+.blockquote p:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.text-chekboxes {
+  display: -ms-grid;
+  display: grid;
+  gap: 0.625rem;
+}
+
+.ol-min-padding {
+  max-width: 52.5rem;
+  margin-left: 2.5rem;
+}
+
+.ol-min-padding:not(:last-child) {
+  margin-bottom: 1.25rem;
 }
 
 .tarif__title:not(:last-child) {
@@ -8250,6 +8409,10 @@ span.flatpickr-weekday {
     font-size: 1.125rem;
   }
 
+  .form-hero__label.datepicker-form-hero .datepicker__input {
+    font-size: 1.25rem;
+  }
+
   .form-hero__label span {
     font-size: 1.125rem;
   }
@@ -8452,6 +8615,39 @@ span.flatpickr-weekday {
 
   .heading__list ul li,
   .heading__list ol li {
+    font-size: 1.125rem;
+  }
+
+  .text-block {
+    gap: 3.75rem;
+  }
+
+  .text-block {
+    padding-top: 3.625rem;
+  }
+
+  .text-block h1 {
+    font-size: 2.625rem;
+  }
+
+  .text-block ul li,
+  .text-block ol li {
+    font-size: 1.125rem;
+  }
+
+  .text h2 {
+    font-size: 1.5rem;
+  }
+
+  .text h3 {
+    font-size: 1.375rem;
+  }
+
+  .text p {
+    font-size: 1.125rem;
+  }
+
+  .blockquote p {
     font-size: 1.125rem;
   }
 
@@ -9150,6 +9346,10 @@ span.flatpickr-weekday {
     font-size: 0.75rem;
   }
 
+  .form-hero__label.datepicker-form-hero .datepicker__input {
+    font-size: 0.9375rem;
+  }
+
   .form-hero__label span {
     font-size: 0.875rem;
   }
@@ -9328,6 +9528,39 @@ span.flatpickr-weekday {
 
   .heading__list ul li,
   .heading__list ol li {
+    font-size: 0.875rem;
+  }
+
+  .text-block {
+    gap: 2.1875rem;
+  }
+
+  .text-block {
+    padding-top: 2.5rem;
+  }
+
+  .text-block h1 {
+    font-size: 1.375rem;
+  }
+
+  .text-block ul li,
+  .text-block ol li {
+    font-size: 0.875rem;
+  }
+
+  .text h2 {
+    font-size: 1rem;
+  }
+
+  .text h3 {
+    font-size: 1rem;
+  }
+
+  .text p {
+    font-size: 0.875rem;
+  }
+
+  .blockquote p {
     font-size: 0.875rem;
   }
 
@@ -10708,6 +10941,11 @@ span.flatpickr-weekday {
             flex-direction: column;
   }
 
+  .form-hero__label.datepicker-form-hero .datepicker__input {
+    min-height: 4.0625rem;
+    padding-left: 3.4375rem;
+  }
+
   .form-hero__label {
     width: 100%;
     -webkit-box-orient: vertical;
@@ -10976,6 +11214,10 @@ span.flatpickr-weekday {
 
   .heading__list--padding {
     padding-left: 0.9375rem;
+  }
+
+  .ol-min-padding {
+    margin-left: 1.25rem;
   }
 
   .customs {
@@ -11551,6 +11793,10 @@ span.flatpickr-weekday {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .form-hero__label.datepicker-form-hero .datepicker__input {
+    min-height: 3.125rem;
   }
 
   .form-hero__input {
@@ -12518,6 +12764,18 @@ span.flatpickr-weekday {
     }
 }
 
+@supports (font-size: clamp( 0.9375rem , 0.8645072993rem  +  0.3649635036vw , 1.25rem )) {
+    .form-hero__label.datepicker-form-hero .datepicker__input {
+      font-size: clamp( 0.9375rem , 0.8645072993rem  +  0.3649635036vw , 1.25rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.9375rem , 0.8645072993rem  +  0.3649635036vw , 1.25rem )) {
+    .form-hero__label.datepicker-form-hero .datepicker__input {
+      font-size: calc(0.9375rem + 0.3125 * (100vw - 20rem) / 85.625);
+    }
+}
+
 @supports (font-size: clamp( 0.875rem , 0.8166058394rem  +  0.2919708029vw , 1.125rem )) {
     .form-hero__label span {
       font-size: clamp( 0.875rem , 0.8166058394rem  +  0.2919708029vw , 1.125rem );
@@ -13056,6 +13314,104 @@ span.flatpickr-weekday {
 @supports not (font-size: clamp( 0.875rem , 0.8166058394rem  +  0.2919708029vw , 1.125rem )) {
     .heading__list ul li,
     .heading__list ol li {
+      font-size: calc(0.875rem + 0.25 * (100vw - 20rem) / 85.625);
+    }
+}
+
+@supports (gap: clamp( 2.1875rem , 1.8225364964rem  +  1.8248175182vw , 3.75rem )) {
+    .text-block {
+      gap: clamp( 2.1875rem , 1.8225364964rem  +  1.8248175182vw , 3.75rem );
+    }
+}
+
+@supports not (gap: clamp( 2.1875rem , 1.8225364964rem  +  1.8248175182vw , 3.75rem )) {
+    .text-block {
+      gap: calc(2.1875rem + 1.5625 * (100vw - 20rem) / 85.625);
+    }
+}
+
+@supports (padding-top: clamp( 2.5rem , 2.2372262774rem  +  1.3138686131vw , 3.625rem )) {
+    .text-block {
+      padding-top: clamp( 2.5rem , 2.2372262774rem  +  1.3138686131vw , 3.625rem );
+    }
+}
+
+@supports not (padding-top: clamp( 2.5rem , 2.2372262774rem  +  1.3138686131vw , 3.625rem )) {
+    .text-block {
+      padding-top: calc(2.5rem + 1.125 * (100vw - 20rem) / 85.625);
+    }
+}
+
+@supports (font-size: clamp( 1.375rem , 1.0830291971rem  +  1.4598540146vw , 2.625rem )) {
+    .text-block h1 {
+      font-size: clamp( 1.375rem , 1.0830291971rem  +  1.4598540146vw , 2.625rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.375rem , 1.0830291971rem  +  1.4598540146vw , 2.625rem )) {
+    .text-block h1 {
+      font-size: calc(1.375rem + 1.25 * (100vw - 20rem) / 85.625);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.8166058394rem  +  0.2919708029vw , 1.125rem )) {
+    .text-block ul li,
+    .text-block ol li {
+      font-size: clamp( 0.875rem , 0.8166058394rem  +  0.2919708029vw , 1.125rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.8166058394rem  +  0.2919708029vw , 1.125rem )) {
+    .text-block ul li,
+    .text-block ol li {
+      font-size: calc(0.875rem + 0.25 * (100vw - 20rem) / 85.625);
+    }
+}
+
+@supports (font-size: clamp( 1rem , 0.8832116788rem  +  0.5839416058vw , 1.5rem )) {
+    .text h2 {
+      font-size: clamp( 1rem , 0.8832116788rem  +  0.5839416058vw , 1.5rem );
+    }
+}
+
+@supports not (font-size: clamp( 1rem , 0.8832116788rem  +  0.5839416058vw , 1.5rem )) {
+    .text h2 {
+      font-size: calc(1rem + 0.5 * (100vw - 20rem) / 85.625);
+    }
+}
+
+@supports (font-size: clamp( 1rem , 0.9124087591rem  +  0.4379562044vw , 1.375rem )) {
+    .text h3 {
+      font-size: clamp( 1rem , 0.9124087591rem  +  0.4379562044vw , 1.375rem );
+    }
+}
+
+@supports not (font-size: clamp( 1rem , 0.9124087591rem  +  0.4379562044vw , 1.375rem )) {
+    .text h3 {
+      font-size: calc(1rem + 0.375 * (100vw - 20rem) / 85.625);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.8166058394rem  +  0.2919708029vw , 1.125rem )) {
+    .text p {
+      font-size: clamp( 0.875rem , 0.8166058394rem  +  0.2919708029vw , 1.125rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.8166058394rem  +  0.2919708029vw , 1.125rem )) {
+    .text p {
+      font-size: calc(0.875rem + 0.25 * (100vw - 20rem) / 85.625);
+    }
+}
+
+@supports (font-size: clamp( 0.875rem , 0.8166058394rem  +  0.2919708029vw , 1.125rem )) {
+    .blockquote p {
+      font-size: clamp( 0.875rem , 0.8166058394rem  +  0.2919708029vw , 1.125rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.8166058394rem  +  0.2919708029vw , 1.125rem )) {
+    .blockquote p {
       font-size: calc(0.875rem + 0.25 * (100vw - 20rem) / 85.625);
     }
 }
@@ -14783,6 +15139,14 @@ span.flatpickr-weekday {
   }
 
   .heading__text p a:hover {
+    text-decoration: none;
+  }
+
+  .text p a:hover {
+    text-decoration: none;
+  }
+
+  .blockquote p a:hover {
     text-decoration: none;
   }
 

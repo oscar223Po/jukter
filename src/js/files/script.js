@@ -5,6 +5,7 @@ import { bodyLockToggle, bodyUnlock, isMobile } from "./functions.js";
 import { flsModules } from "./modules.js";
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
+import {ru as Russian} from 'flatpickr/dist/l10n/ru.js';
 // ================[ JavaScript Section Active Link Var Header ]================
 document.addEventListener("DOMContentLoaded", function () {
 	// ================[ JavaScript Section Current Date For Header ]================
@@ -187,6 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // ================[ JavaScript Section DataPicker ]================
 flatpickr('#datepicker', {
-	dateFormat: 'Y-m-d',
- });
+	dateFormat: "d.m.Y",
+	locale: "ru",
+});
 //--------------------------------------------------------------

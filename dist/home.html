@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240125224142">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240126190806">
 	<link rel="shortcut icon" href="img/icons/head-logo.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,12 +69,10 @@
 										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Куда" class="form-hero__input">
 									</label>
 								</div>
-								<div class="form-hero__date _icon-today">
-									<label for="#" class="form-hero__label">
-										<span>Дата</span>
-										<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Дата" class="form-hero__input">
-									</label>
-								</div>
+								<label for="#" class="form-hero__label datepicker-form-hero">
+									<div class="datepicker__icon _icon-today"></div>
+									<input type="text" name="form[]" value="02.02.2024" class="datepicker__input _icon-account-balance" id="datepicker">
+								</label>
 							</form>
 							<div class="hero__buttons">
 								<button type="button" class="hero__button button button--green _icon-bus">Найти
@@ -678,7 +676,7 @@
 		</footer>
 		<!-- Footer -->
 	</div>
-	<script src="js/app.min.js?_v=20240125224142"></script>
+	<script src="js/app.min.js?_v=20240126190806"></script>
 </body>
 
 </html>
