@@ -1,153 +1,5 @@
 // ========================================================================================================================================================
-// Heading
-.heading {
-	@include adaptiveValue("padding-top", 58, 35);
-	&__container {
-	}
-
-	&__title {
-		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 75, 35);
-		}
-	}
-
-	&__body {
-		display: grid;
-		@include adaptiveValue("gap", 60, 40);
-	}
-
-	&__block {
-	}
-
-	&__subtitle-max {
-		font-size: toRem(24);
-		&:not(:last-child) {
-			margin-bottom: toRem(15);
-		}
-		@media (max-width: $mobile) {
-			&:not(:last-child) {
-				margin-bottom: toRem(10);
-			}
-		}
-	}
-
-	&__subtitle-black {
-		font-weight: 800;
-		line-height: normal;
-		font-size: toRem(20);
-		padding-top: toRem(10);
-		&:not(:last-child) {
-			margin-bottom: toRem(10);
-		}
-	}
-
-	&__subtitle-min {
-		font-size: toRem(20);
-		&:not(:last-child) {
-			margin-bottom: toRem(15);
-		}
-	}
-
-	&__text {
-		p {
-			line-height: normal;
-			@include adaptiveValue("font-size", 18, 14);
-			span {
-				font-weight: 800;
-				color: $blueColor;
-			}
-			h5 {
-				font-weight: 800;
-			}
-			a {
-				font-weight: 800;
-				color: $blueColor;
-				text-decoration: underline;
-				@media (any-hover: hover) {
-					&:hover {
-						text-decoration: none;
-					}
-				}
-			}
-			&:not(:last-child) {
-				margin-bottom: toRem(20);
-			}
-		}
-		&:not(:last-child) {
-			margin-bottom: toRem(20);
-		}
-		&--nomargin {
-			p {
-				&:not(:last-child) {
-					margin-bottom: toRem(0);
-				}
-			}
-		}
-
-		&--paragraph {
-		}
-	}
-
-	&__list {
-		ul,
-		ol {
-			li {
-				@include adaptiveValue("font-size", 18, 14);
-				span {
-					font-weight: 800;
-					color: $blueColor;
-				}
-				&:not(:last-child) {
-					margin-bottom: toRem(15);
-				}
-			}
-		}
-
-		&--ul {
-			padding-left: toRem(15);
-			ul {
-				li {
-					position: relative;
-					&::before {
-						content: "";
-						top: toRem(10);
-						width: toRem(4);
-						height: toRem(4);
-						left: toRem(-14);
-						position: absolute;
-						border-radius: 50%;
-						background-color: $mainColor;
-					}
-				}
-			}
-		}
-
-		&--ol {
-			ol {
-				li {
-					margin-left: toRem(20);
-				}
-			}
-		}
-
-		&--max {
-			max-width: 100%;
-		}
-
-		&--padding {
-			padding-left: toRem(60);
-			@media (max-width: $mobile) {
-				padding-left: toRem(15);
-			}
-		}
-	}
-
-	&__chekboxes {
-		display: grid;
-		gap: toRem(10);
-	}
-}
-// ========================================================================================================================================================
+// Text Block
 .text-block {
 	display: grid;
 	margin: toRem(0) auto;
@@ -195,48 +47,99 @@
 			}
 		}
 	}
-}
-.text {
-	h2 {
-		font-weight: 800;
-		color: $blueColor;
-		line-height: normal;
-		@include adaptiveValue("font-size", 24, 16);
-		&:not(:last-child) {
-			margin-bottom: toRem(10);
+	div {
+		h2 {
+			font-weight: 800;
+			color: $blueColor;
+			line-height: normal;
+			@include adaptiveValue("font-size", 24, 16);
+			&:not(:last-child) {
+				margin-bottom: toRem(10);
+			}
+		}
+		h3 {
+			font-weight: 800;
+			color: $blueColor;
+			line-height: normal;
+			@include adaptiveValue("font-size", 22, 16);
+			&:not(:last-child) {
+				margin-bottom: toRem(10);
+			}
+		}
+		h4 {
+			font-weight: 800;
+			line-height: normal;
+			@include adaptiveValue("font-size", 22, 16);
+			&:not(:last-child) {
+				margin-bottom: toRem(10);
+			}
+		}
+		p {
+			line-height: normal;
+			@include adaptiveValue("font-size", 18, 14);
+			span {
+				font-weight: 800;
+				color: $blueColor;
+			}
+			h5 {
+				font-weight: 800;
+			}
+			a {
+				font-weight: 800;
+				color: $blueColor;
+				text-decoration: underline;
+				@media (any-hover: hover) {
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+			&:not(:last-child) {
+				margin-bottom: toRem(20);
+			}
 		}
 	}
-	h3 {
-		font-weight: 800;
-		color: $blueColor;
-		line-height: normal;
-		@include adaptiveValue("font-size", 22, 16);
-		&:not(:last-child) {
-			margin-bottom: toRem(10);
-		}
-	}
-	p {
-		line-height: normal;
-		@include adaptiveValue("font-size", 18, 14);
+	blockquote {
+		position: relative;
+		margin: toRem(20) toRem(0);
+		padding: toRem(0) toRem(20);
 		span {
 			font-weight: 800;
 			color: $blueColor;
-		}
-		h5 {
-			font-weight: 800;
-		}
-		a {
-			font-weight: 800;
-			color: $blueColor;
-			text-decoration: underline;
-			@media (any-hover: hover) {
-				&:hover {
-					text-decoration: none;
-				}
+			position: absolute;
+			font-size: toRem(44);
+			&:first-child {
+				left: toRem(0);
+				top: toRem(-40);
+			}
+			&:last-child {
+				right: toRem(0);
+				bottom: toRem(-40);
 			}
 		}
-		&:not(:last-child) {
-			margin-bottom: toRem(20);
+		p {
+			line-height: normal;
+			@include adaptiveValue("font-size", 18, 14);
+			span {
+				font-weight: 800;
+				color: $blueColor;
+			}
+			h5 {
+				font-weight: 800;
+			}
+			a {
+				font-weight: 800;
+				color: $blueColor;
+				text-decoration: underline;
+				@media (any-hover: hover) {
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+			&:not(:last-child) {
+				margin-bottom: toRem(20);
+			}
 		}
 	}
 }
@@ -252,52 +155,14 @@
 		margin-bottom: toRem(20);
 	}
 }
-.ul-max {
+.ol-max {
 	&:not(:last-child) {
 		margin-bottom: toRem(20);
 	}
 }
-.blockquote {
-	position: relative;
-	margin: toRem(20) toRem(0);
-	padding: toRem(0) toRem(20);
-	span {
-		font-weight: 800;
-		color: $blueColor;
-		position: absolute;
-		font-size: toRem(44);
-		&:first-child {
-			left: toRem(0);
-			top: toRem(-40);
-		}
-		&:last-child {
-			right: toRem(0);
-			bottom: toRem(-40);
-		}
-	}
-	p {
-		line-height: normal;
-		@include adaptiveValue("font-size", 18, 14);
-		span {
-			font-weight: 800;
-			color: $blueColor;
-		}
-		h5 {
-			font-weight: 800;
-		}
-		a {
-			font-weight: 800;
-			color: $blueColor;
-			text-decoration: underline;
-			@media (any-hover: hover) {
-				&:hover {
-					text-decoration: none;
-				}
-			}
-		}
-		&:not(:last-child) {
-			margin-bottom: toRem(20);
-		}
+.ul-max {
+	&:not(:last-child) {
+		margin-bottom: toRem(20);
 	}
 }
 .text-chekboxes {
@@ -306,6 +171,15 @@
 }
 .ol-min-padding {
 	max-width: toRem(840);
+	margin-left: toRem(40);
+	@media (max-width: $mobile) {
+		margin-left: toRem(20);
+	}
+	&:not(:last-child) {
+		margin-bottom: toRem(20);
+	}
+}
+.ul-max-padding {
 	margin-left: toRem(40);
 	@media (max-width: $mobile) {
 		margin-left: toRem(20);

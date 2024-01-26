@@ -4454,117 +4454,6 @@ summary::-webkit-details-marker {
   line-height: normal;
 }
 
-.heading__body {
-  display: -ms-grid;
-  display: grid;
-}
-
-.heading__subtitle-max {
-  font-size: 1.5rem;
-}
-
-.heading__subtitle-max:not(:last-child) {
-  margin-bottom: 0.9375rem;
-}
-
-.heading__subtitle-black {
-  font-weight: 800;
-  line-height: normal;
-  font-size: 1.25rem;
-  padding-top: 0.625rem;
-}
-
-.heading__subtitle-black:not(:last-child) {
-  margin-bottom: 0.625rem;
-}
-
-.heading__subtitle-min {
-  font-size: 1.25rem;
-}
-
-.heading__subtitle-min:not(:last-child) {
-  margin-bottom: 0.9375rem;
-}
-
-.heading__text p {
-  line-height: normal;
-}
-
-.heading__text p span {
-  font-weight: 800;
-  color: #2a3c6b;
-}
-
-.heading__text p h5 {
-  font-weight: 800;
-}
-
-.heading__text p a {
-  font-weight: 800;
-  color: #2a3c6b;
-  text-decoration: underline;
-}
-
-.heading__text p:not(:last-child) {
-  margin-bottom: 1.25rem;
-}
-
-.heading__text:not(:last-child) {
-  margin-bottom: 1.25rem;
-}
-
-.heading__text--nomargin p:not(:last-child) {
-  margin-bottom: 0rem;
-}
-
-.heading__list ul li span,
-.heading__list ol li span {
-  font-weight: 800;
-  color: #2a3c6b;
-}
-
-.heading__list ul li:not(:last-child),
-.heading__list ol li:not(:last-child) {
-  margin-bottom: 0.9375rem;
-}
-
-.heading__list--ul {
-  padding-left: 0.9375rem;
-}
-
-.heading__list--ul ul li {
-  position: relative;
-}
-
-.heading__list--ul ul li::before {
-  content: "";
-  top: 0.625rem;
-  width: 0.25rem;
-  height: 0.25rem;
-  left: -0.875rem;
-  position: absolute;
-  border-radius: 50%;
-  background-color: #000000;
-}
-
-.heading__list--ol ol li {
-  margin-left: 1.25rem;
-}
-
-.heading__list--max {
-  max-width: 100%;
-}
-
-.heading__list--padding {
-  padding-left: 3.75rem;
-}
-
-.heading__chekboxes {
-  display: -ms-grid;
-  display: grid;
-  gap: 0.625rem;
-}
-
 .text-block {
   display: -ms-grid;
   display: grid;
@@ -4616,46 +4505,101 @@ summary::-webkit-details-marker {
   background-color: #000000;
 }
 
-.text h2 {
+.text-block div h2 {
   font-weight: 800;
   color: #2a3c6b;
   line-height: normal;
 }
 
-.text h2:not(:last-child) {
+.text-block div h2:not(:last-child) {
   margin-bottom: 0.625rem;
 }
 
-.text h3 {
+.text-block div h3 {
   font-weight: 800;
   color: #2a3c6b;
   line-height: normal;
 }
 
-.text h3:not(:last-child) {
+.text-block div h3:not(:last-child) {
   margin-bottom: 0.625rem;
 }
 
-.text p {
+.text-block div h4 {
+  font-weight: 800;
   line-height: normal;
 }
 
-.text p span {
+.text-block div h4:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+
+.text-block div p {
+  line-height: normal;
+}
+
+.text-block div p span {
   font-weight: 800;
   color: #2a3c6b;
 }
 
-.text p h5 {
+.text-block div p h5 {
   font-weight: 800;
 }
 
-.text p a {
+.text-block div p a {
   font-weight: 800;
   color: #2a3c6b;
   text-decoration: underline;
 }
 
-.text p:not(:last-child) {
+.text-block div p:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.text-block blockquote {
+  position: relative;
+  margin: 1.25rem 0rem;
+  padding: 0rem 1.25rem;
+}
+
+.text-block blockquote span {
+  font-weight: 800;
+  color: #2a3c6b;
+  position: absolute;
+  font-size: 2.75rem;
+}
+
+.text-block blockquote span:first-child {
+  left: 0rem;
+  top: -2.5rem;
+}
+
+.text-block blockquote span:last-child {
+  right: 0rem;
+  bottom: -2.5rem;
+}
+
+.text-block blockquote p {
+  line-height: normal;
+}
+
+.text-block blockquote p span {
+  font-weight: 800;
+  color: #2a3c6b;
+}
+
+.text-block blockquote p h5 {
+  font-weight: 800;
+}
+
+.text-block blockquote p a {
+  font-weight: 800;
+  color: #2a3c6b;
+  text-decoration: underline;
+}
+
+.text-block blockquote p:not(:last-child) {
   margin-bottom: 1.25rem;
 }
 
@@ -4675,53 +4619,11 @@ summary::-webkit-details-marker {
   margin-bottom: 1.25rem;
 }
 
-.ul-max:not(:last-child) {
+.ol-max:not(:last-child) {
   margin-bottom: 1.25rem;
 }
 
-.blockquote {
-  position: relative;
-  margin: 1.25rem 0rem;
-  padding: 0rem 1.25rem;
-}
-
-.blockquote span {
-  font-weight: 800;
-  color: #2a3c6b;
-  position: absolute;
-  font-size: 2.75rem;
-}
-
-.blockquote span:first-child {
-  left: 0rem;
-  top: -2.5rem;
-}
-
-.blockquote span:last-child {
-  right: 0rem;
-  bottom: -2.5rem;
-}
-
-.blockquote p {
-  line-height: normal;
-}
-
-.blockquote p span {
-  font-weight: 800;
-  color: #2a3c6b;
-}
-
-.blockquote p h5 {
-  font-weight: 800;
-}
-
-.blockquote p a {
-  font-weight: 800;
-  color: #2a3c6b;
-  text-decoration: underline;
-}
-
-.blockquote p:not(:last-child) {
+.ul-max:not(:last-child) {
   margin-bottom: 1.25rem;
 }
 
@@ -4737,6 +4639,14 @@ summary::-webkit-details-marker {
 }
 
 .ol-min-padding:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.ul-max-padding {
+  margin-left: 2.5rem;
+}
+
+.ul-max-padding:not(:last-child) {
   margin-bottom: 1.25rem;
 }
 
@@ -8597,27 +8507,6 @@ span.flatpickr-weekday {
     font-size: 1rem;
   }
 
-  .heading {
-    padding-top: 3.625rem;
-  }
-
-  .heading__title:not(:last-child) {
-    margin-bottom: 4.6875rem;
-  }
-
-  .heading__body {
-    gap: 3.75rem;
-  }
-
-  .heading__text p {
-    font-size: 1.125rem;
-  }
-
-  .heading__list ul li,
-  .heading__list ol li {
-    font-size: 1.125rem;
-  }
-
   .text-block {
     gap: 3.75rem;
   }
@@ -8635,19 +8524,23 @@ span.flatpickr-weekday {
     font-size: 1.125rem;
   }
 
-  .text h2 {
+  .text-block div h2 {
     font-size: 1.5rem;
   }
 
-  .text h3 {
+  .text-block div h3 {
     font-size: 1.375rem;
   }
 
-  .text p {
+  .text-block div h4 {
+    font-size: 1.375rem;
+  }
+
+  .text-block div p {
     font-size: 1.125rem;
   }
 
-  .blockquote p {
+  .text-block blockquote p {
     font-size: 1.125rem;
   }
 
@@ -9510,27 +9403,6 @@ span.flatpickr-weekday {
     font-size: 0.875rem;
   }
 
-  .heading {
-    padding-top: 2.1875rem;
-  }
-
-  .heading__title:not(:last-child) {
-    margin-bottom: 2.1875rem;
-  }
-
-  .heading__body {
-    gap: 2.5rem;
-  }
-
-  .heading__text p {
-    font-size: 0.875rem;
-  }
-
-  .heading__list ul li,
-  .heading__list ol li {
-    font-size: 0.875rem;
-  }
-
   .text-block {
     gap: 2.1875rem;
   }
@@ -9548,19 +9420,23 @@ span.flatpickr-weekday {
     font-size: 0.875rem;
   }
 
-  .text h2 {
+  .text-block div h2 {
     font-size: 1rem;
   }
 
-  .text h3 {
+  .text-block div h3 {
     font-size: 1rem;
   }
 
-  .text p {
+  .text-block div h4 {
+    font-size: 1rem;
+  }
+
+  .text-block div p {
     font-size: 0.875rem;
   }
 
-  .blockquote p {
+  .text-block blockquote p {
     font-size: 0.875rem;
   }
 
@@ -11208,15 +11084,11 @@ span.flatpickr-weekday {
     padding: 0.9375rem;
   }
 
-  .heading__subtitle-max:not(:last-child) {
-    margin-bottom: 0.625rem;
-  }
-
-  .heading__list--padding {
-    padding-left: 0.9375rem;
-  }
-
   .ol-min-padding {
+    margin-left: 1.25rem;
+  }
+
+  .ul-max-padding {
     margin-left: 1.25rem;
   }
 
@@ -13256,68 +13128,6 @@ span.flatpickr-weekday {
     }
 }
 
-@supports (padding-top: clamp( 2.1875rem , 1.8517335766rem  +  1.6788321168vw , 3.625rem )) {
-    .heading {
-      padding-top: clamp( 2.1875rem , 1.8517335766rem  +  1.6788321168vw , 3.625rem );
-    }
-}
-
-@supports not (padding-top: clamp( 2.1875rem , 1.8517335766rem  +  1.6788321168vw , 3.625rem )) {
-    .heading {
-      padding-top: calc(2.1875rem + 1.4375 * (100vw - 20rem) / 85.625);
-    }
-}
-
-@supports (margin-bottom: clamp( 2.1875rem , 1.6035583942rem  +  2.9197080292vw , 4.6875rem )) {
-    .heading__title:not(:last-child) {
-      margin-bottom: clamp( 2.1875rem , 1.6035583942rem  +  2.9197080292vw , 4.6875rem );
-    }
-}
-
-@supports not (margin-bottom: clamp( 2.1875rem , 1.6035583942rem  +  2.9197080292vw , 4.6875rem )) {
-    .heading__title:not(:last-child) {
-      margin-bottom: calc(2.1875rem + 2.5 * (100vw - 20rem) / 85.625);
-    }
-}
-
-@supports (gap: clamp( 2.5rem , 2.2080291971rem  +  1.4598540146vw , 3.75rem )) {
-    .heading__body {
-      gap: clamp( 2.5rem , 2.2080291971rem  +  1.4598540146vw , 3.75rem );
-    }
-}
-
-@supports not (gap: clamp( 2.5rem , 2.2080291971rem  +  1.4598540146vw , 3.75rem )) {
-    .heading__body {
-      gap: calc(2.5rem + 1.25 * (100vw - 20rem) / 85.625);
-    }
-}
-
-@supports (font-size: clamp( 0.875rem , 0.8166058394rem  +  0.2919708029vw , 1.125rem )) {
-    .heading__text p {
-      font-size: clamp( 0.875rem , 0.8166058394rem  +  0.2919708029vw , 1.125rem );
-    }
-}
-
-@supports not (font-size: clamp( 0.875rem , 0.8166058394rem  +  0.2919708029vw , 1.125rem )) {
-    .heading__text p {
-      font-size: calc(0.875rem + 0.25 * (100vw - 20rem) / 85.625);
-    }
-}
-
-@supports (font-size: clamp( 0.875rem , 0.8166058394rem  +  0.2919708029vw , 1.125rem )) {
-    .heading__list ul li,
-    .heading__list ol li {
-      font-size: clamp( 0.875rem , 0.8166058394rem  +  0.2919708029vw , 1.125rem );
-    }
-}
-
-@supports not (font-size: clamp( 0.875rem , 0.8166058394rem  +  0.2919708029vw , 1.125rem )) {
-    .heading__list ul li,
-    .heading__list ol li {
-      font-size: calc(0.875rem + 0.25 * (100vw - 20rem) / 85.625);
-    }
-}
-
 @supports (gap: clamp( 2.1875rem , 1.8225364964rem  +  1.8248175182vw , 3.75rem )) {
     .text-block {
       gap: clamp( 2.1875rem , 1.8225364964rem  +  1.8248175182vw , 3.75rem );
@@ -13369,49 +13179,61 @@ span.flatpickr-weekday {
 }
 
 @supports (font-size: clamp( 1rem , 0.8832116788rem  +  0.5839416058vw , 1.5rem )) {
-    .text h2 {
+    .text-block div h2 {
       font-size: clamp( 1rem , 0.8832116788rem  +  0.5839416058vw , 1.5rem );
     }
 }
 
 @supports not (font-size: clamp( 1rem , 0.8832116788rem  +  0.5839416058vw , 1.5rem )) {
-    .text h2 {
+    .text-block div h2 {
       font-size: calc(1rem + 0.5 * (100vw - 20rem) / 85.625);
     }
 }
 
 @supports (font-size: clamp( 1rem , 0.9124087591rem  +  0.4379562044vw , 1.375rem )) {
-    .text h3 {
+    .text-block div h3 {
       font-size: clamp( 1rem , 0.9124087591rem  +  0.4379562044vw , 1.375rem );
     }
 }
 
 @supports not (font-size: clamp( 1rem , 0.9124087591rem  +  0.4379562044vw , 1.375rem )) {
-    .text h3 {
+    .text-block div h3 {
+      font-size: calc(1rem + 0.375 * (100vw - 20rem) / 85.625);
+    }
+}
+
+@supports (font-size: clamp( 1rem , 0.9124087591rem  +  0.4379562044vw , 1.375rem )) {
+    .text-block div h4 {
+      font-size: clamp( 1rem , 0.9124087591rem  +  0.4379562044vw , 1.375rem );
+    }
+}
+
+@supports not (font-size: clamp( 1rem , 0.9124087591rem  +  0.4379562044vw , 1.375rem )) {
+    .text-block div h4 {
       font-size: calc(1rem + 0.375 * (100vw - 20rem) / 85.625);
     }
 }
 
 @supports (font-size: clamp( 0.875rem , 0.8166058394rem  +  0.2919708029vw , 1.125rem )) {
-    .text p {
+    .text-block div p {
       font-size: clamp( 0.875rem , 0.8166058394rem  +  0.2919708029vw , 1.125rem );
     }
 }
 
 @supports not (font-size: clamp( 0.875rem , 0.8166058394rem  +  0.2919708029vw , 1.125rem )) {
-    .text p {
+    .text-block div p {
       font-size: calc(0.875rem + 0.25 * (100vw - 20rem) / 85.625);
     }
 }
 
 @supports (font-size: clamp( 0.875rem , 0.8166058394rem  +  0.2919708029vw , 1.125rem )) {
-    .blockquote p {
+    .text-block blockquote p {
       font-size: clamp( 0.875rem , 0.8166058394rem  +  0.2919708029vw , 1.125rem );
     }
 }
 
 @supports not (font-size: clamp( 0.875rem , 0.8166058394rem  +  0.2919708029vw , 1.125rem )) {
-    .blockquote p {
+    .text-block blockquote p {
       font-size: calc(0.875rem + 0.25 * (100vw - 20rem) / 85.625);
     }
 }
@@ -15138,15 +14960,11 @@ span.flatpickr-weekday {
     opacity: 0.85;
   }
 
-  .heading__text p a:hover {
+  .text-block div p a:hover {
     text-decoration: none;
   }
 
-  .text p a:hover {
-    text-decoration: none;
-  }
-
-  .blockquote p a:hover {
+  .text-block blockquote p a:hover {
     text-decoration: none;
   }
 
