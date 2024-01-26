@@ -4473,6 +4473,11 @@ summary::-webkit-details-marker {
   margin-bottom: 0.625rem;
 }
 
+.text-block ul:not(:last-child),
+.text-block ol:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
 .text-block ul li,
 .text-block ol li {
   line-height: normal;
@@ -4607,24 +4612,16 @@ summary::-webkit-details-marker {
   max-width: 52.5rem;
 }
 
-.ul-min:not(:last-child) {
-  margin-bottom: 1.25rem;
-}
-
 .ol-min {
   max-width: 52.5rem;
 }
 
-.ol-min:not(:last-child) {
-  margin-bottom: 1.25rem;
+.ol-max {
+  max-width: 100%;
 }
 
-.ol-max:not(:last-child) {
-  margin-bottom: 1.25rem;
-}
-
-.ul-max:not(:last-child) {
-  margin-bottom: 1.25rem;
+.ul-max {
+  max-width: 100%;
 }
 
 .text-chekboxes {
@@ -4638,16 +4635,8 @@ summary::-webkit-details-marker {
   margin-left: 2.5rem;
 }
 
-.ol-min-padding:not(:last-child) {
-  margin-bottom: 1.25rem;
-}
-
 .ul-max-padding {
   margin-left: 2.5rem;
-}
-
-.ul-max-padding:not(:last-child) {
-  margin-bottom: 1.25rem;
 }
 
 .tarif__title:not(:last-child) {
@@ -11082,14 +11071,6 @@ span.flatpickr-weekday {
 
   .item-ticket {
     padding: 0.9375rem;
-  }
-
-  .ol-min-padding {
-    margin-left: 1.25rem;
-  }
-
-  .ul-max-padding {
-    margin-left: 1.25rem;
   }
 
   .customs {

@@ -19,6 +19,9 @@
 	}
 	ul,
 	ol {
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
 		li {
 			line-height: normal;
 			margin-left: toRem(20);
@@ -145,25 +148,15 @@
 }
 .ul-min {
 	max-width: toRem(840);
-	&:not(:last-child) {
-		margin-bottom: toRem(20);
-	}
 }
 .ol-min {
 	max-width: toRem(840);
-	&:not(:last-child) {
-		margin-bottom: toRem(20);
-	}
 }
 .ol-max {
-	&:not(:last-child) {
-		margin-bottom: toRem(20);
-	}
+	max-width: 100%;
 }
 .ul-max {
-	&:not(:last-child) {
-		margin-bottom: toRem(20);
-	}
+	max-width: 100%;
 }
 .text-chekboxes {
 	display: grid;
@@ -172,20 +165,8 @@
 .ol-min-padding {
 	max-width: toRem(840);
 	margin-left: toRem(40);
-	@media (max-width: $mobile) {
-		margin-left: toRem(20);
-	}
-	&:not(:last-child) {
-		margin-bottom: toRem(20);
-	}
 }
 .ul-max-padding {
 	margin-left: toRem(40);
-	@media (max-width: $mobile) {
-		margin-left: toRem(20);
-	}
-	&:not(:last-child) {
-		margin-bottom: toRem(20);
-	}
 }
 // ========================================================================================================================================================
