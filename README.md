@@ -1,3 +1,10 @@
+# Website About Cargo Transportation & Adaptive "Jukter"
+JavaScript Project "Jukter" With Global Functional Of JavaScript
+
+➼ Technology stack: HTML (HTML5), CSS (CSS3), JavaScript, SCSS/Sass, GULP, (Flexbox - Grid), BEM.
+
+![jukter](https://github.com/oscar223Po/jukter/assets/99406219/a9d7b073-e172-4434-94a9-08736f0e8d91)
+
 # Установка npm на компьютер
 
 ## Шаг 1: Установка Node.js и npm
