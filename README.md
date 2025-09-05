@@ -1,28 +1,50 @@
-# Website About Cargo Transportation & Adaptive "Jukter"
-JavaScript Project "Jukter" With Global Functional Of JavaScript
+# 🚛 Jukter — Cargo Transport Search Website
 
-➼ Technology stack: HTML (HTML5), CSS (CSS3), JavaScript, SCSS/Sass, GULP, (Flexbox - Grid), BEM.
+Jukter connects users with cargo and transport services in just a few clicks. The website focuses on efficiency and clarity for businesses. Its clean design makes finding and booking services simple. Developing such a platform helps logistics companies save time and money.
+
+---
+
+<h3>🖼 Preview</h3>
 
 ![jukter](https://github.com/oscar223Po/jukter/assets/99406219/a9d7b073-e172-4434-94a9-08736f0e8d91)
 
-# Установка npm на компьютер
+---
 
-## Шаг 1: Установка Node.js и npm
+<h3>🎯 Project Goals</h3>
 
-Для установки npm вам необходимо сначала установить Node.js. Вы можете скачать установщик с [официального сайта Node.js](https://nodejs.org/).
+- ✅ Build a user-friendly and adaptive website with responsive design that reflects the company’s services
+- ✨ Add personality and liveliness to the site through pure JavaScript animations
+- ⚡ Ensure high loading speed and cross-browser compatibility (Google Chrome, Safari, Yandex Browser, Opera, Edge, Brave, etc.)
+- 🛠 Develop clean, valid, and maintainable code using only standard web technologies to guarantee stability and performance
 
-Выберите соответствующую версию для вашей операционной системы и следуйте инструкциям по установке.
+---
 
-## Шаг 2: Проверка установки
+<h3>🧩 Development Features</h3>
 
-После установки Node.js, откройте терминал (или командную строку) и выполните следующие команды:
+- 📐 Semantic **HTML5** markup for well-structured and accessible architecture  
+- 🎨 **CSS3 + SCSS (Sass)** for styling with modularity and reusability  
+- 🏷️ **BEM methodology** for organized class naming and scalability  
+- 📱 Responsive layout with **Flexbox** and **CSS Grid**  
+- ⚙️ **JavaScript** for interactive elements and dynamic behavior  
+- 🔄 **Gulp + Webpack** for task automation:  
+  - SCSS compilation  
+  - Minification  
+  - Image optimization  
+  - Hot-reload during development  
 
-npm -v
+---
 
-# Основные Команды Сборки
+<h3>🛠️ Tech Stack</h3>
 
-npm run dev: Запускает сборку в режиме разработчика.
+| Technology         | Purpose                   |
+| ------------------ | ------------------------- |
+| **HTML5**          | Structure & semantics     |
+| **CSS3 / SCSS**    | Styling & maintainability |
+| **BEM**            | Clean and scalable code   |
+| **Flexbox & Grid** | Responsive design         |
+| **JavaScript**     | Dynamic functionality     |
+| **Gulp & Webpack** | Build automation          |
 
-npm run build: Строит все исходные файлы в директорию dist (используется для git push).
+---
 
-npm run zip: Архивирует все исходные файлы в zip (создает сборку для production).
+✨ The chosen **technology stack** ensures stable performance, ease of development, and long-term support.
